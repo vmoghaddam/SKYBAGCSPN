@@ -21819,7 +21819,7 @@ namespace APCore.Models
 
                 entity.Property(e => e.MinFuelRequiredPilotReq).HasColumnType("decimal(18, 0)");
 
-                entity.Property(e => e.MinFuelRequiredSFP).HasColumnType("decimal(18, 0)");
+                //entity.Property(e => e.MinFuelRequiredSFP).HasColumnType("decimal(18, 0)");
 
                 entity.Property(e => e.NotamCPTRemark).HasMaxLength(1000);
 

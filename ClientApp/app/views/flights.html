@@ -974,6 +974,8 @@
                                     <td style=" padding-left:5px;width:120px"><div dx-button="btn_lnd"></div></td>
                                     <td style=" padding-left:5px;width:120px"><div dx-button="btn_atc"></div></td>
                                     <td style=" padding-left:5px;width:120px"><div dx-button="btn_atl"></div></td>
+                                    <td style=" padding-left:5px;width:120px"><div dx-button="btn_fatigue"></div></td>
+                                    <td style=" padding-left:5px;width:120px"><div dx-button="btn_trip"></div></td>
                                     <td ng-show="selectedFlight.PICId==employeeId || _user=='zahiri'" style=" padding-left:5px;width:120px"><div dx-button="btn_asr"></div></td>
                                     <td ng-show="selectedFlight.PICId==employeeId || _user=='zahiri'" style=" padding-left:5px;width:120px"><div dx-button="btn_vr"></div></td>
 
@@ -1515,6 +1517,9 @@
 
     <div ng-include="'app/views/toAdd.html?vx=2'"></div>
     <div ng-include="'app/views/ldgAdd.html?vx=2'"></div>
+    
+    <div ng-include="'app/views/FatigueReport.html?vx=2'"></div>
+    <div ng-include="'app/views/TripInfo.html?vx=2'"></div>
 
     <div ng-include="'app/views/camera.html?vx=2'"></div>
     <div ng-include="'app/views/fltdoc.html?vx=2'"></div>

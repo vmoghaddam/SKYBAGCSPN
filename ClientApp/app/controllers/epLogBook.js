@@ -191,6 +191,51 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             disabled: 'IsLegLocked'
         }
     };
+    $scope.btn_fatigue = {
+        text: 'Fatigue Report',
+        type: 'default',
+        //icon: 'search',
+        width: 150,
+
+        onClick: function (e) {
+
+            //   var data = { Id: $scope.selectedFlight.FlightId, crewId: $scope.selectedFlight.CrewId };
+            //if (!$rootScope.getOnlineStatus()) {
+            //    alert('You are OFFLINE.Please check your internet connection.');
+            //    return;
+            //}
+            var data = { FlightId: $scope.selectedFlight.FlightId };
+
+            $rootScope.$broadcast('InitFatigueReport', data);
+
+        },
+        bindingOptions: {
+            disabled: 'IsLegLocked'
+        }
+    };
+     $scope.btn_trip = {
+        text: 'Trip Info',
+        type: 'default',
+        //icon: 'search',
+        width: 150,
+
+        onClick: function (e) {
+
+            //   var data = { Id: $scope.selectedFlight.FlightId, crewId: $scope.selectedFlight.CrewId };
+            //if (!$rootScope.getOnlineStatus()) {
+            //    alert('You are OFFLINE.Please check your internet connection.');
+            //    return;
+            //}
+            var data = { FlightId: $scope.selectedFlight.FlightId };
+
+            $rootScope.$broadcast('InitTripInfo', data);
+            console.log($scope.selectedFlight);
+
+        },
+        bindingOptions: {
+            disabled: 'IsLegLocked'
+        }
+    };
     $scope.btn_vr = {
         text: 'Voyage Report',
         type: 'default',
@@ -1458,6 +1503,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         $scope.loadingVisible = true;
         flightService.epGetCrewFlights(_d1, _d2).then(function (response) {
 
+           
             $scope.loadingVisible = false;
 
             if (response.IsSuccess) {
@@ -1471,6 +1517,8 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
                         //response.Data = Enumerable.From(response.Data).OrderBy(function(x) { return DateTimeToNumber(x.IStart);}).ToArray(); 
                     }
 
+
+                    console.log(response);
                     $scope.flights = response.Data;
                     $scope.groupedFlights = Enumerable.From(response.Data)
 
@@ -1526,7 +1574,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         //$scope.loadingVisible = true;
         flightService.epGetFlightCrews(flightId).then(function (response) {
             //$scope.loadingVisible = false;
-
+            console.log(response);
             if (response.IsSuccess) {
                 $scope.selectedFlightCrews = response.Data;
 

@@ -430,6 +430,21 @@ app.factory('flightService', ['$http', '$q', 'ngAuthSettings', '$rootScope', fun
 
     };
 
+
+    var _getTripInfo = function (flightId) {
+
+        var deferred = $q.defer();
+        $http.get($rootScope.apiUrl + 'get/tripInfo/' + flightId).then(function (response) {
+            deferred.resolve(response.data);
+        }, function (err, status) {
+            deferred.reject(Exceptions.getMessage(err));
+        })
+
+        return deferred.promise;
+    }
+
+
+
     var _epGetCrewCalendar = function (cid, from, to) {
 
         var deferred = $q.defer();
@@ -1469,6 +1484,7 @@ app.factory('flightService', ['$http', '$q', 'ngAuthSettings', '$rootScope', fun
             item.Alert = null;
             item.server = null;
             db.Put('DR', item.Id, item, function (dbitem) {
+               
                 deferred.resolve(dbitem);
             });
         });
@@ -2130,6 +2146,7 @@ app.factory('flightService', ['$http', '$q', 'ngAuthSettings', '$rootScope', fun
                 _checkInternet(function (st) {
                     if (st) {
                         $http.get($rootScope.apiUrl + 'dr/flight/' + flightId /*+ '?from=' + _df + '&to=' + _dt*/).then(function (response) {
+                          
                             if (response.data.IsSuccess && response.data.Data) {
                                 var _dbdate = !dbitem ? 0 : Number(dbitem.DateUpdate);
                                 var _serverdate = Number(response.data.Data.DateUpdate);
@@ -4198,6 +4215,35 @@ app.factory('flightService', ['$http', '$q', 'ngAuthSettings', '$rootScope', fun
     };
     serviceFactory.checkUnsignedOFPs = _checkUnsignedOFPs;
 
+    var _saveFatigue = function (entity) {
+        console.log(entity);
+        var deferred = $q.defer();
+
+        $http.post($rootScope.apiUrl + 'save/fatigue', entity).then(function (response) {
+            console.log(response);
+            deferred.resolve(response.data);
+        }, function (err, status) {
+
+            deferred.reject(Exceptions.getMessage(err));
+        });
+
+        return deferred.promise;
+    };
+
+
+    var _getFatigue = function (flightId)
+    {
+        var deferred = $q.defer();
+        $http.get($rootScope.apiUrl + 'get/fatigue/'+ flightId).then(function (response) {
+            deferred.resolve(response.data);
+           
+        }, function (err, status) {
+                deferred.reject(exceptions.getMessage(err));
+        })
+
+        return deferred.promise;
+    }
+
 
 
     //////////////////////////////////
@@ -4352,6 +4398,10 @@ app.factory('flightService', ['$http', '$q', 'ngAuthSettings', '$rootScope', fun
     serviceFactory.epGetTOLND2ByFlight = _epGetTOLND2ByFlight;
     serviceFactory.saveTOLND2 = _saveTOLND2;
     serviceFactory.epReplaceTOLND2 = _epReplaceTOLND2;
+
+    serviceFactory.saveFatigue = _saveFatigue;
+    serviceFactory.getFatigue = _getFatigue;
+    serviceFactory.getTripInfo = _getTripInfo;
 
     return serviceFactory;
 

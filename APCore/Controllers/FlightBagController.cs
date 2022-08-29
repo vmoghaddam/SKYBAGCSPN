@@ -262,5 +262,29 @@ namespace APCore.Controllers
             var result = await _flightBagService.GetEFBBirdStrikeCAOByFlightId(flightId);
             return Ok(result);
         }
+
+        [HttpPost]
+        [Route("api/save/fatigue")]
+        public async Task<IActionResult> FatigueReport(EFBFatigueReport dto)
+        {
+            var result = _flightBagService.FatigueReport(dto);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("api/get/fatigue/{flightId}")]
+        public async Task<IActionResult> GetFatigue(int flightId) 
+        {
+            var result = _flightBagService.GetFatigue(flightId);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("api/get/tripInfo/{flightId}")]
+        public async Task<IActionResult> GetTripInfo(int flightId) {
+            var result = _flightBagService.GetTripInfo(flightId);
+            return Ok(result);
+        }
+
     }
 }

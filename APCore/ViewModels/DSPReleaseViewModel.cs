@@ -94,6 +94,38 @@ namespace APCore.ViewModels
         public string IPADDSPRemark { get; set; }
         public string IPADCPTRemark { get; set; }
         public DateTime? DateConfirmed { get; set; }
+        public bool? ATSFlightPlanFOO { get; set; }
+        public bool? ATSFlightPlanCMDR { get; set; }
+        public string ATSFlightPlanFOORemark { get; set; }
+        public string ATSFlightPlanCMDRRemark { get; set; }
+        public bool? VldEFBFOO { get; set; }
+        public bool? VldEFBCMDR { get; set; }
+        public string VldEFBFOORemark { get; set; }
+        public string VldEFBCMDRRemark { get; set; }
+        public bool? VldFlightCrewFOO { get; set; }
+        public bool? VldFlightCrewCMDR { get; set; }
+        public string VldFlightCrewFOORemark { get; set; }
+        public string VldFlightCrewCMDRRemark { get; set; }
+        public bool? VldMedicalFOO { get; set; }
+        public bool? VldMedicalCMDR { get; set; }
+        public string VldMedicalFOORemark { get; set; }
+        public string VldMedicalCMDRRemark { get; set; }
+        public bool? VldPassportFOO { get; set; }
+        public bool? VldPassportCMDR { get; set; }
+        public string VldPassportFOORemark { get; set; }
+        public string VldPassportCMDRRemark { get; set; }
+        public bool? VldCMCFOO { get; set; }
+        public bool? VldCMCCMDR { get; set; }
+        public string VldCMCFOORemark { get; set; }
+        public string VldCMCCMDRRemark { get; set; }
+        public bool? VldRampPassFOO { get; set; }
+        public bool? VldRampPassCMDR { get; set; }
+        public string VldRampPassFOORemark { get; set; }
+        public string VldRampPassCMDRRemark { get; set; }
+        public bool? OperationalFlightPlanFOO { get; set; }
+        public bool? OperationalFlightPlanCMDR { get; set; }
+        public string OperationalFlightPlanFOORemark { get; set; }
+        public string OperationalFlightPlanCMDRRemark { get; set; }
         public int? DispatcherId { get; set; }
         public int Id { get; set; }
         public string User { get; set; }

@@ -1,0 +1,60 @@
+﻿<div ng-controller="TripInfoController">
+    <div id="popup_add" dx-popup="popup_add" class="no-padding">
+        <div style="padding:5px;">
+            <div id="scroll_FatigueReport" dx-scroll-view="scroll_FatigueReport" style="margin-top:5px;padding:0 5px 0 5px">
+                <!--<table style="margin-top:10px;border:0px solid #eee;width:100%;color:lightgray" class="dx-border">-->
+                <table style="margin-top:10px;border:0px solid #eee;width:100%;color:lightgray" class="dx-border">
+                    <tr style="border-bottom:1px solid gray">
+                        <td style="padding: 7px;text-align:left; font-weight: bold"> Flight Number </td>
+                        <td style="padding: 7px;text-align:left;">{{entity.FlightNumber}}</td>
+                        <td style="padding: 7px;text-align:left; font-weight: bold"> A/C Register </td>
+                        <td style="padding: 7px;text-align:left;">{{entity.Register}}</td>
+                        <td style="padding: 7px;text-align:left; font-weight: bold"> Date </td>
+                        <td style="padding: 7px;text-align:left;">{{formatDateLong(entity.STDDay)}}</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid gray">
+                        <td style="padding: 7px;text-align:left; font-weight: bold"> Ramp Fuel </td>
+                        <td style="padding:7px;text-align:left;">{{entity.FPFuel}}</td>
+                        <td style="padding: 7px;text-align:left; font-weight: bold"> Taxi Fuel </td>
+                        <td style="padding:7px;text-align:left;">200</td>
+                        <td style="padding: 7px;text-align:left; font-weight: bold"> Trip Fuel </td>
+                        <td style="padding:7px;text-align:left;">{{entity.FPTripFuel}}</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid gray">
+                        <td style="padding: 7px;text-align:left; font-weight: bold"> MTOW </td>
+                        <td style="padding:7px;text-align:left;" colspan="5"><div dx-text-box="txt_mtow" class="center"></div></td>
+                    </tr>
+                    <!--<tr style="border-bottom:1px solid gray">
+        <td style="padding: 7px;text-align:left; font-weight: bold"> Crew </td>
+        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_crew" class="center"></div></td>
+        <td style="padding: 7px;text-align:left; font-weight: bold"> FM </td>
+        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_fm" class="center"></div></td>
+        <td style="padding: 7px;text-align:left; font-weight: bold"> D/H </td>
+        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_dh" class="center"></div></td>
+    </tr>-->
+                    <!--<tr style="border-bottom:1px solid gray">
+        <td style="padding: 7px;text-align:left; font-weight: bold"> Captain's Name </td>
+        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_cptName" class="center"></div></td>
+    </tr>-->
+                </table>
+
+                <table class="section-table">
+                    <tr ng-repeat="c in selectedFlightCrews">
+                        <td>
+                            <span ng-show="!c.IsPositioning" style="display:inline-block">{{c.Position}}</span>
+                            <span ng-show="c.IsPositioning" style="display:inline-block">Positioning({{c.JobGroup}})</span>
+                        </td>
+                        <td>
+                            <span style="display:inline-block">{{c.Name}}</span>
+                        </td>
+                    </tr>
+
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div dx-load-panel="loadPanel"></div>
+</div>

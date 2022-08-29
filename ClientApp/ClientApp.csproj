@@ -90,6 +90,7 @@
     <Content Include="app\controllers\docviewer.js" />
     <Content Include="app\controllers\drAdd.js" />
     <Content Include="app\controllers\epLogBook.js" />
+    <Content Include="app\controllers\FatigueReportController.js" />
     <Content Include="app\controllers\fdpController.js" />
     <Content Include="app\controllers\fdpsController.js" />
     <Content Include="app\controllers\filterController.js" />
@@ -119,10 +120,12 @@
     <Content Include="app\controllers\statController.js" />
     <Content Include="app\controllers\toAdd.js" />
     <Content Include="app\controllers\toAdd2.js" />
+    <Content Include="app\controllers\TripInfoController.js" />
     <Content Include="app\services\statService.js" />
     <Content Include="app\setting.js" />
     <Content Include="app\views\camera.html" />
     <Content Include="app\views\drAdd.html" />
+    <Content Include="app\views\FatigueReport.html" />
     <Content Include="app\views\fltDoc.html" />
     <Content Include="app\views\imageviewer.html" />
     <Content Include="app\views\jl.html" />
@@ -136,6 +139,7 @@
     <Content Include="app\views\stat.html" />
     <Content Include="app\views\toAdd.html" />
     <Content Include="app\views\toAdd2.html" />
+    <Content Include="app\views\TripInfo.html" />
     <Content Include="pdfjsmodule\pdfviewernew.js" />
     <Content Include="app\controllers\profileController.js" />
     <Content Include="app\controllers\refreshController.js" />

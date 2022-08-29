@@ -183,5 +183,6 @@ namespace APCore.Models
         public string ChrTitle { get; set; }
         public string ChrCode { get; set; }
         public int? DefaultChrId { get; set; }
+        public long? CargoCost { get; set; }
     }
 }

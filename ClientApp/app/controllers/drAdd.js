@@ -11,252 +11,99 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
 
     $scope.entity = {
         Id: -1,
-        ActualWXDSP: false,
-        ActualWXCPT: false,
-        WXForcastDSP: false,
-
-        WXForcastCPT: false,
-        SigxWXDSP: false,
-        SigxWXCPT: false,
-        WindChartDSP: false,
-        WindChartCPT: false,
-        NotamDSP: false,
-        NotamCPT: false,
-        ComputedFligthPlanDSP: false,
-        ComputedFligthPlanCPT: false,
-        ATCFlightPlanDSP: false,
-        ATCFlightPlanCPT: false,
-        PermissionsDSP: false,
-        PermissionsCPT: false,
-        JeppesenAirwayManualDSP: false,
-        JeppesenAirwayManualCPT: false,
+        ATSFlightPlanFOO: false,
+        ATSFlightPlanCMDR: false,
         MinFuelRequiredDSP: false,
         MinFuelRequiredCPT: false,
         GeneralDeclarationDSP: false,
         GeneralDeclarationCPT: false,
-        FlightReportDSP: false,
-        FlightReportCPT: false,
-        TOLndCardsDSP: false,
-        TOLndCardsCPT: false,
         LoadSheetDSP: false,
         LoadSheetCPT: false,
-        FlightSafetyReportDSP: false,
-        FlightSafetyReportCPT: false,
-        AVSECIncidentReportDSP: false,
-        AVSECIncidentReportCPT: false,
-        OperationEngineeringDSP: false,
-        OperationEngineeringCPT: false,
-        VoyageReportDSP: false,
-        VoyageReportCPT: false,
-        PIFDSP: false,
-        PIFCPT: false,
-        GoodDeclarationDSP: false,
-        GoodDeclarationCPT: false,
         IPADDSP: false,
         IPADCPT: false,
+        VldEFBFOO: false,
+        VldEFBCMDR: false,
+        VldFlightCrewCMDR: false,
+        VldMedicalCMDR: false,
+        VldPassportCMDR: false,
+        VldCMCCMDR: false,
+        VldRampPassCMDR: false,
+        OperationalFlightPlanFOO: false,
+        OperationalFlightPlanCMDR: false
     };
 
-    $scope.chb_ActualWXDSP = {
+
+
+    $scope.chb_OFPFOO = {
         text: '',
-        readOnly: true,
         bindingOptions: {
-            value: 'entity.ActualWXDSP',
+            value: 'entity.OperationalFlightPlanFOO',
         }
     };
 
-    $scope.chb_ActualWXCPT = {
+    $scope.chb_OFPCMDR = {
         text: '',
         bindingOptions: {
-            value: 'entity.ActualWXCPT',
+            value: 'entity.OperationalFlightPlanCMDR',
         }
     };
 
-    $scope.txt_ActualWXCPTRemark = {
+    $scope.txt_OFPRemark = {
         text: '',
         bindingOptions: {
-            value: 'entity.ActualWXCPTRemark',
+            value: 'entity.OperationalFlightPlanCMDRRemark',
         }
     };
 
-    $scope.chb_WXForcastDSP = {
+
+    $scope.chb_ATSFPFOO = {
         text: '',
-        readOnly: true,
         bindingOptions: {
-            value: 'entity.WXForcastDSP',
+            value: 'entity.ATSFlightPlanFOO',
         }
     };
 
-    $scope.chb_WXForcastCPT = {
+    $scope.chb_ATSFPCMDR = {
         text: '',
         bindingOptions: {
-            value: 'entity.WXForcastCPT',
+            value: 'entity.ATSFlightPlanCMDR',
         }
     };
 
-    $scope.txt_WXForcastCPTRemark = {
+    $scope.txt_ATSFPRemark = {
         text: '',
         bindingOptions: {
-            value: 'entity.WXForcastCPTRemark',
+            value: 'entity.ATSFlightPlanFOORemark',
         }
     };
 
-    $scope.chb_SigxWXDSP = {
+
+    $scope.chb_ValidEFBFOO = {
         text: '',
-        readOnly: true,
         bindingOptions: {
-            value: 'entity.SigxWXDSP',
+            value: 'entity.VldEFBFOO',
         }
     };
 
-    $scope.chb_SigxWXCPT = {
+    $scope.chb_ValidEFBCMDR = {
         text: '',
         bindingOptions: {
-            value: 'entity.SigxWXCPT',
+            value: 'entity.VldEFBCMDR',
         }
     };
 
-    $scope.txt_SigxWXCPTRemark = {
+    $scope.txt_ValidEFBRemark = {
         text: '',
         bindingOptions: {
-            value: 'entity.SigxWXCPTRemark',
+            value: 'entity.VldEFBCMDRRemark',
         }
     };
 
-    $scope.chb_WindChartDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.WindChartDSP',
-        }
-    };
 
-    $scope.chb_WindChartCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.WindChartCPT',
-        }
-    };
 
-    $scope.txt_WindChartCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.WindChartCPTRemark',
-        }
-    };
-
-    $scope.chb_NotamDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.NotamDSP',
-        }
-    };
-
-    $scope.chb_NotamCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.NotamCPT',
-        }
-    };
-
-    $scope.txt_NotamCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.NotamCPTRemark',
-        }
-    };
-
-    $scope.chb_ComputedFligthPlanDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.ComputedFligthPlanDSP',
-        }
-    };
-
-    $scope.chb_ComputedFligthPlanCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.ComputedFligthPlanCPT',
-        }
-    };
-
-    $scope.txt_ComputedFligthPlanCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.ComputedFligthPlanCPTRemark',
-        }
-    };
-
-    $scope.chb_ATCFlightPlanDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.ATCFlightPlanDSP',
-        }
-    };
-
-    $scope.chb_ATCFlightPlanCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.ATCFlightPlanCPT',
-        }
-    };
-
-    $scope.txt_ATCFlightPlanCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.ATCFlightPlanCPTRemark',
-        }
-    };
-
-    $scope.chb_PermissionsDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.PermissionsDSP',
-        }
-    };
-
-    $scope.chb_PermissionsCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.PermissionsCPT',
-        }
-    };
-
-    $scope.txt_PermissionsCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.PermissionsCPTRemark',
-        }
-    };
-
-    $scope.chb_JeppesenAirwayManualDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.JeppesenAirwayManualDSP',
-        }
-    };
-
-    $scope.chb_JeppesenAirwayManualCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.JeppesenAirwayManualCPT',
-        }
-    };
-
-    $scope.txt_JeppesenAirwayManualCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.JeppesenAirwayManualCPTRemark',
-        }
-    };
 
     $scope.chb_MinFuelRequiredDSP = {
         text: '',
-        readOnly: true,
         bindingOptions: {
             value: 'entity.MinFuelRequiredDSP',
         }
@@ -278,7 +125,6 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
 
     $scope.txt_MinFuelRequiredPilotReq = {
         min: 0,
-        readOnly:false,
         bindingOptions: {
             value: 'entity.MinFuelRequiredPilotReq',
         }
@@ -286,7 +132,6 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
 
     $scope.chb_GeneralDeclarationDSP = {
         text: '',
-        readOnly: true,
         bindingOptions: {
             value: 'entity.GeneralDeclarationDSP',
         }
@@ -306,53 +151,11 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
         }
     };
 
-    $scope.chb_FlightReportDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.FlightReportDSP',
-        }
-    };
 
-    $scope.chb_FlightReportCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.FlightReportCPT',
-        }
-    };
 
-    $scope.txt_FlightReportCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.FlightReportCPTRemark',
-        }
-    };
-
-    $scope.chb_TOLndCardsDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.TOLndCardsDSP',
-        }
-    };
-
-    $scope.chb_TOLndCardsCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.TOLndCardsCPT',
-        }
-    };
-
-    $scope.txt_TOLndCardsCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.TOLndCardsCPTRemark',
-        }
-    };
 
     $scope.chb_LoadSheetDSP = {
         text: '',
-        readOnly: true,
         bindingOptions: {
             value: 'entity.LoadSheetDSP',
         }
@@ -372,155 +175,15 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
         }
     };
 
-    $scope.chb_FlightSafetyReportDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.FlightSafetyReportDSP',
-        }
-    };
 
-    $scope.chb_FlightSafetyReportCPT = {
+    $scope.chb_PersonalIpadFOO = {
         text: '',
-        bindingOptions: {
-            value: 'entity.FlightSafetyReportCPT',
-        }
-    };
-
-    $scope.txt_FlightSafetyReportCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.FlightSafetyReportCPTRemark',
-        }
-    };
-
-
-    $scope.chb_AVSECIncidentReportDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.AVSECIncidentReportDSP',
-        }
-    };
-
-    $scope.chb_AVSECIncidentReportCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.AVSECIncidentReportCPT',
-        }
-    };
-
-    $scope.txt_AVSECIncidentReportCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.AVSECIncidentReportCPTRemark',
-        }
-    };
-
-    $scope.chb_OperationEngineeringDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.OperationEngineeringDSP',
-        }
-    };
-
-    $scope.chb_OperationEngineeringCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.OperationEngineeringCPT',
-        }
-    };
-
-    $scope.txt_OperationEngineeringCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.OperationEngineeringCPTRemark',
-        }
-    };
-
-    $scope.chb_VoyageReportDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.VoyageReportDSP',
-        }
-    };
-
-    $scope.chb_VoyageReportCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.VoyageReportCPT',
-        }
-    };
-
-    $scope.txt_VoyageReportCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.VoyageReportCPTRemark',
-        }
-    };
-
-    $scope.chb_PIFDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.PIFDSP',
-        }
-    };
-
-    $scope.chb_PIFCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.PIFCPT',
-        }
-    };
-
-    $scope.txt_PIFCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.PIFCPTRemark',
-        }
-    };
-
-    $scope.txt_GoodDeclarationCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.GoodDeclarationCPTRemark',
-        }
-    };
-
-    $scope.chb_GoodDeclarationDSP = {
-        text: '',
-        readOnly: true,
-        bindingOptions: {
-            value: 'entity.GoodDeclarationDSP',
-        }
-    };
-
-    $scope.chb_GoodDeclarationCPT = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.GoodDeclarationCPT',
-        }
-    };
-
-    $scope.GoodDeclarationCPTRemark = {
-        text: '',
-        bindingOptions: {
-            value: 'entity.GoodDeclarationCPTRemark',
-        }
-    };
-
-    $scope.chb_IPADDSP = {
-        text: '',
-        readOnly: true,
         bindingOptions: {
             value: 'entity.IPADDSP',
         }
     };
 
-    $scope.chb_IPADCPT = {
+    $scope.chb_PersonalIpadCMDR = {
         text: '',
         bindingOptions: {
             value: 'entity.IPADCPT',
@@ -533,6 +196,97 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
             value: 'entity.IPADCPTRemark',
         }
     };
+
+    $scope.chb_FlightCrewCMDR = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldFlightCrewCMDR',
+        }
+    };
+
+    $scope.txt_FlightCrewRemark = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldFlightCrewCMDRRemark',
+        }
+    };
+
+
+    $scope.chb_FlightCrewCMDR = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldFlightCrewCMDR',
+        }
+    };
+
+    $scope.txt_FlightCrewRemark = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldFlightCrewCMDRRemark',
+        }
+    };
+
+
+
+    $scope.chb_MedicalCMDR = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldMedicalCMDR',
+        }
+    };
+
+    $scope.txt_MedicalRemark = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldMedicalCMDRRemark',
+        }
+    };
+
+
+    $scope.chb_PassportCMDR = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldPassportCMDR',
+        }
+    };
+
+    $scope.txt_PassportRemark = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldPassportCMDRRemark',
+        }
+    };
+
+
+    $scope.chb_CrewMemberCMDR = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldCMCCMDR',
+        }
+    };
+
+    $scope.txt_CrewMemberCMDRRemark = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldCMCCMDRRemark',
+        }
+    };
+
+
+    $scope.chb_RampPassCMDR = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldRampPassCMDR',
+        }
+    };
+
+    $scope.txt_RampPassRemark = {
+        text: '',
+        bindingOptions: {
+            value: 'entity.VldRampPassCMDRRemark',
+        }
+    };
+
 
 
 
@@ -569,24 +323,24 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
                                             var data = { FlightId: $scope.entity.FlightId, documentType: 'dr' };
 
                                             $rootScope.$broadcast('InitSignAdd', data);
-                                           ///////////////////////////
-                                             
+                                            ///////////////////////////
+
                                         } else General.ShowNotify("An error occurred in  saving Dispatch Release Form.", 'error');
 
 
                                     }, function (err) {
                                         $scope.loadingVisible = false;
-                                            General.ShowNotify("An error occurred in  saving Dispatch Release Form.", 'error');
-                                            General.ShowNotify(JSON.stringify(err), 'error');
+                                        General.ShowNotify("An error occurred in  saving Dispatch Release Form.", 'error');
+                                        General.ShowNotify(JSON.stringify(err), 'error');
                                     });
-                                   
+
                                 }
                                 else {
                                     General.ShowNotify("You are OFFLINE.Please check your internet connection", 'error');
                                 }
                             });
                             //$scope.entity.Id
-                            
+
                         }
                         else {
                             General.ShowNotify("You are OFFLINE.Please check your internet connection", 'error');
@@ -595,33 +349,31 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
                     }
                 }, toolbar: 'bottom'
             },
-             
+
             {
                 widget: 'dxButton', location: 'after', options: {
                     type: 'default', text: 'Check All', icon: 'check', onClick: function (e) {
 
-                        $scope.entity.ActualWXCPT = true;
-                        $scope.entity.WXForcastCPT = true;
-                        $scope.entity.SigxWXCPT = true;
-                        $scope.entity.WindChartCPT = true;
-                        $scope.entity.NotamCPT = true;
-                        $scope.entity.ComputedFligthPlanCPT = true;
-                        $scope.entity.ATCFlightPlanCPT = true;
-                        $scope.entity.PermissionsCPT = true;
-                        $scope.entity.JeppesenAirwayManualCPT = true;
-                        $scope.entity.MinFuelRequiredCPT = true;
-                        $scope.entity.GeneralDeclarationCPT = true;
-                        $scope.entity.FlightReportCPT = true;
-                        $scope.entity.TOLndCardsCPT = true;
-                        $scope.entity.LoadSheetCPT = true;
-                        $scope.entity.FlightSafetyReportCPT = true;
-                        $scope.entity.AVSECIncidentReportCPT = true;
-                        $scope.entity.OperationEngineeringCPT = true;
-                        $scope.entity.VoyageReportCPT = true;
-                        $scope.entity.PIFCPT = true;
-                        $scope.entity.GoodDeclarationCPT = true;
-                        $scope.entity.IPADCPT = true;
-                         
+
+                        $scope.entity.ATSFlightPlanFOO= true;
+                        $scope.entity.ATSFlightPlanCMDR= true;
+                        $scope.entity.MinFuelRequiredDSP= true;
+                        $scope.entity.MinFuelRequiredCPT= true;
+                        $scope.entity.GeneralDeclarationDSP= true;
+                        $scope.entity.GeneralDeclarationCPT= true;
+                        $scope.entity.LoadSheetDSP= true;
+                        $scope.entity.LoadSheetCPT= true;
+                        $scope.entity.IPADDSP= true;
+                        $scope.entity.IPADCPT= true;
+                        $scope.entity.VldEFBFOO= true;
+                        $scope.entity.VldEFBCMDR= true;
+                        $scope.entity.VldFlightCrewCMDR= true;
+                        $scope.entity.VldMedicalCMDR= true;
+                        $scope.entity.VldPassportCMDR= true;
+                        $scope.entity.VldCMCCMDR= true;
+                        $scope.entity.VldRampPassCMDR= true;
+                        $scope.entity.OperationalFlightPlanFOO = true;
+                        $scope.entity.OperationalFlightPlanCMDR = true;
 
                     }
                 }, toolbar: 'bottom'
@@ -717,6 +469,8 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
     $scope.fill = function (data) {
         $scope.entity = data;
 
+        console.log('dispath', data);
+
         $scope.entity.ActualWXDSP = true;
 
         $scope.entity.WXForcastDSP = true;
@@ -766,10 +520,11 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
     $scope.isLockVisible = false;
     //12-06
     $scope.fillFuel = function () {
+        return;
         //$scope.flight 
-       // alert($scope.flight.FuelRemaining);
-       // alert($scope.flight.FuelUplift);
-        if ((!$scope.flight.FuelRemaining && $scope.flight.FuelRemaining !== 0) || (!$scope.flight.FuelUplift && $scope.flight.FuelUplift!==0)) {
+        // alert($scope.flight.FuelRemaining);
+        // alert($scope.flight.FuelUplift);
+        if ((!$scope.flight.FuelRemaining && $scope.flight.FuelRemaining !== 0) || (!$scope.flight.FuelUplift && $scope.flight.FuelUplift !== 0)) {
             $scope.entity.MinFuelRequiredPilotReq = null;
             return;
         }
@@ -796,7 +551,7 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
                     General.ShowNotifyBottom("The application cannot connect to the Server. Please check your internet connection.", 'error');
                 }
             });
-            
+
         }
 
         $scope.loadingVisible = true;
@@ -814,11 +569,12 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
 
                 $scope.loadingVisible = false;
 
+
                 $scope.isEditable = true;//(diff <= 24);
-                
-               
+
+
                 if (!response2.Data) {
-                   
+
                     $scope.isNew = true;
                     $scope.entity = {
                         Id: -1,
@@ -865,6 +621,7 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
                         GoodDeclarationCPT: false,
                         IPADDSP: true,
                         IPADCPT: false,
+
                     };
                     $scope.entity.FlightId = $scope.tempData.FlightId;
                     $scope.fillFuel();
@@ -872,7 +629,7 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
                 else {
                     if (response2.Data.JLSignedBy) {
                         //$scope.isEditable = false;
-                       
+
                         $scope.url_sign = signFiles + response.Data.PICId + ".jpg";
                         $scope.PIC = response2.Data.PIC;
                         $scope.signDate = moment(new Date(response2.Data.JLDatePICApproved)).format('YYYY-MM-DD HH:mm');
@@ -951,8 +708,8 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
 
         if (prms.doc == 'dr')
             flightService.signDocLocal(prms, prms.doc).then(function (response) {
-               // $scope.isEditable = false;
-               // $scope.isLockVisible = false;
+                // $scope.isEditable = false;
+                // $scope.isLockVisible = false;
                 $scope.url_sign = signFiles + prms.PICId + ".jpg";
                 $scope.PIC = prms.PIC;
                 $scope.signDate = moment(new Date(prms.JLDatePICApproved)).format('YYYY-MM-DD HH:mm');
@@ -967,6 +724,7 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
 
         $scope.tempData = prms;
 
+        console.log('flightId', $scope.tempData.FlightId);
 
         $scope.popup_add_visible = true;
 

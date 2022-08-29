@@ -28,7 +28,7 @@ namespace APCore.Services
         DbSet<ViewEFBASR> GetEFBASRs();
         DbSet<ViewTOLNDCard> GetViewTOLNDCards();
         Task<DataResponse> GetTOLNDCardViewByFlightId(int flightId);
-        Task<DataResponse> GetTOLNDCardByFlightId(int flightId,string type);
+        Task<DataResponse> GetTOLNDCardByFlightId(int flightId, string type);
         Task<DataResponse> GetTOLNDCardsByFlightIds(List<int> ids);
         Task<DataResponse> GetTOLNDCardById(int Id);
 
@@ -41,6 +41,9 @@ namespace APCore.Services
         Task<DataResponse> GetEFBASRById(int Id);
         DbSet<EFBBirdStrikeCAO> GetEFBBirdStrikeCAOs();
         Task<DataResponse> GetEFBBirdStrikeCAOByFlightId(int flightId);
+        Task<DataResponse> FatigueReport(EFBFatigueReport dto);
+        Task<DataResponse> GetFatigue(int flightId);
+        Task<DataResponse> GetTripInfo(int flightId);
     }
 
 
@@ -58,7 +61,7 @@ namespace APCore.Services
 
         //public DbSet<ViewEFBVoyageReport> GetEFBVoyageReports()
         //{
-         //   return _context.ViewEFBVoyageReports;
+        //   return _context.ViewEFBVoyageReports;
 
         //}
 
@@ -68,7 +71,7 @@ namespace APCore.Services
 
         }
 
-        public DbSet<ViewEFBVoyageReport> GetEFBVoyageReports ()
+        public DbSet<ViewEFBVoyageReport> GetEFBVoyageReports()
         {
             return _context.ViewEFBVoyageReports;
 
@@ -102,7 +105,7 @@ namespace APCore.Services
             return new DataResponse()
             {
                 Data = entity,
-                IsSuccess=true
+                IsSuccess = true
 
             };
         }
@@ -128,9 +131,9 @@ namespace APCore.Services
             };
         }
 
-        public async Task<DataResponse> GetTOLNDCardByFlightId(int flightId,string type)
+        public async Task<DataResponse> GetTOLNDCardByFlightId(int flightId, string type)
         {
-            var entity = await _context.TOLNDCards.SingleOrDefaultAsync(q => q.FlightId == flightId && q.Type==type);
+            var entity = await _context.TOLNDCards.SingleOrDefaultAsync(q => q.FlightId == flightId && q.Type == type);
             return new DataResponse()
             {
                 Data = entity,
@@ -195,7 +198,7 @@ namespace APCore.Services
 
         public async Task<DataResponse> GetEFBASRById(int Id)
         {
-            var entity = await _context.ViewEFBASRs.SingleOrDefaultAsync(q => q.Id== Id);
+            var entity = await _context.ViewEFBASRs.SingleOrDefaultAsync(q => q.Id == Id);
             return new DataResponse()
             {
                 Data = entity,
@@ -225,7 +228,7 @@ namespace APCore.Services
                     voyage.EFBFlightIrregularities = await _context.EFBFlightIrregularities.Where(q => q.VoyageReportId == voyage.Id).ToListAsync();
                     voyage.EFBReasons = await _context.EFBReasons.Where(q => q.VoyageReportId == voyage.Id).ToListAsync();
                     //var irregularity = await _context.EFBFlightIrregularities.Where(q => q.VoyageReportId == voyage.Id).Select(q => q.IrrId).ToListAsync();
-                   // var reason = await _context.EFBReasons.Where(q => q.VoyageReportId == voyage.Id).Select(q => q.ReasonId).ToListAsync();
+                    // var reason = await _context.EFBReasons.Where(q => q.VoyageReportId == voyage.Id).Select(q => q.ReasonId).ToListAsync();
                     return new DataResponse()
                     {
                         //Data = new
@@ -234,7 +237,7 @@ namespace APCore.Services
                         //    irregularity,
                         //    reason
                         //},
-                        Data=voyage,
+                        Data = voyage,
                         IsSuccess = true
 
                     };
@@ -260,11 +263,11 @@ namespace APCore.Services
                     IsSuccess = false
                 };
             }
-            
+
         }
 
 
-         
+
 
         public async Task<DataResponse> GetEFBVoyageReportById(int Id)
         {
@@ -284,16 +287,17 @@ namespace APCore.Services
                     IsSuccess = true
 
                 };
-            } else
+            }
+            else
             {
                 return new DataResponse()
                 {
                     Data = voyage,
                     IsSuccess = false
                 };
-                    }
+            }
         }
-        public async Task<DataResponse> GetEFBBirdStrikeCAOByFlightId(int flightId) 
+        public async Task<DataResponse> GetEFBBirdStrikeCAOByFlightId(int flightId)
         {
 
             var entity = await _context.EFBBirdStrikeCAOs.SingleOrDefaultAsync(q => q.FlightId == flightId);
@@ -314,11 +318,11 @@ namespace APCore.Services
                 _context.EFBASRs.Add(entity);
             }
             entity.User = EFBASR.User;
-            entity.DateUpdate= DateTime.UtcNow.ToString("yyyyMMddHHmm"); 
+            entity.DateUpdate = DateTime.UtcNow.ToString("yyyyMMddHHmm");
 
             entity.FlightId = EFBASR.FlightId;
             entity.EventTypeId = EFBASR.EventTypeId;
-            entity.OccurrenceDate =Helper.ConvertToDate( EFBASR.OccurrenceDate);
+            entity.OccurrenceDate = Helper.ConvertToDate(EFBASR.OccurrenceDate);
             entity.IsDay = EFBASR.IsDay;
             entity.SQUAWK = EFBASR.SQUAWK;
             entity.FuelJettisoned = EFBASR.FuelJettisoned;
@@ -333,7 +337,7 @@ namespace APCore.Services
             entity.LOCAirport = EFBASR.LOCAirport;
             entity.LOCStand = EFBASR.LOCStand;
             entity.LOCRunway = EFBASR.LOCRunway;
-           // entity.LOCGEOLongitude = EFBASR.LOCGEOLongitude;
+            // entity.LOCGEOLongitude = EFBASR.LOCGEOLongitude;
             entity.LOCGEOAltitude = EFBASR.LOCGEOAltitude;
             entity.LOCGEOLongtitude = EFBASR.LOCGEOLongtitude;
             entity.METId = EFBASR.METId;
@@ -405,7 +409,7 @@ namespace APCore.Services
 
             var saveResult = await _context.SaveAsync();
             if (saveResult.Succeed)
-                return new DataResponse() { IsSuccess = true,Data= entity };
+                return new DataResponse() { IsSuccess = true, Data = entity };
             else
                 return new DataResponse() { IsSuccess = false };
         }
@@ -414,7 +418,7 @@ namespace APCore.Services
         public async Task<DataResponse> SaveTOCard(TOLNDCardViewModel dto)
         {
             //var entity = await _context.EFBASRs.FirstOrDefaultAsync(q => q.Id == EFBASR.Id);
-            var entity = await _context.TOLNDCards.FirstOrDefaultAsync(q => q.FlightId == dto.FlightId && q.Type==dto.Type);
+            var entity = await _context.TOLNDCards.FirstOrDefaultAsync(q => q.FlightId == dto.FlightId && q.Type == dto.Type);
             if (entity == null)
             {
                 entity = new TOLNDCard();
@@ -422,7 +426,7 @@ namespace APCore.Services
             }
             entity.User = dto.User;
             entity.DateUpdate = DateTime.UtcNow.ToString("yyyyMMddHHmm");
-            
+
             entity.FlightId = dto.FlightId;
             entity.Information = dto.Information;
             entity.RW = dto.RW;
@@ -536,7 +540,7 @@ namespace APCore.Services
 
                 return new DataResponse() { IsSuccess = true, Data = entity };
             }
-                
+
             else
                 return new DataResponse() { IsSuccess = false };
         }
@@ -662,7 +666,7 @@ namespace APCore.Services
             {
                 release = new EFBDSPRelease();
                 _context.EFBDSPReleases.Add(release);
-                
+
             }
 
             release.User = DSPRelease.User;
@@ -756,7 +760,39 @@ namespace APCore.Services
             release.IPADCPTRemark = DSPRelease.IPADCPTRemark;
             release.DateConfirmed = DSPRelease.DateConfirmed;
             release.DispatcherId = DSPRelease.DispatcherId;
-            
+            release.ATSFlightPlanCMDR = DSPRelease.ATSFlightPlanCMDR;
+            release.ATSFlightPlanFOO = DSPRelease.ATSFlightPlanFOO;
+            release.ATSFlightPlanFOORemark = DSPRelease.ATSFlightPlanFOORemark;
+            release.ATSFlightPlanCMDRRemark = DSPRelease.ATSFlightPlanCMDRRemark;
+            release.VldCMCCMDR = DSPRelease.VldCMCCMDR;
+            release.VldCMCCMDRRemark = DSPRelease.VldCMCCMDRRemark;
+            release.VldCMCFOO = DSPRelease.VldCMCFOO;
+            release.VldCMCFOORemark = DSPRelease.VldCMCFOORemark;
+            release.VldEFBCMDR = DSPRelease.VldEFBCMDR;
+            release.VldEFBCMDRRemark = DSPRelease.VldEFBCMDRRemark;
+            release.VldEFBFOO = DSPRelease.VldEFBFOO;
+            release.VldEFBFOORemark = DSPRelease.VldEFBFOORemark;
+            release.VldFlightCrewCMDR = DSPRelease.VldFlightCrewCMDR;
+            release.VldFlightCrewCMDRRemark = DSPRelease.VldFlightCrewCMDRRemark;
+            release.VldFlightCrewFOO = DSPRelease.VldFlightCrewFOO;
+            release.VldFlightCrewFOORemark = DSPRelease.VldFlightCrewFOORemark;
+            release.VldMedicalCMDR = DSPRelease.VldMedicalCMDR;
+            release.VldMedicalCMDRRemark = DSPRelease.VldMedicalCMDRRemark;
+            release.VldMedicalFOO = DSPRelease.VldMedicalFOO;
+            release.VldMedicalFOORemark = DSPRelease.VldMedicalFOORemark;
+            release.VldPassportCMDR = DSPRelease.VldPassportCMDR;
+            release.VldPassportCMDRRemark = DSPRelease.VldPassportCMDRRemark;
+            release.VldPassportFOO = DSPRelease.VldPassportFOO;
+            release.VldPassportFOORemark = DSPRelease.VldPassportFOORemark;
+            release.VldRampPassCMDR = DSPRelease.VldRampPassCMDR;
+            release.VldRampPassCMDRRemark = DSPRelease.VldRampPassCMDRRemark;
+            release.VldRampPassFOO = DSPRelease.VldRampPassFOO;
+            release.VldRampPassFOORemark = DSPRelease.VldRampPassFOORemark;
+            release.OperationalFlightPlanFOO = DSPRelease.OperationalFlightPlanFOO;
+            release.OperationalFlightPlanFOORemark = DSPRelease.OperationalFlightPlanFOORemark;
+            release.OperationalFlightPlanCMDR = DSPRelease.OperationalFlightPlanCMDR;
+            release.OperationalFlightPlanCMDRRemark = DSPRelease.OperationalFlightPlanCMDRRemark;
+
             var saveResult = await _context.SaveAsync();
             if (saveResult.Succeed)
             {
@@ -769,6 +805,75 @@ namespace APCore.Services
 
         }
 
+
+        public async Task<DataResponse> FatigueReport(EFBFatigueReport dto)
+        {
+            var entity = _context.EFBFatigueReports.SingleOrDefault(q => q.FlightId == dto.FlightId);
+            if (entity == null)
+            {
+                entity = new EFBFatigueReport();
+                _context.EFBFatigueReports.Add(entity);
+            }
+
+            entity.ReporterName = dto.ReporterName;
+            entity.Rank = dto.Rank;
+            entity.PositionInFlight = dto.PositionInFlight;
+            //entity.MaxDuty = dto.MaxDuty;
+            //entity.TotalDuty = dto.TotalDuty;
+            entity.RequiredRest = dto.RequiredRest;
+            entity.ActualRest = dto.ActualRest;
+            entity.Fidgeting = dto.Fidgeting;
+            entity.ImpairedAttention = dto.ImpairedAttention;
+            entity.RubbingEyes = dto.RubbingEyes;
+            entity.ImpairedMemory = dto.ImpairedMemory;
+            entity.Yawing = dto.Yawing;
+            entity.ImpairedProblemSolving = dto.ImpairedProblemSolving;
+            entity.LongBlinks = dto.LongBlinks;
+            entity.StaringBlankly = dto.StaringBlankly;
+            entity.ImpairedSituationalAwareness = dto.ImpairedSituationalAwareness;
+            entity.NegativeMood = dto.NegativeMood;
+            entity.DifficultyKeepingEyes = dto.DifficultyKeepingEyes;
+            entity.HeadNodding = dto.HeadNodding;
+            entity.ReducedCommunication = dto.ReducedCommunication;
+            entity.Other = dto.Other;
+            entity.FullyAlert = dto.FullyAlert;
+            entity.Lively = dto.Lively;
+            entity.Fresh = dto.Fresh;
+            entity.LittleTired = dto.LittleTired;
+            entity.AlmostTired = dto.AlmostTired;
+            entity.VeryTired = dto.VeryTired;
+            entity.Exhausted = dto.Exhausted;
+            entity.Report = dto.Report;
+            entity.IncreasedRiskTaking = dto.IncreasedRiskTaking;
+            entity.FrequentBlinking = dto.FrequentBlinking;
+            entity.FlightId = dto.FlightId;
+            entity.State = dto.State;
+            entity.FollowUp = dto.FollowUp;
+            entity.Day = dto.Day;
+            entity.Night = dto.Night;
+            entity.Sector = dto.Sector;
+            entity.State = dto.State;
+
+            var saveResult = await _context.SaveAsync();
+
+            if (saveResult.Succeed)
+                return new DataResponse() { IsSuccess = true, Data = entity };
+            else
+                return new DataResponse() { IsSuccess = false };
+
+        }
+
+
+        public async Task<DataResponse> GetFatigue(int flightId) 
+        {
+            var entity = _context.ViewEFBFatigueReports.SingleOrDefault(q => q.FlightId == flightId);
+            return new DataResponse() { IsSuccess = true, Data = entity };
+        }
+
+        public async Task<DataResponse> GetTripInfo(int flightId) {
+            var entity = _context.AppLegs.SingleOrDefault(q => q.FlightId == flightId);
+            return new DataResponse() { IsSuccess = true, Data = entity };
+        }
     }
 
 }

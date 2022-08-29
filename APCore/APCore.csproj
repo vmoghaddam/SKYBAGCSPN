@@ -5,6 +5,10 @@
     <UserSecretsId>9c35ae54-27fc-4098-bea1-c6bfd1856222</UserSecretsId>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget></PlatformTarget>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="Models\_ppa_cspnContext.cs" />
   </ItemGroup>

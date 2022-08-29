@@ -8,9 +8,13 @@ var reportBase = 'http://report.crewpocket.ir/';
  
 
 var serviceBase = 'http://fleet.flypersia.aero/apiv2/';
-var serviceBase2 =  'https://localhost:5001/api/';
+//var serviceBase2 =  'https://localhost:5001/api/';
  
-var serviceBase3 = 'https://localhost:5001/api/';
+//var serviceBase3 = 'https://localhost:5001/api/';
+
+var serviceBase2 =  'https://localhost:44399/api/';
+ 
+var serviceBase3 = 'https://localhost:44399/api/';
 
 var serviceBaseAPI = 'http://localhost:12271/';
  

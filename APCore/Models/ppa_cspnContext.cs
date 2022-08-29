@@ -140,6 +140,7 @@ namespace APCore.Models
         public virtual DbSet<EFBBirdStrikeCAO> EFBBirdStrikeCAOs { get; set; }
         public virtual DbSet<EFBConfidentialReport> EFBConfidentialReports { get; set; }
         public virtual DbSet<EFBDSPRelease> EFBDSPReleases { get; set; }
+        public virtual DbSet<EFBFatigueReport> EFBFatigueReports { get; set; }
         public virtual DbSet<EFBFlightIrregularity> EFBFlightIrregularities { get; set; }
         public virtual DbSet<EFBOccurrenceCAO> EFBOccurrenceCAOs { get; set; }
         public virtual DbSet<EFBReason> EFBReasons { get; set; }
@@ -204,6 +205,7 @@ namespace APCore.Models
         public virtual DbSet<FlightTemplate> FlightTemplates { get; set; }
         public virtual DbSet<FlightUploadHistory> FlightUploadHistories { get; set; }
         public virtual DbSet<FltFMI> FltFMIs { get; set; }
+        public virtual DbSet<FormRequest> FormRequests { get; set; }
         public virtual DbSet<FormVacation> FormVacations { get; set; }
         public virtual DbSet<FuelAvg> FuelAvgs { get; set; }
         public virtual DbSet<FuelAvgReg> FuelAvgRegs { get; set; }
@@ -342,6 +344,10 @@ namespace APCore.Models
         public virtual DbSet<Location> Locations { get; set; }
         public virtual DbSet<LogProp> LogProps { get; set; }
         public virtual DbSet<LoginInfo> LoginInfos { get; set; }
+        public virtual DbSet<MBAircraftIndex> MBAircraftIndices { get; set; }
+        public virtual DbSet<MBFuelIndex> MBFuelIndices { get; set; }
+        public virtual DbSet<MBPantryIndex> MBPantryIndices { get; set; }
+        public virtual DbSet<MBStabTrim> MBStabTrims { get; set; }
         public virtual DbSet<MV> MVs { get; set; }
         public virtual DbSet<MVT> MVTs { get; set; }
         public virtual DbSet<MVTAPI> MVTAPIs { get; set; }
@@ -508,6 +514,7 @@ namespace APCore.Models
         public virtual DbSet<ViewAirport> ViewAirports { get; set; }
         public virtual DbSet<ViewApplicableCourse> ViewApplicableCourses { get; set; }
         public virtual DbSet<ViewApplicableCoursePerson> ViewApplicableCoursePeople { get; set; }
+        public virtual DbSet<ViewAssignGrid> ViewAssignGrids { get; set; }
         public virtual DbSet<ViewBirdStrikeCAO> ViewBirdStrikeCAOs { get; set; }
         public virtual DbSet<ViewBoardSummary> ViewBoardSummaries { get; set; }
         public virtual DbSet<ViewBook> ViewBooks { get; set; }
@@ -601,6 +608,7 @@ namespace APCore.Models
         public virtual DbSet<ViewDutyFlightSumCom> ViewDutyFlightSumComs { get; set; }
         public virtual DbSet<ViewEFBASR> ViewEFBASRs { get; set; }
         public virtual DbSet<ViewEFBDSPRelease> ViewEFBDSPReleases { get; set; }
+        public virtual DbSet<ViewEFBFatigueReport> ViewEFBFatigueReports { get; set; }
         public virtual DbSet<ViewEFBOccurrenceCAO> ViewEFBOccurrenceCAOs { get; set; }
         public virtual DbSet<ViewEFBVoyageIrr> ViewEFBVoyageIrrs { get; set; }
         public virtual DbSet<ViewEFBVoyageReason> ViewEFBVoyageReasons { get; set; }
@@ -696,6 +704,7 @@ namespace APCore.Models
         public virtual DbSet<ViewFormAYearly> ViewFormAYearlies { get; set; }
         public virtual DbSet<ViewFormAYearlyDom> ViewFormAYearlyDoms { get; set; }
         public virtual DbSet<ViewFormAYearlyInt> ViewFormAYearlyInts { get; set; }
+        public virtual DbSet<ViewFormVacation> ViewFormVacations { get; set; }
         public virtual DbSet<ViewIPAccess> ViewIPAccesses { get; set; }
         public virtual DbSet<ViewIdeaLast> ViewIdeaLasts { get; set; }
         public virtual DbSet<ViewIdeaRank> ViewIdeaRanks { get; set; }
@@ -4496,6 +4505,14 @@ namespace APCore.Models
 
                 entity.Property(e => e.ATCFlightPlanDSPRemark).HasMaxLength(1000);
 
+                entity.Property(e => e.ATSFlightPlanCMDRRemark)
+                    .HasMaxLength(1)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ATSFlightPlanFOORemark)
+                    .HasMaxLength(1)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.AVSECIncidentReportCPTRemark).HasMaxLength(1000);
 
                 entity.Property(e => e.AVSECIncidentReportDSPRemark).HasMaxLength(1000);
@@ -4556,9 +4573,19 @@ namespace APCore.Models
 
                 entity.Property(e => e.NotamDSPRemark).HasMaxLength(1000);
 
+                entity.Property(e => e.Note).IsUnicode(false);
+
                 entity.Property(e => e.OperationEngineeringCPTRemark).HasMaxLength(1000);
 
                 entity.Property(e => e.OperationEngineeringDSPRemark).HasMaxLength(1000);
+
+                entity.Property(e => e.OperationalFlightPlanCMDRRemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.OperationalFlightPlanFOORemark)
+                    .HasMaxLength(1)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.PIC)
                     .HasMaxLength(500)
@@ -4584,6 +4611,54 @@ namespace APCore.Models
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
+                entity.Property(e => e.VldCMCCMDRRemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VldCMCFOORemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VldEFBCMDRRemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VldEFBFOORemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VldFlightCrewCMDRRemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VldFlightCrewFOORemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VldMedicalCMDRRemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VldMedicalFOORemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VldPassportCMDRRemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VldPassportFOORemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VldRampPassCMDRRemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VldRampPassFOORemark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.VoyageReportCPTRemark).HasMaxLength(1000);
 
                 entity.Property(e => e.VoyageReportDSPRemark).HasMaxLength(1000);
@@ -4605,6 +4680,23 @@ namespace APCore.Models
                     .WithMany(p => p.EFBDSPReleases)
                     .HasForeignKey(d => d.FlightId)
                     .HasConstraintName("fk_EFB_FI");
+            });
+
+            modelBuilder.Entity<EFBFatigueReport>(entity =>
+            {
+                entity.ToTable("EFBFatigueReport", "dbo");
+
+                entity.Property(e => e.FollowUp).HasMaxLength(255);
+
+                entity.Property(e => e.Other).HasMaxLength(500);
+
+                entity.Property(e => e.PositionInFlight).HasMaxLength(500);
+
+                entity.Property(e => e.Report).HasMaxLength(500);
+
+                entity.Property(e => e.ReporterName).HasMaxLength(500);
+
+                entity.Property(e => e.State).HasMaxLength(255);
             });
 
             modelBuilder.Entity<EFBFlightIrregularity>(entity =>
@@ -5849,6 +5941,10 @@ namespace APCore.Models
 
                 entity.Property(e => e.CommanderNote).HasMaxLength(2000);
 
+                entity.Property(e => e.DLI).HasColumnType("decimal(18, 4)");
+
+                entity.Property(e => e.DOI).HasColumnType("decimal(18, 4)");
+
                 entity.Property(e => e.DateApplied).HasColumnType("datetime");
 
                 entity.Property(e => e.DateCreate).HasColumnType("datetime");
@@ -5909,6 +6005,14 @@ namespace APCore.Models
 
                 entity.Property(e => e.JLTakeOff).HasColumnType("datetime");
 
+                entity.Property(e => e.LILNW).HasColumnType("decimal(18, 4)");
+
+                entity.Property(e => e.LITOW).HasColumnType("decimal(18, 4)");
+
+                entity.Property(e => e.LIZFW).HasColumnType("decimal(18, 4)");
+
+                entity.Property(e => e.LNW).HasColumnType("decimal(18, 4)");
+
                 entity.Property(e => e.LTR)
                     .HasMaxLength(255)
                     .IsUnicode(false);
@@ -5916,6 +6020,12 @@ namespace APCore.Models
                 entity.Property(e => e.Landing)
                     .HasColumnType("datetime")
                     .HasComment("Landing");
+
+                entity.Property(e => e.MACLNW).HasColumnType("decimal(18, 4)");
+
+                entity.Property(e => e.MACTOW).HasColumnType("decimal(18, 4)");
+
+                entity.Property(e => e.MACZFW).HasColumnType("decimal(18, 4)");
 
                 entity.Property(e => e.OSTA).HasColumnType("datetime");
 
@@ -5930,6 +6040,8 @@ namespace APCore.Models
                 entity.Property(e => e.PIC)
                     .HasMaxLength(500)
                     .IsUnicode(false);
+
+                entity.Property(e => e.PantryCode).HasMaxLength(1);
 
                 entity.Property(e => e.RVSM_FLT_CPT).HasColumnType("decimal(18, 4)");
 
@@ -5969,6 +6081,12 @@ namespace APCore.Models
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
+                entity.Property(e => e.StabTrimFifteen).HasColumnType("decimal(18, 4)");
+
+                entity.Property(e => e.StabTrimFive).HasColumnType("decimal(18, 4)");
+
+                entity.Property(e => e.TOW).HasColumnType("decimal(18, 4)");
+
                 entity.Property(e => e.Takeoff)
                     .HasColumnType("datetime")
                     .HasComment("Takeoff");
@@ -5978,6 +6096,8 @@ namespace APCore.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.UsedFuel).HasColumnType("decimal(18, 4)");
+
+                entity.Property(e => e.ZFW).HasColumnType("decimal(18, 4)");
 
                 entity.HasOne(d => d.AirlineOperators)
                     .WithMany(p => p.FlightInformations)
@@ -6538,6 +6658,19 @@ namespace APCore.Models
                 entity.Property(e => e.UpdateUser).HasMaxLength(255);
             });
 
+            modelBuilder.Entity<FormRequest>(entity =>
+            {
+                entity.ToTable("FormRequest", "dbo");
+
+                entity.Property(e => e.RemarkOperation).HasMaxLength(2000);
+
+                entity.Property(e => e.RemarkUser).HasMaxLength(2000);
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<FormVacation>(entity =>
             {
                 entity.ToTable("FormVacation", "dbo");
@@ -6556,6 +6689,10 @@ namespace APCore.Models
 
                 entity.Property(e => e.SchedulingRemark)
                     .HasMaxLength(2000)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(255)
                     .IsUnicode(false);
             });
 
@@ -9459,6 +9596,50 @@ namespace APCore.Models
                     .IsUnicode(false);
             });
 
+            modelBuilder.Entity<MBAircraftIndex>(entity =>
+            {
+                entity.ToTable("MBAircraftIndex", "dbo");
+
+                entity.Property(e => e.CPT1).HasColumnType("decimal(18, 6)");
+
+                entity.Property(e => e.CPT2).HasColumnType("decimal(18, 6)");
+
+                entity.Property(e => e.CPT3).HasColumnType("decimal(18, 6)");
+
+                entity.Property(e => e.CPT4).HasColumnType("decimal(18, 6)");
+
+                entity.Property(e => e.OASec).HasColumnType("decimal(18, 6)");
+
+                entity.Property(e => e.OBSec).HasColumnType("decimal(18, 6)");
+
+                entity.Property(e => e.OCSec).HasColumnType("decimal(18, 6)");
+
+                entity.Property(e => e.ODSec).HasColumnType("decimal(18, 6)");
+            });
+
+            modelBuilder.Entity<MBFuelIndex>(entity =>
+            {
+                entity.ToTable("MBFuelIndex", "dbo");
+            });
+
+            modelBuilder.Entity<MBPantryIndex>(entity =>
+            {
+                entity.ToTable("MBPantryIndex", "dbo");
+
+                entity.Property(e => e.DOI).HasColumnType("decimal(18, 2)");
+
+                entity.Property(e => e.PantryCode).HasMaxLength(255);
+            });
+
+            modelBuilder.Entity<MBStabTrim>(entity =>
+            {
+                entity.ToTable("MBStabTrim", "dbo");
+
+                entity.Property(e => e.FlapFifteen).HasColumnType("decimal(18, 4)");
+
+                entity.Property(e => e.FlapFive).HasColumnType("decimal(18, 4)");
+            });
+
             modelBuilder.Entity<MV>(entity =>
             {
                 entity.HasNoKey();
@@ -9790,6 +9971,8 @@ namespace APCore.Models
             {
                 entity.ToTable("OFPImport", "dbo");
 
+                entity.Property(e => e.DOW).HasColumnType("decimal(18, 4)");
+
                 entity.Property(e => e.DateConfirmed).HasColumnType("datetime");
 
                 entity.Property(e => e.DateCreate).HasColumnType("datetime");
@@ -9804,6 +9987,8 @@ namespace APCore.Models
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
+                entity.Property(e => e.FLL).HasColumnType("decimal(18, 4)");
+
                 entity.Property(e => e.FPFuel).HasColumnType("decimal(18, 4)");
 
                 entity.Property(e => e.FPTripFuel).HasColumnType("decimal(18, 4)");
@@ -9816,17 +10001,31 @@ namespace APCore.Models
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
+                entity.Property(e => e.JAPlan1).IsUnicode(false);
+
+                entity.Property(e => e.JAPlan2).IsUnicode(false);
+
+                entity.Property(e => e.JFuel).IsUnicode(false);
+
                 entity.Property(e => e.JLDatePICApproved).HasColumnType("datetime");
 
                 entity.Property(e => e.JLSignedBy)
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
+                entity.Property(e => e.JPlan).IsUnicode(false);
+
+                entity.Property(e => e.MCI).HasColumnType("decimal(18, 4)");
+
                 entity.Property(e => e.Origin)
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
                 entity.Property(e => e.PIC)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Source)
                     .HasMaxLength(500)
                     .IsUnicode(false);
 
@@ -9884,6 +10083,10 @@ namespace APCore.Models
                     .HasMaxLength(500)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Remark)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.User)
                     .HasMaxLength(255)
                     .IsUnicode(false);
@@ -9907,6 +10110,10 @@ namespace APCore.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.OFP).IsUnicode(false);
+
+                entity.Property(e => e.UploadMessage)
+                    .HasMaxLength(2000)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<OffItem>(entity =>
@@ -17344,6 +17551,94 @@ namespace APCore.Models
                     .IsUnicode(false);
             });
 
+            modelBuilder.Entity<ViewAssignGrid>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("ViewAssignGrid", "dbo");
+
+                entity.Property(e => e.DutyTypeTitle)
+                    .IsRequired()
+                    .HasMaxLength(1000);
+
+                entity.Property(e => e.EndLocal).HasColumnType("datetime");
+
+                entity.Property(e => e.FirstName)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.InitEnd).HasColumnType("datetime");
+
+                entity.Property(e => e.InitFlights)
+                    .HasMaxLength(2000)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.InitFlts)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.InitFromIATA)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.InitGroup)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.InitKey)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.InitNo)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.InitRank)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.InitRoute)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.InitStart).HasColumnType("datetime");
+
+                entity.Property(e => e.JobGroup).HasMaxLength(500);
+
+                entity.Property(e => e.JobGroup2)
+                    .IsRequired()
+                    .HasMaxLength(1)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.JobGroupCode)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Key)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LastName)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.MaxFDP).HasColumnType("decimal(10, 5)");
+
+                entity.Property(e => e.Rank).HasMaxLength(1000);
+
+                entity.Property(e => e.Remark)
+                    .HasMaxLength(1000)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Remark2).HasMaxLength(500);
+
+                entity.Property(e => e.ScheduleName)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.StartLocal).HasColumnType("datetime");
+            });
+
             modelBuilder.Entity<ViewBirdStrikeCAO>(entity =>
             {
                 entity.HasNoKey();
@@ -22098,6 +22393,12 @@ namespace APCore.Models
 
                 entity.Property(e => e.IPADDSPRemark).HasMaxLength(1000);
 
+                entity.Property(e => e.JLDatePICApproved).HasColumnType("datetime");
+
+                entity.Property(e => e.JLSignedBy)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.JeppesenAirwayManualCPTRemark).HasMaxLength(1000);
 
                 entity.Property(e => e.JeppesenAirwayManualDSPRemark).HasMaxLength(1000);
@@ -22108,8 +22409,6 @@ namespace APCore.Models
 
                 entity.Property(e => e.MinFuelRequiredPilotReq).HasColumnType("decimal(18, 0)");
 
-                entity.Property(e => e.MinFuelRequiredSFP).HasColumnType("decimal(18, 0)");
-
                 entity.Property(e => e.NotamCPTRemark).HasMaxLength(1000);
 
                 entity.Property(e => e.NotamDSPRemark).HasMaxLength(1000);
@@ -22117,6 +22416,10 @@ namespace APCore.Models
                 entity.Property(e => e.OperationEngineeringCPTRemark).HasMaxLength(1000);
 
                 entity.Property(e => e.OperationEngineeringDSPRemark).HasMaxLength(1000);
+
+                entity.Property(e => e.PIC)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.PIFCPTRemark).HasMaxLength(1000);
 
@@ -22145,6 +22448,33 @@ namespace APCore.Models
                 entity.Property(e => e.WindChartCPTRemark).HasMaxLength(1000);
 
                 entity.Property(e => e.WindChartDSPRemark).HasMaxLength(1000);
+            });
+
+            modelBuilder.Entity<ViewEFBFatigueReport>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("ViewEFBFatigueReport", "dbo");
+
+                entity.Property(e => e.FlightNumber).HasMaxLength(50);
+
+                entity.Property(e => e.FollowUp).HasMaxLength(255);
+
+                entity.Property(e => e.FromAirportIATA).HasMaxLength(255);
+
+                entity.Property(e => e.Other).HasMaxLength(500);
+
+                entity.Property(e => e.PositionInFlight).HasMaxLength(500);
+
+                entity.Property(e => e.Register).HasMaxLength(50);
+
+                entity.Property(e => e.Report).HasMaxLength(500);
+
+                entity.Property(e => e.ReporterName).HasMaxLength(500);
+
+                entity.Property(e => e.State).HasMaxLength(255);
+
+                entity.Property(e => e.ToAirportIATA).HasMaxLength(255);
             });
 
             modelBuilder.Entity<ViewEFBOccurrenceCAO>(entity =>
@@ -22482,6 +22812,8 @@ namespace APCore.Models
 
                 entity.Property(e => e.CRMIssueDate).HasColumnType("datetime");
 
+                entity.Property(e => e.CTUIssueDate).HasColumnType("datetime");
+
                 entity.Property(e => e.CaoCardNumber).HasMaxLength(500);
 
                 entity.Property(e => e.CaoIntervalCalanderType).HasMaxLength(1000);
@@ -22606,6 +22938,10 @@ namespace APCore.Models
                     .HasMaxLength(7)
                     .IsUnicode(false);
 
+                entity.Property(e => e.LRCExpireDate).HasColumnType("datetime");
+
+                entity.Property(e => e.LRCIssueDate).HasColumnType("datetime");
+
                 entity.Property(e => e.LanguageCourseExpireDate).HasColumnType("datetime");
 
                 entity.Property(e => e.LastName)
@@ -22703,6 +23039,10 @@ namespace APCore.Models
 
                 entity.Property(e => e.ProficiencyValidUntilOPC).HasColumnType("datetime");
 
+                entity.Property(e => e.RSPExpireDate).HasColumnType("datetime");
+
+                entity.Property(e => e.RSPIssueDate).HasColumnType("datetime");
+
                 entity.Property(e => e.RaitingCertificates).HasMaxLength(500);
 
                 entity.Property(e => e.RampPassExpireDate).HasColumnType("datetime");
@@ -22714,6 +23054,10 @@ namespace APCore.Models
                 entity.Property(e => e.RecurrentIssueDate).HasColumnType("datetime");
 
                 entity.Property(e => e.Remark).HasMaxLength(2000);
+
+                entity.Property(e => e.SAExpireDate).HasColumnType("datetime");
+
+                entity.Property(e => e.SAIssueDate).HasColumnType("datetime");
 
                 entity.Property(e => e.SEPTExpireDate).HasColumnType("datetime");
 
@@ -22748,6 +23092,24 @@ namespace APCore.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Telegram).HasMaxLength(255);
+
+                entity.Property(e => e.Type737ConversionIssueDate).HasColumnType("datetime");
+
+                entity.Property(e => e.Type737ExpireDate).HasColumnType("datetime");
+
+                entity.Property(e => e.Type737IssueDate).HasColumnType("datetime");
+
+                entity.Property(e => e.TypeAirbusConversionIssueDate).HasColumnType("datetime");
+
+                entity.Property(e => e.TypeAirbusExpireDate).HasColumnType("datetime");
+
+                entity.Property(e => e.TypeAirbusIssueDate).HasColumnType("datetime");
+
+                entity.Property(e => e.TypeMDConversionIssueDate).HasColumnType("datetime");
+
+                entity.Property(e => e.TypeMDExpireDate).HasColumnType("datetime");
+
+                entity.Property(e => e.TypeMDIssueDate).HasColumnType("datetime");
 
                 entity.Property(e => e.UpsetRecoveryTrainingExpireDate).HasColumnType("datetime");
 
@@ -27963,6 +28325,57 @@ namespace APCore.Models
                 entity.Property(e => e.FlightHour).HasColumnType("numeric(38, 6)");
 
                 entity.Property(e => e.FreightTone).HasColumnType("decimal(38, 0)");
+            });
+
+            modelBuilder.Entity<ViewFormVacation>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("ViewFormVacation", "dbo");
+
+                entity.Property(e => e.FirstName)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.JobGroup).HasMaxLength(500);
+
+                entity.Property(e => e.LastName)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.Mobile).HasMaxLength(500);
+
+                entity.Property(e => e.NID)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(1003);
+
+                entity.Property(e => e.OperationRemak)
+                    .HasMaxLength(2000)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.PID)
+                    .IsRequired()
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.ReasonStr)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Remark)
+                    .HasMaxLength(2000)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.SchedulingRemark)
+                    .HasMaxLength(2000)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<ViewIPAccess>(entity =>
