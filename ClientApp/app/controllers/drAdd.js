@@ -35,7 +35,6 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
 
 
     $scope.chb_OFPFOO = {
-        text: '',
         bindingOptions: {
             value: 'entity.OperationalFlightPlanFOO',
         }
@@ -100,8 +99,6 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
     };
 
 
-
-
     $scope.chb_MinFuelRequiredDSP = {
         text: '',
         bindingOptions: {
@@ -150,9 +147,6 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
             value: 'entity.GeneralDeclarationCPTRemark',
         }
     };
-
-
-
 
     $scope.chb_LoadSheetDSP = {
         text: '',
@@ -438,6 +432,30 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
         onHiding: function () {
 
             //$scope.clearEntity();
+            $scope.entity = {
+                Id: -1,
+                ATSFlightPlanFOO: false,
+                ATSFlightPlanCMDR: false,
+                MinFuelRequiredDSP: false,
+                MinFuelRequiredCPT: false,
+                GeneralDeclarationDSP: false,
+                GeneralDeclarationCPT: false,
+                LoadSheetDSP: false,
+                LoadSheetCPT: false,
+                IPADDSP: false,
+                IPADCPT: false,
+                VldEFBFOO: false,
+                VldEFBCMDR: false,
+                VldFlightCrewCMDR: false,
+                VldMedicalCMDR: false,
+                VldPassportCMDR: false,
+                VldCMCCMDR: false,
+                VldRampPassCMDR: false,
+                OperationalFlightPlanFOO: false,
+                OperationalFlightPlanCMDR: false
+            };
+
+
             $scope.url_sign = null;
             $rootScope.IsRootSyncEnabled = true;
             $scope.popup_add_visible = false;
@@ -467,72 +485,28 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
 
     $scope.flight = null;
     $scope.fill = function (data) {
+        console.log(data);
         $scope.entity = data;
 
-        console.log('dispath', data);
-
-        $scope.entity.ActualWXDSP = true;
-
-        $scope.entity.WXForcastDSP = true;
-
-
-        $scope.entity.SigxWXDSP = true;
-
-        $scope.entity.WindChartDSP = true;
-
-        $scope.entity.NotamDSP = true;
-
-        $scope.entity.ComputedFligthPlanDSP = true;
-
-        $scope.entity.ATCFlightPlanDSP = true;
-
-        $scope.entity.PermissionsDSP = true;
-
-        $scope.entity.JeppesenAirwayManualDSP = true;
-
-        $scope.entity.MinFuelRequiredDSP = true;
-
-        $scope.entity.GeneralDeclarationDSP = true;
-
-        $scope.entity.FlightReportDSP = true;
-
-        $scope.entity.TOLndCardsDSP = true;
-
-        $scope.entity.LoadSheetDSP = true;
-
-        $scope.entity.FlightSafetyReportDSP = true;
-
-        $scope.entity.AVSECIncidentReportDSP = true;
-
-        $scope.entity.OperationEngineeringDSP = true;
-
-        $scope.entity.VoyageReportDSP = true;
-
-        $scope.entity.PIFDSP = true;
-
-        $scope.entity.GoodDeclarationDSP = true;
-
-        $scope.entity.IPADDSP = true;
-
-        $scope.fillFuel();
+        //$scope.fillFuel();
 
     };
     $scope.isLockVisible = false;
     //12-06
-    $scope.fillFuel = function () {
-        return;
-        //$scope.flight 
-        // alert($scope.flight.FuelRemaining);
-        // alert($scope.flight.FuelUplift);
-        if ((!$scope.flight.FuelRemaining && $scope.flight.FuelRemaining !== 0) || (!$scope.flight.FuelUplift && $scope.flight.FuelUplift !== 0)) {
-            $scope.entity.MinFuelRequiredPilotReq = null;
-            return;
-        }
-        var remaining = $scope.flight.FuelRemaining ? Number($scope.flight.FuelRemaining) : 0;
-        var uplift = $scope.flight.FuelUplift ? Number($scope.flight.FuelUplift) : 0;
-        var total = remaining + uplift;
-        $scope.entity.MinFuelRequiredPilotReq = total;
-    };
+    //$scope.fillFuel = function () {
+    //    return;
+    //    //$scope.flight 
+    //    // alert($scope.flight.FuelRemaining);
+    //    // alert($scope.flight.FuelUplift);
+    //    if ((!$scope.flight.FuelRemaining && $scope.flight.FuelRemaining !== 0) || (!$scope.flight.FuelUplift && $scope.flight.FuelUplift !== 0)) {
+    //        $scope.entity.MinFuelRequiredPilotReq = null;
+    //        return;
+    //    }
+    //    var remaining = $scope.flight.FuelRemaining ? Number($scope.flight.FuelRemaining) : 0;
+    //    var uplift = $scope.flight.FuelUplift ? Number($scope.flight.FuelUplift) : 0;
+    //    var total = remaining + uplift;
+    //    $scope.entity.MinFuelRequiredPilotReq = total;
+    //};
 
     $scope.bind = function () {
         $scope.entity.FlightId = $scope.tempData.FlightId;
@@ -575,56 +549,11 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
 
                 if (!response2.Data) {
 
+                    $scope.entity.Id = -1;
                     $scope.isNew = true;
-                    $scope.entity = {
-                        Id: -1,
-                        ActualWXDSP: true,
-                        ActualWXCPT: false,
-                        WXForcastDSP: true,
-
-                        WXForcastCPT: false,
-                        SigxWXDSP: true,
-                        SigxWXCPT: false,
-                        WindChartDSP: true,
-                        WindChartCPT: false,
-                        NotamDSP: true,
-                        NotamCPT: false,
-                        ComputedFligthPlanDSP: true,
-                        ComputedFligthPlanCPT: false,
-                        ATCFlightPlanDSP: true,
-                        ATCFlightPlanCPT: false,
-                        PermissionsDSP: true,
-                        PermissionsCPT: false,
-                        JeppesenAirwayManualDSP: true,
-                        JeppesenAirwayManualCPT: false,
-                        MinFuelRequiredDSP: true,
-                        MinFuelRequiredCPT: false,
-                        GeneralDeclarationDSP: true,
-                        GeneralDeclarationCPT: false,
-                        FlightReportDSP: true,
-                        FlightReportCPT: false,
-                        TOLndCardsDSP: true,
-                        TOLndCardsCPT: false,
-                        LoadSheetDSP: true,
-                        LoadSheetCPT: false,
-                        FlightSafetyReportDSP: true,
-                        FlightSafetyReportCPT: false,
-                        AVSECIncidentReportDSP: true,
-                        AVSECIncidentReportCPT: false,
-                        OperationEngineeringDSP: true,
-                        OperationEngineeringCPT: false,
-                        VoyageReportDSP: true,
-                        VoyageReportCPT: false,
-                        PIFDSP: true,
-                        PIFCPT: false,
-                        GoodDeclarationDSP: true,
-                        GoodDeclarationCPT: false,
-                        IPADDSP: true,
-                        IPADCPT: false,
-
-                    };
+                    
                     $scope.entity.FlightId = $scope.tempData.FlightId;
-                    $scope.fillFuel();
+                    //$scope.fillFuel();
                 }
                 else {
                     if (response2.Data.JLSignedBy) {
@@ -724,8 +653,7 @@ app.controller('drAddController', ['$scope', '$location', 'flightService', 'auth
 
         $scope.tempData = prms;
 
-        console.log('flightId', $scope.tempData.FlightId);
-
+        
         $scope.popup_add_visible = true;
 
     });

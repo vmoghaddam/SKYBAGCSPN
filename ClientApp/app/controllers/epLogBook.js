@@ -267,6 +267,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             //    alert('You are OFFLINE.Please check your internet connection.');
             //    return;
             //}
+            
             var data = { FlightId: $scope.selectedFlight.FlightId };
 
             $rootScope.$broadcast('InitDrAdd', data);
@@ -935,8 +936,13 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
 
     };
     $scope.drClick = function (g) {
-        var first = g.items[0];
-        var data = { FlightId: first.FlightId };
+        //var first = g.items[0];
+        //var data = { FlightId: first.FlightId };
+
+        if (!$scope.selectedFlight)
+            return;
+        var data = { FlightId: $scope.selectedFlight.FlightId };
+
 
         $rootScope.$broadcast('InitDrAdd', data);
     };
