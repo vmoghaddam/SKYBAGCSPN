@@ -8,12 +8,12 @@ namespace APCore.Models
     public partial class ExtIdea
     {
         public string PersonalCode { get; set; }
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string CourseCode { get; set; }
         public string CourseTitle { get; set; }
-        public string ClassID { get; set; }
+        public string ClassId { get; set; }
         public string Instructor { get; set; }
         public DateTime? BeginDate { get; set; }
         public DateTime? EndDate { get; set; }

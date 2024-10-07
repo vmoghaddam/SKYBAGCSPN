@@ -43,16 +43,16 @@ namespace APCore.Models
         public decimal? DateEndPracticalP { get; set; }
         public int? DurationPractical { get; set; }
         public int? DurationPracticalUnitId { get; set; }
-        public int? CT_CalendarTypeId { get; set; }
-        public string CT_Title { get; set; }
-        public int? CT_LicenseResultBasicId { get; set; }
-        public string CT_Remark { get; set; }
-        public int? CT_CourseCategoryId { get; set; }
-        public int? CT_Interval { get; set; }
-        public bool? CT_IsGeneral { get; set; }
-        public bool? CT_Status { get; set; }
-        public int? CT_Id { get; set; }
-        public string CC_Title { get; set; }
+        public int? CtCalendarTypeId { get; set; }
+        public string CtTitle { get; set; }
+        public int? CtLicenseResultBasicId { get; set; }
+        public string CtRemark { get; set; }
+        public int? CtCourseCategoryId { get; set; }
+        public int? CtInterval { get; set; }
+        public bool? CtIsGeneral { get; set; }
+        public bool? CtStatus { get; set; }
+        public int? CtId { get; set; }
+        public string CcTitle { get; set; }
         public string CaoTypeTitle { get; set; }
         public string CaoTypeRemark { get; set; }
         public string Organization { get; set; }

@@ -10,10 +10,10 @@ namespace APCore.Models
         public int Id { get; set; }
         public int? PassportExpired { get; set; }
         public int? PassportExpiring { get; set; }
-        public int? NDTExpired { get; set; }
-        public int? NDTExpiring { get; set; }
-        public int? CAOExpired { get; set; }
-        public int? CAOExpiring { get; set; }
+        public int? Ndtexpired { get; set; }
+        public int? Ndtexpiring { get; set; }
+        public int? Caoexpired { get; set; }
+        public int? Caoexpiring { get; set; }
         public int? MedicalExpired { get; set; }
         public int? MedicalExpiring { get; set; }
     }

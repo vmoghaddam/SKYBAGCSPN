@@ -23,8 +23,8 @@ namespace APCore.Models
         public int? DestinationId { get; set; }
         public string Origin { get; set; }
         public string Destination { get; set; }
-        public string OriginICAO { get; set; }
-        public string DestinationICAO { get; set; }
+        public string OriginIcao { get; set; }
+        public string DestinationIcao { get; set; }
         public string Register { get; set; }
         public string FlightStatus { get; set; }
         public DateTime? DepartureDay { get; set; }
@@ -33,10 +33,10 @@ namespace APCore.Models
         public DateTime? ArrivalDayLocal { get; set; }
         public int? BlockTime { get; set; }
         public int? FlightTime { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
         public DateTime? Departure { get; set; }
         public DateTime? Arrival { get; set; }
         public DateTime? DepartureLocal { get; set; }

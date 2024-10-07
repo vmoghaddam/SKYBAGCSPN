@@ -5,40 +5,40 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewMSN
+    public partial class ViewMsn
     {
-        public int ID { get; set; }
-        public int? AC_ModelID { get; set; }
-        public int AirlineOperatorsID { get; set; }
-        public int? MSN { get; set; }
+        public int Id { get; set; }
+        public int? AcModelId { get; set; }
+        public int AirlineOperatorsId { get; set; }
+        public int? Msn { get; set; }
         public string Register { get; set; }
-        public int? TFH_Hours { get; set; }
-        public byte? TFH_Minutes { get; set; }
-        public int? TFC { get; set; }
+        public int? TfhHours { get; set; }
+        public byte? TfhMinutes { get; set; }
+        public int? Tfc { get; set; }
         public DateTime? ManDate { get; set; }
-        public DateTime? Last_WB { get; set; }
-        public bool? ETOPS { get; set; }
-        public bool? AC_Flag { get; set; }
-        public int? Cabin_Seat_Ver_F { get; set; }
-        public int? Cabin_Seat_Ver_B { get; set; }
-        public int? Cabin_Seat_Ver_C { get; set; }
-        public int? Cabin_Seat_Ver_R { get; set; }
-        public int? Lav_QTY { get; set; }
-        public int? Galley_QTY { get; set; }
-        public int? Cabin_CrewVer { get; set; }
-        public int? Cockpit_Seat_Ver_Pilot { get; set; }
-        public int? Cockpit_Seat_Ver_FlightEngineer { get; set; }
-        public int? Cockpit_Seat_Ver_Observer { get; set; }
-        public string Previous_Register { get; set; }
-        public int? Fuel_LH_Outer { get; set; }
-        public int? Fuel_LH_Inner { get; set; }
-        public int? Fuel_Center { get; set; }
-        public int? Fuel_RH_Inner { get; set; }
-        public int? Fuel_RH_Outer { get; set; }
-        public int? Fuel_ACT2 { get; set; }
-        public int? Fuel_ACT1 { get; set; }
-        public int? Fuel_Trim { get; set; }
-        public int? Fuel_Total { get; set; }
+        public DateTime? LastWb { get; set; }
+        public bool? Etops { get; set; }
+        public bool? AcFlag { get; set; }
+        public int? CabinSeatVerF { get; set; }
+        public int? CabinSeatVerB { get; set; }
+        public int? CabinSeatVerC { get; set; }
+        public int? CabinSeatVerR { get; set; }
+        public int? LavQty { get; set; }
+        public int? GalleyQty { get; set; }
+        public int? CabinCrewVer { get; set; }
+        public int? CockpitSeatVerPilot { get; set; }
+        public int? CockpitSeatVerFlightEngineer { get; set; }
+        public int? CockpitSeatVerObserver { get; set; }
+        public string PreviousRegister { get; set; }
+        public int? FuelLhOuter { get; set; }
+        public int? FuelLhInner { get; set; }
+        public int? FuelCenter { get; set; }
+        public int? FuelRhInner { get; set; }
+        public int? FuelRhOuter { get; set; }
+        public int? FuelAct2 { get; set; }
+        public int? FuelAct1 { get; set; }
+        public int? FuelTrim { get; set; }
+        public int? FuelTotal { get; set; }
         public bool? FuelUnit { get; set; }
         public int CustomerId { get; set; }
         public string Model { get; set; }
@@ -48,6 +48,6 @@ namespace APCore.Models
         public string Manufacturer { get; set; }
         public string AirlineOperators { get; set; }
         public string Customer { get; set; }
-        public bool? isvirtual { get; set; }
+        public bool? Isvirtual { get; set; }
     }
 }

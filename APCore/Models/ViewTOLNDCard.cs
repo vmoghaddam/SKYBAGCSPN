@@ -5,41 +5,41 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewTOLNDCard
+    public partial class ViewTolndcard
     {
         public int Id { get; set; }
         public int FlightId { get; set; }
         public string Information { get; set; }
-        public string RW { get; set; }
-        public string TL { get; set; }
-        public string FE { get; set; }
+        public string Rw { get; set; }
+        public string Tl { get; set; }
+        public string Fe { get; set; }
         public string Wind { get; set; }
         public string Visibility { get; set; }
         public string Cloud { get; set; }
         public string Temp { get; set; }
-        public string QNH { get; set; }
+        public string Qnh { get; set; }
         public string DewP { get; set; }
-        public string WXCondition { get; set; }
-        public string STAR { get; set; }
-        public string APP { get; set; }
-        public string MAS { get; set; }
+        public string Wxcondition { get; set; }
+        public string Star { get; set; }
+        public string App { get; set; }
+        public string Mas { get; set; }
         public string ActLandingWeight { get; set; }
         public string Flap { get; set; }
         public string StabTrim { get; set; }
         public string Verf { get; set; }
         public string FuelToAlternate { get; set; }
-        public string TA { get; set; }
-        public string ZFW { get; set; }
-        public string TOFuel { get; set; }
-        public string TOWeight { get; set; }
-        public string CG { get; set; }
+        public string Ta { get; set; }
+        public string Zfw { get; set; }
+        public string Tofuel { get; set; }
+        public string Toweight { get; set; }
+        public string Cg { get; set; }
         public string V1 { get; set; }
         public string Vr { get; set; }
         public string V2 { get; set; }
         public string Type { get; set; }
-        public string LDA { get; set; }
-        public string JLSignedBy { get; set; }
-        public DateTime? JLDatePICApproved { get; set; }
+        public string Lda { get; set; }
+        public string JlsignedBy { get; set; }
+        public DateTime? JldatePicapproved { get; set; }
         public string DateUpdate { get; set; }
         public string User { get; set; }
         public DateTime? BlockOn { get; set; }
@@ -50,30 +50,30 @@ namespace APCore.Models
         public DateTime? LandingLocal { get; set; }
         public DateTime? TakeOffLocal { get; set; }
         public DateTime? BlockOffLocal { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
-        public int? FlightStatusID { get; set; }
-        public int? RegisterID { get; set; }
-        public int? FlightTypeID { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
+        public int? FlightStatusId { get; set; }
+        public int? RegisterId { get; set; }
+        public int? FlightTypeId { get; set; }
         public string AircraftType { get; set; }
         public int? TypeId { get; set; }
         public string FlightNumber { get; set; }
         public int? FromAirport { get; set; }
         public int? ToAirport { get; set; }
         public int? CustomerId { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public string Register { get; set; }
-        public int MSN { get; set; }
+        public int Msn { get; set; }
         public string FlightStatus { get; set; }
         public string ArrivalRemark { get; set; }
         public string DepartureRemark { get; set; }
-        public DateTime? STDDay { get; set; }
-        public DateTime? STADay { get; set; }
-        public DateTime? STDDayLocal { get; set; }
-        public DateTime? STADayLocal { get; set; }
+        public DateTime? Stdday { get; set; }
+        public DateTime? Staday { get; set; }
+        public DateTime? StddayLocal { get; set; }
+        public DateTime? StadayLocal { get; set; }
         public int? DelayBlockOff { get; set; }
         public int? DelayTakeoff { get; set; }
         public DateTime? Departure { get; set; }
@@ -83,14 +83,14 @@ namespace APCore.Models
         public int? BlockTime { get; set; }
         public int? FlightTime { get; set; }
         public int? ScheduledFlightTime { get; set; }
-        public int? FPFlightTime { get; set; }
-        public int? PFLR { get; set; }
+        public int? FpflightTime { get; set; }
+        public int? Pflr { get; set; }
         public int? PaxChild { get; set; }
         public int? PaxInfant { get; set; }
         public int? PaxAdult { get; set; }
         public int? PaxTotal { get; set; }
         public int? PaxRevenued { get; set; }
-        public int? FuelUnitID { get; set; }
+        public int? FuelUnitId { get; set; }
         public decimal? FuelRemaining { get; set; }
         public decimal? FuelUplift { get; set; }
         public decimal? FuelUsed { get; set; }
@@ -102,58 +102,58 @@ namespace APCore.Models
         public DateTime? FlightDate { get; set; }
         public int? CargoCount { get; set; }
         public int? BaggageCount { get; set; }
-        public decimal? FPFuel { get; set; }
-        public int? CPCrewId { get; set; }
-        public string CPRegister { get; set; }
-        public int? CPPositionId { get; set; }
-        public int? CPFlightTypeId { get; set; }
-        public int? CPFDPItemId { get; set; }
-        public bool? CPDH { get; set; }
-        public int? CPFDPId { get; set; }
-        public string CPP1 { get; set; }
-        public string CPInstructor { get; set; }
-        public string CPP2 { get; set; }
-        public string CPSCCM { get; set; }
-        public string CPISCCM { get; set; }
+        public decimal? Fpfuel { get; set; }
+        public int? CpcrewId { get; set; }
+        public string Cpregister { get; set; }
+        public int? CppositionId { get; set; }
+        public int? CpflightTypeId { get; set; }
+        public int? CpfdpitemId { get; set; }
+        public bool? Cpdh { get; set; }
+        public int? Cpfdpid { get; set; }
+        public string Cpp1 { get; set; }
+        public string Cpinstructor { get; set; }
+        public string Cpp2 { get; set; }
+        public string Cpsccm { get; set; }
+        public string Cpisccm { get; set; }
         public int NightTime { get; set; }
         public int? DayTime { get; set; }
-        public int? JLUserId { get; set; }
-        public int? JLApproverId { get; set; }
-        public DateTime? JLDate { get; set; }
-        public DateTime? JLDateApproved { get; set; }
-        public string JLNo { get; set; }
+        public int? JluserId { get; set; }
+        public int? JlapproverId { get; set; }
+        public DateTime? Jldate { get; set; }
+        public DateTime? JldateApproved { get; set; }
+        public string Jlno { get; set; }
         public string SerialNo { get; set; }
-        public decimal? RVSM_GND_CPT { get; set; }
-        public string LTR { get; set; }
-        public decimal? RVSM_GND_STBY { get; set; }
-        public decimal? RVSM_GND_FO { get; set; }
-        public decimal? RVSM_FLT_CPT { get; set; }
-        public decimal? RVSM_FLT_STBY { get; set; }
-        public decimal? RVSM_FLT_FO { get; set; }
-        public decimal? CARGO { get; set; }
+        public decimal? RvsmGndCpt { get; set; }
+        public string Ltr { get; set; }
+        public decimal? RvsmGndStby { get; set; }
+        public decimal? RvsmGndFo { get; set; }
+        public decimal? RvsmFltCpt { get; set; }
+        public decimal? RvsmFltStby { get; set; }
+        public decimal? RvsmFltFo { get; set; }
+        public decimal? Cargo { get; set; }
         public decimal? FuelDensity { get; set; }
         public string CommanderNote { get; set; }
-        public bool? AttASR { get; set; }
+        public bool? AttAsr { get; set; }
         public bool? AttVoyageReport { get; set; }
         public bool? AttRepositioning1 { get; set; }
         public bool? AttRepositioning2 { get; set; }
-        public string JLUser { get; set; }
-        public string JLApprover { get; set; }
-        public int IsJL { get; set; }
-        public int IsJLApproved { get; set; }
-        public string PF { get; set; }
-        public string IPName { get; set; }
-        public int? IPId { get; set; }
-        public string IPScheduleName { get; set; }
-        public string P1Name { get; set; }
-        public int? P1Id { get; set; }
-        public string P1ScheduleName { get; set; }
-        public string P2Name { get; set; }
-        public int? P2Id { get; set; }
-        public string P2ScheduleName { get; set; }
-        public string PIC { get; set; }
-        public int? PICId { get; set; }
-        public string SIC { get; set; }
-        public int? SICId { get; set; }
+        public string Jluser { get; set; }
+        public string Jlapprover { get; set; }
+        public int IsJl { get; set; }
+        public int IsJlapproved { get; set; }
+        public string Pf { get; set; }
+        public string Ipname { get; set; }
+        public int? Ipid { get; set; }
+        public string IpscheduleName { get; set; }
+        public string P1name { get; set; }
+        public int? P1id { get; set; }
+        public string P1scheduleName { get; set; }
+        public string P2name { get; set; }
+        public int? P2id { get; set; }
+        public string P2scheduleName { get; set; }
+        public string Pic { get; set; }
+        public int? Picid { get; set; }
+        public string Sic { get; set; }
+        public int? Sicid { get; set; }
     }
 }

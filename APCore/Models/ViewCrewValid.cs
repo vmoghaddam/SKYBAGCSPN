@@ -9,7 +9,7 @@ namespace APCore.Models
     {
         public int Id { get; set; }
         public int SexId { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public int PersonId { get; set; }
         public int? CustomerId { get; set; }
         public int? GroupId { get; set; }
@@ -23,7 +23,7 @@ namespace APCore.Models
         public string Mobile { get; set; }
         public string Address { get; set; }
         public int? CurrentLocationAirportId { get; set; }
-        public string CurrentLocationAirporIATA { get; set; }
+        public string CurrentLocationAirporIata { get; set; }
         public string CurrentLocationCity { get; set; }
         public int? CurrentLocationCityId { get; set; }
         public int? LastLocationId { get; set; }

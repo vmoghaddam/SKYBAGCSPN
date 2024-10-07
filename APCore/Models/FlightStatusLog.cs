@@ -7,13 +7,13 @@ namespace APCore.Models
 {
     public partial class FlightStatusLog
     {
-        public int ID { get; set; }
-        public int FlightID { get; set; }
-        public int FlightStatusID { get; set; }
+        public int Id { get; set; }
+        public int FlightId { get; set; }
+        public int FlightStatusId { get; set; }
         public DateTime Date { get; set; }
         public string Remark { get; set; }
         public int UserId { get; set; }
 
-        public virtual FlightInformation Flight { get; set; }
+        public virtual FlightInformation1 Flight { get; set; }
     }
 }

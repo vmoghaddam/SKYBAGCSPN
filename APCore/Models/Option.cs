@@ -12,7 +12,7 @@ namespace APCore.Models
             Customers = new HashSet<Customer>();
             PersonCaoIntervalCalanderTypes = new HashSet<Person>();
             PersonMarriages = new HashSet<Person>();
-            PersonNDTIntervalCalanderTypes = new HashSet<Person>();
+            PersonNdtintervalCalanderTypes = new HashSet<Person>();
         }
 
         public int Id { get; set; }
@@ -26,6 +26,6 @@ namespace APCore.Models
         public virtual ICollection<Customer> Customers { get; set; }
         public virtual ICollection<Person> PersonCaoIntervalCalanderTypes { get; set; }
         public virtual ICollection<Person> PersonMarriages { get; set; }
-        public virtual ICollection<Person> PersonNDTIntervalCalanderTypes { get; set; }
+        public virtual ICollection<Person> PersonNdtintervalCalanderTypes { get; set; }
     }
 }

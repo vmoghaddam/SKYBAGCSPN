@@ -19,7 +19,7 @@ namespace APCore.Models
         public string Remark { get; set; }
         public int? BoxId { get; set; }
         public int? FlightPlanItemId { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public string Name { get; set; }
         public string Mobile { get; set; }
         public string Email { get; set; }
@@ -33,7 +33,7 @@ namespace APCore.Models
         public string Username { get; set; }
         public int? CustomerId { get; set; }
         public int MarriageId { get; set; }
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public int SexId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -47,40 +47,40 @@ namespace APCore.Models
         public string Address { get; set; }
         public DateTime? DateJoinAvation { get; set; }
         public int? Exp { get; set; }
-        public DateTime? DateLastCheckUP { get; set; }
-        public DateTime? DateNextCheckUP { get; set; }
+        public DateTime? DateLastCheckUp { get; set; }
+        public DateTime? DateNextCheckUp { get; set; }
         public DateTime? DateYearOfExperience { get; set; }
         public string CaoCardNumber { get; set; }
         public DateTime? DateCaoCardIssue { get; set; }
         public string CompetencyNo { get; set; }
         public int? CaoInterval { get; set; }
         public DateTime? DateCaoCardExpire { get; set; }
-        public string PPLNumber { get; set; }
-        public DateTime? PPLDateIssue { get; set; }
-        public DateTime? PPLDateExpire { get; set; }
-        public int? PPLExpireStatus { get; set; }
-        public string CPLNumber { get; set; }
-        public DateTime? CPLDateIssue { get; set; }
-        public DateTime? CPLDateExpire { get; set; }
-        public int? CPLExpireStatus { get; set; }
-        public string ATPLNumber { get; set; }
-        public DateTime? ATPLDateIssue { get; set; }
-        public DateTime? ATPLDateExpire { get; set; }
-        public int? ATPLExpireStatus { get; set; }
-        public string MCCNumber { get; set; }
-        public DateTime? MCCDateIssue { get; set; }
-        public DateTime? MCCDateExpire { get; set; }
-        public int? MCCExpireStatus { get; set; }
+        public string Pplnumber { get; set; }
+        public DateTime? PpldateIssue { get; set; }
+        public DateTime? PpldateExpire { get; set; }
+        public int? PplexpireStatus { get; set; }
+        public string Cplnumber { get; set; }
+        public DateTime? CpldateIssue { get; set; }
+        public DateTime? CpldateExpire { get; set; }
+        public int? CplexpireStatus { get; set; }
+        public string Atplnumber { get; set; }
+        public DateTime? AtpldateIssue { get; set; }
+        public DateTime? AtpldateExpire { get; set; }
+        public int? AtplexpireStatus { get; set; }
+        public string Mccnumber { get; set; }
+        public DateTime? MccdateIssue { get; set; }
+        public DateTime? MccdateExpire { get; set; }
+        public int? MccexpireStatus { get; set; }
         public int? CurrentLocationAirportId { get; set; }
-        public string CurrentLocationAirporIATA { get; set; }
+        public string CurrentLocationAirporIata { get; set; }
         public int IsMedicalExpired { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
         public int? FromAirportId { get; set; }
         public int? ToAirportId { get; set; }
         public string Flights { get; set; }
         public DateTime? Date { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
     }
 }

@@ -16,6 +16,6 @@ namespace APCore.Models
         public int Flight1 { get; set; }
         public int Flight28 { get; set; }
         public int FlightYear { get; set; }
-        public int FlightCYear { get; set; }
+        public int FlightCyear { get; set; }
     }
 }

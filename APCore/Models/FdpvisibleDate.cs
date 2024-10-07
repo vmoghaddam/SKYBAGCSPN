@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class FDPVisibleDate
+    public partial class FdpvisibleDate
     {
         public int Id { get; set; }
         public DateTime? DateFrom { get; set; }

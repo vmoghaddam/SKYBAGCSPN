@@ -11,8 +11,8 @@ namespace APCore.Models
         public DateTime? DateLocal { get; set; }
         public string FltNo { get; set; }
         public string Route { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
         public string Register { get; set; }
         public int? CockpitCount { get; set; }
         public int? CabinCount { get; set; }

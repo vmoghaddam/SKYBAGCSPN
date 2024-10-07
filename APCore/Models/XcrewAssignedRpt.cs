@@ -5,17 +5,17 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class XCrewAssignedRpt
+    public partial class XcrewAssignedRpt
     {
-        public string SCH { get; set; }
-        public string CODE { get; set; }
-        public string PDATE { get; set; }
-        public DateTime? DATE { get; set; }
-        public string FN { get; set; }
+        public string Sch { get; set; }
+        public string Code { get; set; }
+        public string Pdate { get; set; }
+        public DateTime? Date { get; set; }
+        public string Fn { get; set; }
         public int? FlightId { get; set; }
         public int? CrewId2 { get; set; }
         public string Name { get; set; }
         public string JobGroup { get; set; }
-        public int? groupid { get; set; }
+        public int? Groupid { get; set; }
     }
 }

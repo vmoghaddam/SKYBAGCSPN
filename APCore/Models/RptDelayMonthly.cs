@@ -7,15 +7,15 @@ namespace APCore.Models
 {
     public partial class RptDelayMonthly
     {
-        public int? PYear { get; set; }
-        public string PMonthName { get; set; }
-        public int? PMonth { get; set; }
+        public int? Pyear { get; set; }
+        public string PmonthName { get; set; }
+        public int? Pmonth { get; set; }
         public int Delay { get; set; }
         public int PreDelay { get; set; }
         public decimal? DelayPerLeg { get; set; }
         public decimal PreDelayPerLeg { get; set; }
-        public decimal? DelayPerBL { get; set; }
-        public decimal PreDelayPerBL { get; set; }
+        public decimal? DelayPerBl { get; set; }
+        public decimal PreDelayPerBl { get; set; }
         public int? OnTimeFlightCount { get; set; }
         public int PreOnTimeFlightCount { get; set; }
         public decimal? OnTimeFlightsPerAll { get; set; }
@@ -110,23 +110,23 @@ namespace APCore.Models
         public int PrePaxDelay60120 { get; set; }
         public int FlightCount { get; set; }
         public int PreFlightCount { get; set; }
-        public int? AFlightCount { get; set; }
-        public int PreAFlightCount { get; set; }
+        public int? AflightCount { get; set; }
+        public int PreAflightCount { get; set; }
         public int BlockTime { get; set; }
         public int PreBlockTime { get; set; }
-        public int? ABlockTime { get; set; }
-        public int PreABlockTime { get; set; }
+        public int? AblockTime { get; set; }
+        public int PreAblockTime { get; set; }
         public int FlightTime { get; set; }
         public int PreFlightTime { get; set; }
-        public int? AFlightTime { get; set; }
-        public int PreAFlightTime { get; set; }
+        public int? AflightTime { get; set; }
+        public int PreAflightTime { get; set; }
         public int TotalPax { get; set; }
         public int PreTotalPax { get; set; }
-        public int? ATotalPax { get; set; }
-        public int PreATotalPax { get; set; }
+        public int? AtotalPax { get; set; }
+        public int PreAtotalPax { get; set; }
         public int TotalPaxAll { get; set; }
         public int PreTotalPaxAll { get; set; }
-        public int? ATotalPaxAll { get; set; }
-        public int PreATotalPaxAll { get; set; }
+        public int? AtotalPaxAll { get; set; }
+        public int PreAtotalPaxAll { get; set; }
     }
 }

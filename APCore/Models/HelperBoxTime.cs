@@ -13,13 +13,13 @@ namespace APCore.Models
         public int? Ground { get; set; }
         public int? BoxBegin { get; set; }
         public int BoxEnd { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
         public DateTime? ActualDeparture { get; set; }
         public DateTime? ActualArrival { get; set; }
         public DateTime? ChocksOut { get; set; }
         public DateTime? ChocksIn { get; set; }
-        public int? FlightStatusID { get; set; }
+        public int? FlightStatusId { get; set; }
         public DateTime? Date { get; set; }
         public int? CalanderId { get; set; }
         public long? Rank { get; set; }

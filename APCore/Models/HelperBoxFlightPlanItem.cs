@@ -18,7 +18,7 @@ namespace APCore.Models
         public DateTime? PairItemDeparture { get; set; }
         public DateTime? PairItemArrival { get; set; }
         public int? Break { get; set; }
-        public int? WOCL { get; set; }
+        public int? Wocl { get; set; }
         public decimal? SplitDutyExtension { get; set; }
     }
 }

@@ -176,5 +176,12 @@ namespace APCore.Models
         public string Cpisccm { get; set; }
         public int NightTime { get; set; }
         public int? DayTime { get; set; }
+        public int? ChrAdult { get; set; }
+        public int? ChrChild { get; set; }
+        public int? ChrInfant { get; set; }
+        public int? ChrCapacity { get; set; }
+        public string ChrTitle { get; set; }
+        public string ChrCode { get; set; }
+        public int DefaultChrId { get; set; }
     }
 }

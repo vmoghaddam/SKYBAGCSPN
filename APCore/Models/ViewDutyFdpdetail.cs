@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewDutyFDPDetail
+    public partial class ViewDutyFdpdetail
     {
-        public DateTime CDate { get; set; }
-        public int? CDay { get; set; }
+        public DateTime Cdate { get; set; }
+        public int? Cday { get; set; }
         public DateTime? DatePart { get; set; }
-        public int FDPId { get; set; }
+        public int Fdpid { get; set; }
         public int? CrewId { get; set; }
         public int? PositionId { get; set; }
         public string Position { get; set; }
@@ -23,8 +23,8 @@ namespace APCore.Models
         public int? DateStartDay { get; set; }
         public int? DateEndDay { get; set; }
         public int? DateEndMonth { get; set; }
-        public string FDPTitle { get; set; }
-        public string FDPRemark { get; set; }
+        public string Fdptitle { get; set; }
+        public string Fdpremark { get; set; }
         public string DutyTypeTitle { get; set; }
         public int DutyType { get; set; }
         public string JobGroup { get; set; }

@@ -4026,6 +4026,7 @@ app.factory('flightService', ['$http', '$q', 'ngAuthSettings', '$rootScope', fun
 
         $http.get($rootScope.apiUrl + 'check/lock/' + flightId + '/' + doc).then(function (response) {
             deferred.resolve(response.data);
+            console.log(response);
         }, function (err, status) {
 
             //deferred.reject(Exceptions.getMessage(err));

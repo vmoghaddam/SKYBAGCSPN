@@ -16,37 +16,37 @@ namespace APCore.Models
         public DateTime? Landing { get; set; }
         public DateTime? Takeoff { get; set; }
         public DateTime? ChocksOut { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
         public DateTime? Date { get; set; }
-        public int? FlightStatusID { get; set; }
-        public int? RegisterID { get; set; }
-        public int? FlightTypeID { get; set; }
+        public int? FlightStatusId { get; set; }
+        public int? RegisterId { get; set; }
+        public int? FlightTypeId { get; set; }
         public string FlightType { get; set; }
         public string FlightTypeAbr { get; set; }
         public int? TypeId { get; set; }
         public string FlightNumber { get; set; }
         public int? FromAirport { get; set; }
         public int? ToAirport { get; set; }
-        public DateTime? STAPlanned { get; set; }
-        public DateTime? STDPlanned { get; set; }
-        public int? FlightHPlanned { get; set; }
-        public int? FlightMPlanned { get; set; }
+        public DateTime? Staplanned { get; set; }
+        public DateTime? Stdplanned { get; set; }
+        public int? FlightHplanned { get; set; }
+        public int? FlightMplanned { get; set; }
         public int? CustomerId { get; set; }
         public string FromAirportName { get; set; }
-        public string FromAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
         public int? FromAirportCityId { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string ToAirportIata { get; set; }
         public string ToAirportName { get; set; }
         public int? ToAirportCityId { get; set; }
         public string FromAirportCity { get; set; }
         public string ToAirportCity { get; set; }
         public string AircraftType { get; set; }
         public string Register { get; set; }
-        public int? MSN { get; set; }
+        public int? Msn { get; set; }
         public string FlightStatus { get; set; }
-        public DateTime? STDDay { get; set; }
-        public DateTime? STADay { get; set; }
+        public DateTime? Stdday { get; set; }
+        public DateTime? Staday { get; set; }
         public int? DelayOffBlock { get; set; }
         public int? DelayOnBlock { get; set; }
         public int? DelayTakeoff { get; set; }
@@ -55,10 +55,10 @@ namespace APCore.Models
         public int? IsDelayTakeoff { get; set; }
         public int? IsDelayOnBlock { get; set; }
         public int? IsDelayLanding { get; set; }
-        public int? ActualFlightHOffBlock { get; set; }
-        public int? ActualFlightHTakeoff { get; set; }
-        public decimal? ActualFlightMOffBlock { get; set; }
-        public decimal? ActualFlightMTakeoff { get; set; }
+        public int? ActualFlightHoffBlock { get; set; }
+        public int? ActualFlightHtakeoff { get; set; }
+        public decimal? ActualFlightMoffBlock { get; set; }
+        public decimal? ActualFlightMtakeoff { get; set; }
         public int? CancelReasonId { get; set; }
         public string CancelRemark { get; set; }
         public DateTime? CancelDate { get; set; }
@@ -69,14 +69,14 @@ namespace APCore.Models
         public int PositionId { get; set; }
         public int EmployeeId { get; set; }
         public string Position { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public int PersonId { get; set; }
         public int? GroupId { get; set; }
         public string ImageUrl { get; set; }
         public string JobGroupCode { get; set; }
         public string JobGroup { get; set; }
         public int MarriageId { get; set; }
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public int SexId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -92,8 +92,8 @@ namespace APCore.Models
         public string Address { get; set; }
         public DateTime? DateJoinAvation { get; set; }
         public int? Exp { get; set; }
-        public DateTime? DateLastCheckUP { get; set; }
-        public DateTime? DateNextCheckUP { get; set; }
+        public DateTime? DateLastCheckUp { get; set; }
+        public DateTime? DateNextCheckUp { get; set; }
         public DateTime? DateYearOfExperience { get; set; }
         public string CaoCardNumber { get; set; }
         public DateTime? DateCaoCardIssue { get; set; }
@@ -101,24 +101,24 @@ namespace APCore.Models
         public int? CaoInterval { get; set; }
         public DateTime? DateCaoCardExpire { get; set; }
         public int IsMedicalExpired { get; set; }
-        public string PPLNumber { get; set; }
-        public DateTime? PPLDateIssue { get; set; }
-        public DateTime? PPLDateExpire { get; set; }
-        public int? PPLExpireStatus { get; set; }
-        public string CPLNumber { get; set; }
-        public DateTime? CPLDateIssue { get; set; }
-        public DateTime? CPLDateExpire { get; set; }
-        public int? CPLExpireStatus { get; set; }
-        public string ATPLNumber { get; set; }
-        public DateTime? ATPLDateIssue { get; set; }
-        public DateTime? ATPLDateExpire { get; set; }
-        public int? ATPLExpireStatus { get; set; }
-        public string MCCNumber { get; set; }
-        public DateTime? MCCDateIssue { get; set; }
-        public DateTime? MCCDateExpire { get; set; }
-        public int? MCCExpireStatus { get; set; }
+        public string Pplnumber { get; set; }
+        public DateTime? PpldateIssue { get; set; }
+        public DateTime? PpldateExpire { get; set; }
+        public int? PplexpireStatus { get; set; }
+        public string Cplnumber { get; set; }
+        public DateTime? CpldateIssue { get; set; }
+        public DateTime? CpldateExpire { get; set; }
+        public int? CplexpireStatus { get; set; }
+        public string Atplnumber { get; set; }
+        public DateTime? AtpldateIssue { get; set; }
+        public DateTime? AtpldateExpire { get; set; }
+        public int? AtplexpireStatus { get; set; }
+        public string Mccnumber { get; set; }
+        public DateTime? MccdateIssue { get; set; }
+        public DateTime? MccdateExpire { get; set; }
+        public int? MccexpireStatus { get; set; }
         public int? CurrentLocationAirportId { get; set; }
-        public string CurrentLocationAirporIATA { get; set; }
+        public string CurrentLocationAirporIata { get; set; }
         public DateTime? ReportingTime { get; set; }
         public int? FlightTime { get; set; }
         public int? Ground { get; set; }

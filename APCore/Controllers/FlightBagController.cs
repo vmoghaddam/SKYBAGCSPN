@@ -22,16 +22,16 @@ namespace APCore.Controllers
         }
 
 
-        [HttpPost]
-        [Route("api/dr/save")]
-        public async Task<IActionResult> saveDispatchRelease(DSPReleaseViewModel DSPRelease)
-        {
+        //[HttpPost]
+        //[Route("api/dr/save")]
+        //public async Task<IActionResult> saveDispatchRelease(DSPReleaseViewModel DSPRelease)
+        //{
 
-            var result = await _flightBagService.SaveRelease(DSPRelease);
-            if (!result.IsSuccess)
-                return NotFound(result.Errors);
-            return Ok(result);
-        }
+        //    var result = await _flightBagService.SaveRelease(DSPRelease);
+        //    if (!result.IsSuccess)
+        //        return NotFound(result.Errors);
+        //    return Ok(result);
+        //}
 
 
         [HttpPost]
@@ -96,14 +96,14 @@ namespace APCore.Controllers
             return _flightBagService.GetEFBVoyageReportsAll();
         }
 
-        [HttpGet]
-        [EnableQuery()]
-        [Route("api/voyage/total/query")]
+        //[HttpGet]
+        //[EnableQuery()]
+        //[Route("api/voyage/total/query")]
 
-        public ActionResult<IQueryable<ViewEFBVoyageReport >> GetVoyageReportTotal()
-        {
-            return _flightBagService.GetEFBVoyageReports ();
-        }
+        //public ActionResult<IQueryable<ViewEFBVoyageReport >> GetVoyageReportTotal()
+        //{
+        //    return _flightBagService.GetEFBVoyageReports ();
+        //}
 
 
         [HttpGet]
@@ -263,21 +263,21 @@ namespace APCore.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
-        [Route("api/save/fatigue")]
-        public async Task<IActionResult> FatigueReport(EFBFatigueReport dto)
-        {
-            var result = _flightBagService.FatigueReport(dto);
-            return Ok(result);
-        }
+        //[HttpPost]
+        //[Route("api/save/fatigue")]
+        //public async Task<IActionResult> FatigueReport(EFBFatigueReport dto)
+        //{
+        //    var result = _flightBagService.FatigueReport(dto);
+        //    return Ok(result);
+        //}
 
-        [HttpGet]
-        [Route("api/get/fatigue/{flightId}")]
-        public async Task<IActionResult> GetFatigue(int flightId) 
-        {
-            var result = _flightBagService.GetFatigue(flightId);
-            return Ok(result);
-        }
+        //[HttpGet]
+        //[Route("api/get/fatigue/{flightId}")]
+        //public async Task<IActionResult> GetFatigue(int flightId) 
+        //{
+        //    var result = _flightBagService.GetFatigue(flightId);
+        //    return Ok(result);
+        //}
 
         [HttpGet]
         [Route("api/get/tripInfo/{flightId}")]

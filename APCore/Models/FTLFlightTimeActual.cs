@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class FTLFlightTimeActual
+    public partial class FtlflightTimeActual
     {
         public int FlightId { get; set; }
-        public DateTime? STDDay { get; set; }
+        public DateTime? Stdday { get; set; }
         public int? CrewId { get; set; }
-        public int FDPItemId { get; set; }
-        public int FDPId { get; set; }
+        public int FdpitemId { get; set; }
+        public int Fdpid { get; set; }
         public int? ScheduledFlightTime { get; set; }
         public int? FlightTime { get; set; }
     }

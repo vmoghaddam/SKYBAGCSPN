@@ -9,9 +9,9 @@ namespace APCore.Models
     {
         public Customer()
         {
-            Ac_MSNs = new HashSet<Ac_MSN>();
+            AcMsns = new HashSet<AcMsn>();
             Books = new HashSet<Book>();
-            FlightInformations = new HashSet<FlightInformation>();
+            FlightInformation1s = new HashSet<FlightInformation1>();
             FlightPlans = new HashSet<FlightPlan>();
             Locations = new HashSet<Location>();
             PersonCustomers = new HashSet<PersonCustomer>();
@@ -22,8 +22,8 @@ namespace APCore.Models
         public int? TypeId { get; set; }
         public string Address { get; set; }
         public int? CountryId { get; set; }
-        public string IDNo { get; set; }
-        public string NID { get; set; }
+        public string Idno { get; set; }
+        public string Nid { get; set; }
         public string MapUrl { get; set; }
         public DateTime DateRegister { get; set; }
         public DateTime? DateConfirmed { get; set; }
@@ -36,9 +36,9 @@ namespace APCore.Models
 
         public virtual Country Country { get; set; }
         public virtual Option Type { get; set; }
-        public virtual ICollection<Ac_MSN> Ac_MSNs { get; set; }
+        public virtual ICollection<AcMsn> AcMsns { get; set; }
         public virtual ICollection<Book> Books { get; set; }
-        public virtual ICollection<FlightInformation> FlightInformations { get; set; }
+        public virtual ICollection<FlightInformation1> FlightInformation1s { get; set; }
         public virtual ICollection<FlightPlan> FlightPlans { get; set; }
         public virtual ICollection<Location> Locations { get; set; }
         public virtual ICollection<PersonCustomer> PersonCustomers { get; set; }

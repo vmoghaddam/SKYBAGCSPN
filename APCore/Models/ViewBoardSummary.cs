@@ -17,7 +17,7 @@ namespace APCore.Models
         public int FlightTimeActual { get; set; }
         public int FlightTime { get; set; }
         public int FixTime { get; set; }
-        public int SITATime { get; set; }
+        public int Sitatime { get; set; }
         public int Delay { get; set; }
         public int Pax { get; set; }
         public int PaxAdult { get; set; }

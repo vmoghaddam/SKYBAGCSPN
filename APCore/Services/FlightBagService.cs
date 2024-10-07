@@ -13,7 +13,7 @@ namespace APCore.Services
 
     public interface IFlightBagService
     {
-        Task<DataResponse> SaveRelease(DSPReleaseViewModel DSPRelease);
+        //Task<DataResponse> SaveRelease(DSPReleaseViewModel DSPRelease);
         Task<DataResponse> SaveEFBBirdStrike(EFBBirdStrikeViewModel EFBBirdStrike);
         Task<DataResponse> SaveEFBOccurrence(EFBOccurrenceViewModel EFBOccurrence);
         Task<DataResponse> SaveEFBVoyageReport(EFBVoyageReportViewModel EFBVoyageReport);
@@ -22,7 +22,7 @@ namespace APCore.Services
         // DbSet<ViewEFBVoyageReport> GetEFBVoyageReports();
         DbSet<ViewEFBVoyageReportsAll> GetEFBVoyageReportsAll();
         DbSet<ViewEFBDSPRelease> GetEFBDSPReleases();
-        DbSet<ViewEFBVoyageReport> GetEFBVoyageReports();
+        //DbSet<ViewEFBVoyageReport> GetEFBVoyageReports();
         Task<DataResponse> GetEFBVoyageReportByFlightId(int flightId);
         Task<DataResponse> GetEFBVoyageReportById(int flightId);
         DbSet<ViewEFBASR> GetEFBASRs();
@@ -41,8 +41,8 @@ namespace APCore.Services
         Task<DataResponse> GetEFBASRById(int Id);
         DbSet<EFBBirdStrikeCAO> GetEFBBirdStrikeCAOs();
         Task<DataResponse> GetEFBBirdStrikeCAOByFlightId(int flightId);
-        Task<DataResponse> FatigueReport(EFBFatigueReport dto);
-        Task<DataResponse> GetFatigue(int flightId);
+        //Task<DataResponse> FatigueReport(EFBFatigueReport dto);
+        //Task<DataResponse> GetFatigue(int flightId);
         Task<DataResponse> GetTripInfo(int flightId);
     }
 
@@ -71,11 +71,11 @@ namespace APCore.Services
 
         }
 
-        public DbSet<ViewEFBVoyageReport> GetEFBVoyageReports()
-        {
-            return _context.ViewEFBVoyageReports;
+        //public DbSet<ViewEFBVoyageReport> GetEFBVoyageReports()
+        //{
+        //    return _context.ViewEFBVoyageReports;
 
-        }
+        //}
 
         public DbSet<ViewEFBASR> GetEFBASRs()
         {
@@ -405,6 +405,38 @@ namespace APCore.Services
             entity.IsOthers = EFBASR.IsOthers;
             entity.SigxWXTypeId = EFBASR.SigxWXTypeId;
             entity.BSTurningId = EFBASR.BSTurningId;
+            entity.CallSign = EFBASR.CallSign;
+            entity.DivertedTo = EFBASR.DivertedTo;
+            entity.FuelQuantity = EFBASR.FuelQuantity;
+            entity.FuelLocation = EFBASR.FuelLocation;
+            entity.FuelDumpTime = EFBASR.FuelDumpTime;
+            entity.ATLRefNo = EFBASR.ATLRefNo;
+            entity.WindDir = EFBASR.WindDir;
+            entity.WindSpeed = EFBASR.WindSpeed;
+            entity.Temp = EFBASR.Temp;
+            entity.Visibility = EFBASR.Visibility;
+            entity.QNH = EFBASR.QNH;
+            entity.CloudAmount = EFBASR.CloudAmount;
+            entity.CloudType = EFBASR.CloudType;
+            entity.CloudHeight = EFBASR.CloudHeight;
+            entity.NatureOfFlight = EFBASR.NatureOfFlight;
+            entity.AirSpace = EFBASR.Airspace;
+            entity.Runway = EFBASR.Runway;
+            entity.ACPart = EFBASR.ACPart;
+            entity.ACPartStat = EFBASR.ACPartStat;
+            entity.RunwaySurface = EFBASR.RunwaySurface;
+            entity.ProximitryHor = EFBASR.ProximitryHor;
+            entity.ProximitryVer = EFBASR.ProximitryVer;
+            entity.DescriptionOfIncidentRunway = EFBASR.DescriptionOfIncidentRunway;
+            entity.CommunicationDiff = EFBASR.CommunicationDiff;
+            entity.ATCMemory = EFBASR.ATCMemory;
+            entity.ReactionTime = EFBASR.ReactionTime;
+            entity.CorrectiveAction = EFBASR.CorrectiveAction;
+            entity.CommunicationReviewed = EFBASR.CommunicationReviewed;
+            entity.CM2 = EFBASR.CM2;
+            entity.FlightLevel = EFBASR.FlightLevel;
+
+
 
 
             var saveResult = await _context.SaveAsync();
@@ -659,216 +691,216 @@ namespace APCore.Services
 
         }
 
-        public async Task<DataResponse> SaveRelease(DSPReleaseViewModel DSPRelease)
-        {
-            var release = await _context.EFBDSPReleases.FirstOrDefaultAsync(q => q.FlightId == DSPRelease.FlightId);
-            if (release == null)
-            {
-                release = new EFBDSPRelease();
-                _context.EFBDSPReleases.Add(release);
+        //public async Task<DataResponse> SaveRelease(DSPReleaseViewModel DSPRelease)
+        //{
+        //    var release = await _context.EFBDSPReleases.FirstOrDefaultAsync(q => q.FlightId == DSPRelease.FlightId);
+        //    if (release == null)
+        //    {
+        //        release = new EFBDSPRelease();
+        //        _context.EFBDSPReleases.Add(release);
 
-            }
+        //    }
 
-            release.User = DSPRelease.User;
-            release.DateUpdate = DateTime.UtcNow.ToString("yyyyMMddHHmm");
-
-
-            release.FlightId = DSPRelease.FlightId;
-            release.ActualWXDSP = DSPRelease.ActualWXDSP;
-            release.ActualWXCPT = DSPRelease.ActualWXCPT;
-            release.ActualWXDSPRemark = DSPRelease.ActualWXDSPRemark;
-            release.ActualWXCPTRemark = DSPRelease.ActualWXCPTRemark;
-            release.WXForcastDSP = DSPRelease.WXForcastDSP;
-            release.WXForcastCPT = DSPRelease.WXForcastCPT;
-            release.WXForcastDSPRemark = DSPRelease.WXForcastDSPRemark;
-            release.WXForcastCPTRemark = DSPRelease.WXForcastCPTRemark;
-            release.SigxWXDSP = DSPRelease.SigxWXDSP;
-            release.SigxWXCPT = DSPRelease.SigxWXCPT;
-            release.SigxWXDSPRemark = DSPRelease.SigxWXDSPRemark;
-            release.SigxWXCPTRemark = DSPRelease.SigxWXCPTRemark;
-            release.WindChartDSP = DSPRelease.WindChartDSP;
-            release.WindChartCPT = DSPRelease.WindChartCPT;
-            release.WindChartDSPRemark = DSPRelease.WindChartDSPRemark;
-            release.WindChartCPTRemark = DSPRelease.WindChartCPTRemark;
-            release.NotamDSP = DSPRelease.NotamDSP;
-            release.NotamCPT = DSPRelease.NotamCPT;
-            release.NotamDSPRemark = DSPRelease.NotamDSPRemark;
-            release.NotamCPTRemark = DSPRelease.NotamCPTRemark;
-            release.ComputedFligthPlanDSP = DSPRelease.ComputedFligthPlanDSP;
-            release.ComputedFligthPlanCPT = DSPRelease.ComputedFligthPlanCPT;
-            release.ComputedFligthPlanDSPRemark = DSPRelease.ComputedFligthPlanDSPRemark;
-            release.ComputedFligthPlanCPTRemark = DSPRelease.ComputedFligthPlanCPTRemark;
-            release.ATCFlightPlanDSP = DSPRelease.ATCFlightPlanDSP;
-            release.ATCFlightPlanCPT = DSPRelease.ATCFlightPlanCPT;
-            release.ATCFlightPlanDSPRemark = DSPRelease.ATCFlightPlanDSPRemark;
-            release.ATCFlightPlanCPTRemark = DSPRelease.ATCFlightPlanCPTRemark;
-            release.PermissionsDSP = DSPRelease.PermissionsDSP;
-            release.PermissionsCPT = DSPRelease.PermissionsCPT;
-            release.PermissionsDSPRemark = DSPRelease.PermissionsDSPRemark;
-            release.PermissionsCPTRemark = DSPRelease.PermissionsCPTRemark;
-            release.JeppesenAirwayManualDSP = DSPRelease.JeppesenAirwayManualDSP;
-            release.JeppesenAirwayManualCPT = DSPRelease.JeppesenAirwayManualCPT;
-            release.JeppesenAirwayManualDSPRemark = DSPRelease.JeppesenAirwayManualDSPRemark;
-            release.JeppesenAirwayManualCPTRemark = DSPRelease.JeppesenAirwayManualCPTRemark;
-            release.MinFuelRequiredDSP = DSPRelease.MinFuelRequiredDSP;
-            release.MinFuelRequiredCPT = DSPRelease.MinFuelRequiredCPT;
-            release.MinFuelRequiredCFP = DSPRelease.MinFuelRequiredCFP;
-            release.MinFuelRequiredPilotReq = DSPRelease.MinFuelRequiredPilotReq;
-            release.GeneralDeclarationDSP = DSPRelease.GeneralDeclarationDSP;
-            release.GeneralDeclarationCPT = DSPRelease.GeneralDeclarationCPT;
-            release.GeneralDeclarationDSPRemark = DSPRelease.GeneralDeclarationDSPRemark;
-            release.GeneralDeclarationCPTRemark = DSPRelease.GeneralDeclarationCPTRemark;
-            release.FlightReportDSP = DSPRelease.FlightReportDSP;
-            release.FlightReportCPT = DSPRelease.FlightReportCPT;
-            release.FlightReportDSPRemark = DSPRelease.FlightReportDSPRemark;
-            release.FlightReportCPTRemark = DSPRelease.FlightReportCPTRemark;
-            release.TOLndCardsDSP = DSPRelease.TOLndCardsDSP;
-            release.TOLndCardsCPT = DSPRelease.TOLndCardsCPT;
-            release.TOLndCardsDSPRemark = DSPRelease.TOLndCardsDSPRemark;
-            release.TOLndCardsCPTRemark = DSPRelease.TOLndCardsCPTRemark;
-            release.LoadSheetDSP = DSPRelease.LoadSheetDSP;
-            release.LoadSheetCPT = DSPRelease.LoadSheetCPT;
-            release.LoadSheetDSPRemark = DSPRelease.LoadSheetDSPRemark;
-            release.LoadSheetCPTRemark = DSPRelease.LoadSheetCPTRemark;
-            release.FlightSafetyReportDSP = DSPRelease.FlightSafetyReportDSP;
-            release.FlightSafetyReportCPT = DSPRelease.FlightSafetyReportCPT;
-            release.FlightSafetyReportDSPRemark = DSPRelease.FlightSafetyReportDSPRemark;
-            release.FlightSafetyReportCPTRemark = DSPRelease.FlightSafetyReportCPTRemark;
-            release.AVSECIncidentReportDSP = DSPRelease.AVSECIncidentReportDSP;
-            release.AVSECIncidentReportCPT = DSPRelease.AVSECIncidentReportCPT;
-            release.AVSECIncidentReportDSPRemark = DSPRelease.AVSECIncidentReportDSPRemark;
-            release.AVSECIncidentReportCPTRemark = DSPRelease.AVSECIncidentReportCPTRemark;
-            release.OperationEngineeringDSP = DSPRelease.OperationEngineeringDSP;
-            release.OperationEngineeringCPT = DSPRelease.OperationEngineeringCPT;
-            release.OperationEngineeringDSPRemark = DSPRelease.OperationEngineeringDSPRemark;
-            release.OperationEngineeringCPTRemark = DSPRelease.OperationEngineeringCPTRemark;
-            release.VoyageReportDSP = DSPRelease.VoyageReportDSP;
-            release.VoyageReportCPT = DSPRelease.VoyageReportCPT;
-            release.VoyageReportDSPRemark = DSPRelease.VoyageReportDSPRemark;
-            release.VoyageReportCPTRemark = DSPRelease.VoyageReportCPTRemark;
-            release.PIFDSP = DSPRelease.PIFDSP;
-            release.PIFCPT = DSPRelease.PIFCPT;
-            release.PIFDSPRemark = DSPRelease.PIFDSPRemark;
-            release.PIFCPTRemark = DSPRelease.PIFCPTRemark;
-            release.GoodDeclarationDSP = DSPRelease.GoodDeclarationDSP;
-            release.GoodDeclarationCPT = DSPRelease.GoodDeclarationCPT;
-            release.GoodDeclarationDSPRemark = DSPRelease.GoodDeclarationDSPRemark;
-            release.GoodDeclarationCPTRemark = DSPRelease.GoodDeclarationCPTRemark;
-            release.IPADDSP = DSPRelease.IPADDSP;
-            release.IPADCPT = DSPRelease.IPADCPT;
-            release.IPADDSPRemark = DSPRelease.IPADDSPRemark;
-            release.IPADCPTRemark = DSPRelease.IPADCPTRemark;
-            release.DateConfirmed = DSPRelease.DateConfirmed;
-            release.DispatcherId = DSPRelease.DispatcherId;
-            release.ATSFlightPlanCMDR = DSPRelease.ATSFlightPlanCMDR;
-            release.ATSFlightPlanFOO = DSPRelease.ATSFlightPlanFOO;
-            release.ATSFlightPlanFOORemark = DSPRelease.ATSFlightPlanFOORemark;
-            release.ATSFlightPlanCMDRRemark = DSPRelease.ATSFlightPlanCMDRRemark;
-            release.VldCMCCMDR = DSPRelease.VldCMCCMDR;
-            release.VldCMCCMDRRemark = DSPRelease.VldCMCCMDRRemark;
-            release.VldCMCFOO = DSPRelease.VldCMCFOO;
-            release.VldCMCFOORemark = DSPRelease.VldCMCFOORemark;
-            release.VldEFBCMDR = DSPRelease.VldEFBCMDR;
-            release.VldEFBCMDRRemark = DSPRelease.VldEFBCMDRRemark;
-            release.VldEFBFOO = DSPRelease.VldEFBFOO;
-            release.VldEFBFOORemark = DSPRelease.VldEFBFOORemark;
-            release.VldFlightCrewCMDR = DSPRelease.VldFlightCrewCMDR;
-            release.VldFlightCrewCMDRRemark = DSPRelease.VldFlightCrewCMDRRemark;
-            release.VldFlightCrewFOO = DSPRelease.VldFlightCrewFOO;
-            release.VldFlightCrewFOORemark = DSPRelease.VldFlightCrewFOORemark;
-            release.VldMedicalCMDR = DSPRelease.VldMedicalCMDR;
-            release.VldMedicalCMDRRemark = DSPRelease.VldMedicalCMDRRemark;
-            release.VldMedicalFOO = DSPRelease.VldMedicalFOO;
-            release.VldMedicalFOORemark = DSPRelease.VldMedicalFOORemark;
-            release.VldPassportCMDR = DSPRelease.VldPassportCMDR;
-            release.VldPassportCMDRRemark = DSPRelease.VldPassportCMDRRemark;
-            release.VldPassportFOO = DSPRelease.VldPassportFOO;
-            release.VldPassportFOORemark = DSPRelease.VldPassportFOORemark;
-            release.VldRampPassCMDR = DSPRelease.VldRampPassCMDR;
-            release.VldRampPassCMDRRemark = DSPRelease.VldRampPassCMDRRemark;
-            release.VldRampPassFOO = DSPRelease.VldRampPassFOO;
-            release.VldRampPassFOORemark = DSPRelease.VldRampPassFOORemark;
-            release.OperationalFlightPlanFOO = DSPRelease.OperationalFlightPlanFOO;
-            release.OperationalFlightPlanFOORemark = DSPRelease.OperationalFlightPlanFOORemark;
-            release.OperationalFlightPlanCMDR = DSPRelease.OperationalFlightPlanCMDR;
-            release.OperationalFlightPlanCMDRRemark = DSPRelease.OperationalFlightPlanCMDRRemark;
-
-            var saveResult = await _context.SaveAsync();
-            if (saveResult.Succeed)
-            {
-
-                return new DataResponse() { IsSuccess = true, Data = release };
-            }
-
-            else
-                return new DataResponse() { IsSuccess = false };
-
-        }
+        //    release.User = DSPRelease.User;
+        //    release.DateUpdate = DateTime.UtcNow.ToString("yyyyMMddHHmm");
 
 
-        public async Task<DataResponse> FatigueReport(EFBFatigueReport dto)
-        {
-            var entity = _context.EFBFatigueReports.SingleOrDefault(q => q.FlightId == dto.FlightId);
-            if (entity == null)
-            {
-                entity = new EFBFatigueReport();
-                _context.EFBFatigueReports.Add(entity);
-            }
+        //    release.FlightId = DSPRelease.FlightId;
+        //    release.ActualWXDSP = DSPRelease.ActualWXDSP;
+        //    release.ActualWXCPT = DSPRelease.ActualWXCPT;
+        //    release.ActualWXDSPRemark = DSPRelease.ActualWXDSPRemark;
+        //    release.ActualWXCPTRemark = DSPRelease.ActualWXCPTRemark;
+        //    release.WXForcastDSP = DSPRelease.WXForcastDSP;
+        //    release.WXForcastCPT = DSPRelease.WXForcastCPT;
+        //    release.WXForcastDSPRemark = DSPRelease.WXForcastDSPRemark;
+        //    release.WXForcastCPTRemark = DSPRelease.WXForcastCPTRemark;
+        //    release.SigxWXDSP = DSPRelease.SigxWXDSP;
+        //    release.SigxWXCPT = DSPRelease.SigxWXCPT;
+        //    release.SigxWXDSPRemark = DSPRelease.SigxWXDSPRemark;
+        //    release.SigxWXCPTRemark = DSPRelease.SigxWXCPTRemark;
+        //    release.WindChartDSP = DSPRelease.WindChartDSP;
+        //    release.WindChartCPT = DSPRelease.WindChartCPT;
+        //    release.WindChartDSPRemark = DSPRelease.WindChartDSPRemark;
+        //    release.WindChartCPTRemark = DSPRelease.WindChartCPTRemark;
+        //    release.NotamDSP = DSPRelease.NotamDSP;
+        //    release.NotamCPT = DSPRelease.NotamCPT;
+        //    release.NotamDSPRemark = DSPRelease.NotamDSPRemark;
+        //    release.NotamCPTRemark = DSPRelease.NotamCPTRemark;
+        //    release.ComputedFligthPlanDSP = DSPRelease.ComputedFligthPlanDSP;
+        //    release.ComputedFligthPlanCPT = DSPRelease.ComputedFligthPlanCPT;
+        //    release.ComputedFligthPlanDSPRemark = DSPRelease.ComputedFligthPlanDSPRemark;
+        //    release.ComputedFligthPlanCPTRemark = DSPRelease.ComputedFligthPlanCPTRemark;
+        //    release.ATCFlightPlanDSP = DSPRelease.ATCFlightPlanDSP;
+        //    release.ATCFlightPlanCPT = DSPRelease.ATCFlightPlanCPT;
+        //    release.ATCFlightPlanDSPRemark = DSPRelease.ATCFlightPlanDSPRemark;
+        //    release.ATCFlightPlanCPTRemark = DSPRelease.ATCFlightPlanCPTRemark;
+        //    release.PermissionsDSP = DSPRelease.PermissionsDSP;
+        //    release.PermissionsCPT = DSPRelease.PermissionsCPT;
+        //    release.PermissionsDSPRemark = DSPRelease.PermissionsDSPRemark;
+        //    release.PermissionsCPTRemark = DSPRelease.PermissionsCPTRemark;
+        //    release.JeppesenAirwayManualDSP = DSPRelease.JeppesenAirwayManualDSP;
+        //    release.JeppesenAirwayManualCPT = DSPRelease.JeppesenAirwayManualCPT;
+        //    release.JeppesenAirwayManualDSPRemark = DSPRelease.JeppesenAirwayManualDSPRemark;
+        //    release.JeppesenAirwayManualCPTRemark = DSPRelease.JeppesenAirwayManualCPTRemark;
+        //    release.MinFuelRequiredDSP = DSPRelease.MinFuelRequiredDSP;
+        //    release.MinFuelRequiredCPT = DSPRelease.MinFuelRequiredCPT;
+        //    release.MinFuelRequiredCFP = DSPRelease.MinFuelRequiredCFP;
+        //    release.MinFuelRequiredPilotReq = DSPRelease.MinFuelRequiredPilotReq;
+        //    release.GeneralDeclarationDSP = DSPRelease.GeneralDeclarationDSP;
+        //    release.GeneralDeclarationCPT = DSPRelease.GeneralDeclarationCPT;
+        //    release.GeneralDeclarationDSPRemark = DSPRelease.GeneralDeclarationDSPRemark;
+        //    release.GeneralDeclarationCPTRemark = DSPRelease.GeneralDeclarationCPTRemark;
+        //    release.FlightReportDSP = DSPRelease.FlightReportDSP;
+        //    release.FlightReportCPT = DSPRelease.FlightReportCPT;
+        //    release.FlightReportDSPRemark = DSPRelease.FlightReportDSPRemark;
+        //    release.FlightReportCPTRemark = DSPRelease.FlightReportCPTRemark;
+        //    release.TOLndCardsDSP = DSPRelease.TOLndCardsDSP;
+        //    release.TOLndCardsCPT = DSPRelease.TOLndCardsCPT;
+        //    release.TOLndCardsDSPRemark = DSPRelease.TOLndCardsDSPRemark;
+        //    release.TOLndCardsCPTRemark = DSPRelease.TOLndCardsCPTRemark;
+        //    release.LoadSheetDSP = DSPRelease.LoadSheetDSP;
+        //    release.LoadSheetCPT = DSPRelease.LoadSheetCPT;
+        //    release.LoadSheetDSPRemark = DSPRelease.LoadSheetDSPRemark;
+        //    release.LoadSheetCPTRemark = DSPRelease.LoadSheetCPTRemark;
+        //    release.FlightSafetyReportDSP = DSPRelease.FlightSafetyReportDSP;
+        //    release.FlightSafetyReportCPT = DSPRelease.FlightSafetyReportCPT;
+        //    release.FlightSafetyReportDSPRemark = DSPRelease.FlightSafetyReportDSPRemark;
+        //    release.FlightSafetyReportCPTRemark = DSPRelease.FlightSafetyReportCPTRemark;
+        //    release.AVSECIncidentReportDSP = DSPRelease.AVSECIncidentReportDSP;
+        //    release.AVSECIncidentReportCPT = DSPRelease.AVSECIncidentReportCPT;
+        //    release.AVSECIncidentReportDSPRemark = DSPRelease.AVSECIncidentReportDSPRemark;
+        //    release.AVSECIncidentReportCPTRemark = DSPRelease.AVSECIncidentReportCPTRemark;
+        //    release.OperationEngineeringDSP = DSPRelease.OperationEngineeringDSP;
+        //    release.OperationEngineeringCPT = DSPRelease.OperationEngineeringCPT;
+        //    release.OperationEngineeringDSPRemark = DSPRelease.OperationEngineeringDSPRemark;
+        //    release.OperationEngineeringCPTRemark = DSPRelease.OperationEngineeringCPTRemark;
+        //    release.VoyageReportDSP = DSPRelease.VoyageReportDSP;
+        //    release.VoyageReportCPT = DSPRelease.VoyageReportCPT;
+        //    release.VoyageReportDSPRemark = DSPRelease.VoyageReportDSPRemark;
+        //    release.VoyageReportCPTRemark = DSPRelease.VoyageReportCPTRemark;
+        //    release.PIFDSP = DSPRelease.PIFDSP;
+        //    release.PIFCPT = DSPRelease.PIFCPT;
+        //    release.PIFDSPRemark = DSPRelease.PIFDSPRemark;
+        //    release.PIFCPTRemark = DSPRelease.PIFCPTRemark;
+        //    release.GoodDeclarationDSP = DSPRelease.GoodDeclarationDSP;
+        //    release.GoodDeclarationCPT = DSPRelease.GoodDeclarationCPT;
+        //    release.GoodDeclarationDSPRemark = DSPRelease.GoodDeclarationDSPRemark;
+        //    release.GoodDeclarationCPTRemark = DSPRelease.GoodDeclarationCPTRemark;
+        //    release.IPADDSP = DSPRelease.IPADDSP;
+        //    release.IPADCPT = DSPRelease.IPADCPT;
+        //    release.IPADDSPRemark = DSPRelease.IPADDSPRemark;
+        //    release.IPADCPTRemark = DSPRelease.IPADCPTRemark;
+        //    release.DateConfirmed = DSPRelease.DateConfirmed;
+        //    release.DispatcherId = DSPRelease.DispatcherId;
+        //    release.ATSFlightPlanCMDR = DSPRelease.ATSFlightPlanCMDR;
+        //    release.ATSFlightPlanFOO = DSPRelease.ATSFlightPlanFOO;
+        //    release.ATSFlightPlanFOORemark = DSPRelease.ATSFlightPlanFOORemark;
+        //    release.ATSFlightPlanCMDRRemark = DSPRelease.ATSFlightPlanCMDRRemark;
+        //    release.VldCMCCMDR = DSPRelease.VldCMCCMDR;
+        //    release.VldCMCCMDRRemark = DSPRelease.VldCMCCMDRRemark;
+        //    release.VldCMCFOO = DSPRelease.VldCMCFOO;
+        //    release.VldCMCFOORemark = DSPRelease.VldCMCFOORemark;
+        //    release.VldEFBCMDR = DSPRelease.VldEFBCMDR;
+        //    release.VldEFBCMDRRemark = DSPRelease.VldEFBCMDRRemark;
+        //    release.VldEFBFOO = DSPRelease.VldEFBFOO;
+        //    release.VldEFBFOORemark = DSPRelease.VldEFBFOORemark;
+        //    release.VldFlightCrewCMDR = DSPRelease.VldFlightCrewCMDR;
+        //    release.VldFlightCrewCMDRRemark = DSPRelease.VldFlightCrewCMDRRemark;
+        //    release.VldFlightCrewFOO = DSPRelease.VldFlightCrewFOO;
+        //    release.VldFlightCrewFOORemark = DSPRelease.VldFlightCrewFOORemark;
+        //    release.VldMedicalCMDR = DSPRelease.VldMedicalCMDR;
+        //    release.VldMedicalCMDRRemark = DSPRelease.VldMedicalCMDRRemark;
+        //    release.VldMedicalFOO = DSPRelease.VldMedicalFOO;
+        //    release.VldMedicalFOORemark = DSPRelease.VldMedicalFOORemark;
+        //    release.VldPassportCMDR = DSPRelease.VldPassportCMDR;
+        //    release.VldPassportCMDRRemark = DSPRelease.VldPassportCMDRRemark;
+        //    release.VldPassportFOO = DSPRelease.VldPassportFOO;
+        //    release.VldPassportFOORemark = DSPRelease.VldPassportFOORemark;
+        //    release.VldRampPassCMDR = DSPRelease.VldRampPassCMDR;
+        //    release.VldRampPassCMDRRemark = DSPRelease.VldRampPassCMDRRemark;
+        //    release.VldRampPassFOO = DSPRelease.VldRampPassFOO;
+        //    release.VldRampPassFOORemark = DSPRelease.VldRampPassFOORemark;
+        //    release.OperationalFlightPlanFOO = DSPRelease.OperationalFlightPlanFOO;
+        //    release.OperationalFlightPlanFOORemark = DSPRelease.OperationalFlightPlanFOORemark;
+        //    release.OperationalFlightPlanCMDR = DSPRelease.OperationalFlightPlanCMDR;
+        //    release.OperationalFlightPlanCMDRRemark = DSPRelease.OperationalFlightPlanCMDRRemark;
 
-            entity.ReporterName = dto.ReporterName;
-            entity.Rank = dto.Rank;
-            entity.PositionInFlight = dto.PositionInFlight;
-            //entity.MaxDuty = dto.MaxDuty;
-            //entity.TotalDuty = dto.TotalDuty;
-            entity.RequiredRest = dto.RequiredRest;
-            entity.ActualRest = dto.ActualRest;
-            entity.Fidgeting = dto.Fidgeting;
-            entity.ImpairedAttention = dto.ImpairedAttention;
-            entity.RubbingEyes = dto.RubbingEyes;
-            entity.ImpairedMemory = dto.ImpairedMemory;
-            entity.Yawing = dto.Yawing;
-            entity.ImpairedProblemSolving = dto.ImpairedProblemSolving;
-            entity.LongBlinks = dto.LongBlinks;
-            entity.StaringBlankly = dto.StaringBlankly;
-            entity.ImpairedSituationalAwareness = dto.ImpairedSituationalAwareness;
-            entity.NegativeMood = dto.NegativeMood;
-            entity.DifficultyKeepingEyes = dto.DifficultyKeepingEyes;
-            entity.HeadNodding = dto.HeadNodding;
-            entity.ReducedCommunication = dto.ReducedCommunication;
-            entity.Other = dto.Other;
-            entity.FullyAlert = dto.FullyAlert;
-            entity.Lively = dto.Lively;
-            entity.Fresh = dto.Fresh;
-            entity.LittleTired = dto.LittleTired;
-            entity.AlmostTired = dto.AlmostTired;
-            entity.VeryTired = dto.VeryTired;
-            entity.Exhausted = dto.Exhausted;
-            entity.Report = dto.Report;
-            entity.IncreasedRiskTaking = dto.IncreasedRiskTaking;
-            entity.FrequentBlinking = dto.FrequentBlinking;
-            entity.FlightId = dto.FlightId;
-            entity.State = dto.State;
-            entity.FollowUp = dto.FollowUp;
-            entity.Day = dto.Day;
-            entity.Night = dto.Night;
-            entity.Sector = dto.Sector;
-            entity.State = dto.State;
+        //    var saveResult = await _context.SaveAsync();
+        //    if (saveResult.Succeed)
+        //    {
 
-            var saveResult = await _context.SaveAsync();
+        //        return new DataResponse() { IsSuccess = true, Data = release };
+        //    }
 
-            if (saveResult.Succeed)
-                return new DataResponse() { IsSuccess = true, Data = entity };
-            else
-                return new DataResponse() { IsSuccess = false };
+        //    else
+        //        return new DataResponse() { IsSuccess = false };
 
-        }
+        //}
 
 
-        public async Task<DataResponse> GetFatigue(int flightId) 
-        {
-            var entity = _context.ViewEFBFatigueReports.SingleOrDefault(q => q.FlightId == flightId);
-            return new DataResponse() { IsSuccess = true, Data = entity };
-        }
+        //public async Task<DataResponse> FatigueReport(EFBFatigueReport dto)
+        //{
+        //    var entity = _context.EFBFatigueReports.SingleOrDefault(q => q.FlightId == dto.FlightId);
+        //    if (entity == null)
+        //    {
+        //        entity = new EFBFatigueReport();
+        //        _context.EFBFatigueReports.Add(entity);
+        //    }
+
+        //    entity.ReporterName = dto.ReporterName;
+        //    entity.Rank = dto.Rank;
+        //    entity.PositionInFlight = dto.PositionInFlight;
+        //    //entity.MaxDuty = dto.MaxDuty;
+        //    //entity.TotalDuty = dto.TotalDuty;
+        //    entity.RequiredRest = dto.RequiredRest;
+        //    entity.ActualRest = dto.ActualRest;
+        //    entity.Fidgeting = dto.Fidgeting;
+        //    entity.ImpairedAttention = dto.ImpairedAttention;
+        //    entity.RubbingEyes = dto.RubbingEyes;
+        //    entity.ImpairedMemory = dto.ImpairedMemory;
+        //    entity.Yawing = dto.Yawing;
+        //    entity.ImpairedProblemSolving = dto.ImpairedProblemSolving;
+        //    entity.LongBlinks = dto.LongBlinks;
+        //    entity.StaringBlankly = dto.StaringBlankly;
+        //    entity.ImpairedSituationalAwareness = dto.ImpairedSituationalAwareness;
+        //    entity.NegativeMood = dto.NegativeMood;
+        //    entity.DifficultyKeepingEyes = dto.DifficultyKeepingEyes;
+        //    entity.HeadNodding = dto.HeadNodding;
+        //    entity.ReducedCommunication = dto.ReducedCommunication;
+        //    entity.Other = dto.Other;
+        //    entity.FullyAlert = dto.FullyAlert;
+        //    entity.Lively = dto.Lively;
+        //    entity.Fresh = dto.Fresh;
+        //    entity.LittleTired = dto.LittleTired;
+        //    entity.AlmostTired = dto.AlmostTired;
+        //    entity.VeryTired = dto.VeryTired;
+        //    entity.Exhausted = dto.Exhausted;
+        //    entity.Report = dto.Report;
+        //    entity.IncreasedRiskTaking = dto.IncreasedRiskTaking;
+        //    entity.FrequentBlinking = dto.FrequentBlinking;
+        //    entity.FlightId = dto.FlightId;
+        //    entity.State = dto.State;
+        //    entity.FollowUp = dto.FollowUp;
+        //    entity.Day = dto.Day;
+        //    entity.Night = dto.Night;
+        //    entity.Sector = dto.Sector;
+        //    entity.State = dto.State;
+
+        //    var saveResult = await _context.SaveAsync();
+
+        //    if (saveResult.Succeed)
+        //        return new DataResponse() { IsSuccess = true, Data = entity };
+        //    else
+        //        return new DataResponse() { IsSuccess = false };
+
+        //}
+
+
+        //public async Task<DataResponse> GetFatigue(int flightId) 
+        //{
+        //    var entity = _context.ViewEFBFatigueReports.SingleOrDefault(q => q.FlightId == flightId);
+        //    return new DataResponse() { IsSuccess = true, Data = entity };
+        //}
 
         public async Task<DataResponse> GetTripInfo(int flightId) {
             var entity = _context.AppLegs.SingleOrDefault(q => q.FlightId == flightId);

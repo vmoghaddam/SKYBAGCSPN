@@ -9,7 +9,7 @@ namespace APCore.Models
     {
         public AcMsn()
         {
-            FlightInformations = new HashSet<FlightInformation>();
+            FlightInformation1s = new HashSet<FlightInformation1>();
             FlightPlanItems = new HashSet<FlightPlanItem>();
             FlightPlanRegisterPlannedRegisters = new HashSet<FlightPlanRegister>();
             FlightPlanRegisterRegisters = new HashSet<FlightPlanRegister>();
@@ -61,7 +61,7 @@ namespace APCore.Models
         public virtual AircraftModel AcModel { get; set; }
         public virtual Organization AirlineOperators { get; set; }
         public virtual Customer Customer { get; set; }
-        public virtual ICollection<FlightInformation> FlightInformations { get; set; }
+        public virtual ICollection<FlightInformation1> FlightInformation1s { get; set; }
         public virtual ICollection<FlightPlanItem> FlightPlanItems { get; set; }
         public virtual ICollection<FlightPlanRegister> FlightPlanRegisterPlannedRegisters { get; set; }
         public virtual ICollection<FlightPlanRegister> FlightPlanRegisterRegisters { get; set; }

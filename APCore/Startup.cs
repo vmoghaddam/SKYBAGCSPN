@@ -92,7 +92,7 @@ namespace APCore
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IFlightService, FlightService>();
             services.AddScoped<ILibraryService, LibraryService>();
-            services.AddScoped<IWeatherService, WeatherService>();
+            //services.AddScoped<IWeatherService, WeatherService>();
             services.AddScoped<IFlightBagService, FlightBagService>();
             services.AddScoped<IAirportService, AirportService>();
             services.AddScoped<ICertificateService, CertificateService>();

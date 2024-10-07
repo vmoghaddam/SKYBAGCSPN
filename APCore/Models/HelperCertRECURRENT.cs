@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperCertRECURRENT
+    public partial class HelperCertRecurrent
     {
         public int Id { get; set; }
         public int PersonId { get; set; }

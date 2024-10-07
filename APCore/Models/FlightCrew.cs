@@ -17,7 +17,7 @@ namespace APCore.Models
         public int? FlightPlanCrewId { get; set; }
 
         public virtual Employee Employee { get; set; }
-        public virtual FlightInformation FlightInformation { get; set; }
+        public virtual FlightInformation1 FlightInformation { get; set; }
         public virtual FlightPlanCalanderCrew FlightPlanCrew { get; set; }
     }
 }

@@ -7,19 +7,19 @@ namespace APCore.Models
 {
     public partial class ViewLegFdpItem
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public DateTime? ChocksIn { get; set; }
         public DateTime? Landing { get; set; }
         public DateTime? Takeoff { get; set; }
         public DateTime? ChocksOut { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
         public DateTime? Date { get; set; }
-        public int? FlightStatusID { get; set; }
-        public DateTime? STDDay { get; set; }
-        public DateTime? STADay { get; set; }
+        public int? FlightStatusId { get; set; }
+        public DateTime? Stdday { get; set; }
+        public DateTime? Staday { get; set; }
         public DateTime? Departure { get; set; }
         public DateTime? Arrival { get; set; }
         public DateTime? DepartureLocal { get; set; }

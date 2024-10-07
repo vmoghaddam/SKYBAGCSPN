@@ -26,7 +26,7 @@ namespace APCore.Models
         public string Remarks { get; set; }
         public DateTime? DateDay { get; set; }
         public int? FlightId { get; set; }
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
 
         public virtual ICollection<WeatherTafForecast> WeatherTafForecasts { get; set; }
     }

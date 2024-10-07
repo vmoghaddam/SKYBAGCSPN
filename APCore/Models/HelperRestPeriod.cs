@@ -12,6 +12,6 @@ namespace APCore.Models
         public DateTime? RestUntil { get; set; }
         public DateTime? RestFromLocal { get; set; }
         public DateTime? RestUntilLocal { get; set; }
-        public int FDPId { get; set; }
+        public int Fdpid { get; set; }
     }
 }

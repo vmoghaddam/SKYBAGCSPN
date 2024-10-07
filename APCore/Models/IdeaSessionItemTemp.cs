@@ -14,7 +14,7 @@ namespace APCore.Models
         public DateTime? DateFromUtc { get; set; }
         public DateTime? DateToUtc { get; set; }
         public string Remark { get; set; }
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
 
         public virtual IdeaSessionTemp Session { get; set; }
     }

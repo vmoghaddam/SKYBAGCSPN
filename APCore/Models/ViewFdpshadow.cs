@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewFDPShadow
+    public partial class ViewFdpshadow
     {
         public int Id { get; set; }
         public int? CrewId { get; set; }

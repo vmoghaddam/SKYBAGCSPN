@@ -5,14 +5,14 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewFDPItemAb
+    public partial class ViewFdpitemAb
     {
         public int Id { get; set; }
-        public int FDPId { get; set; }
+        public int Fdpid { get; set; }
         public int? FlightId { get; set; }
         public bool? IsSector { get; set; }
         public bool? IsOff { get; set; }
         public bool? IsPositioning { get; set; }
-        public int? FlightStatusID { get; set; }
+        public int? FlightStatusId { get; set; }
     }
 }

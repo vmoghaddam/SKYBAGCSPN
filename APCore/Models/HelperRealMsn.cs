@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperRealMSN
+    public partial class HelperRealMsn
     {
-        public int RegisterID { get; set; }
+        public int RegisterId { get; set; }
         public string Register { get; set; }
         public int? TypeId { get; set; }
         public string AircraftType { get; set; }

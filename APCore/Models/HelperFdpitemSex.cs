@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperFDPItemSex
+    public partial class HelperFdpitemSex
     {
         public int Id { get; set; }
-        public int FDPId { get; set; }
+        public int Fdpid { get; set; }
         public int? CrewId { get; set; }
         public int SexId { get; set; }
         public string Sex { get; set; }

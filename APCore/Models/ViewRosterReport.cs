@@ -11,18 +11,18 @@ namespace APCore.Models
         public DateTime? DateLocal { get; set; }
         public string FltNo { get; set; }
         public string Route { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
         public string Register { get; set; }
         public string AircraftType { get; set; }
-        public string IP { get; set; }
-        public string OBS { get; set; }
+        public string Ip { get; set; }
+        public string Obs { get; set; }
         public string P1 { get; set; }
         public string P2 { get; set; }
-        public string SAFETY { get; set; }
-        public string SCCM { get; set; }
-        public string CCM1 { get; set; }
-        public string CCM2 { get; set; }
-        public string CCM3 { get; set; }
+        public string Safety { get; set; }
+        public string Sccm { get; set; }
+        public string Ccm1 { get; set; }
+        public string Ccm2 { get; set; }
+        public string Ccm3 { get; set; }
     }
 }

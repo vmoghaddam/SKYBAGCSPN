@@ -36,16 +36,16 @@ namespace APCore.Models
         public DateTime? DateEndPractical { get; set; }
         public int? DurationPractical { get; set; }
         public int? DurationPracticalUnitId { get; set; }
-        public int? CT_CalendarTypeId { get; set; }
-        public string CT_Title { get; set; }
-        public int? CT_LicenseResultBasicId { get; set; }
-        public string CT_Remark { get; set; }
-        public int? CT_CourseCategoryId { get; set; }
-        public int? CT_Interval { get; set; }
-        public bool? CT_IsGeneral { get; set; }
-        public bool? CT_Status { get; set; }
-        public int? CT_Id { get; set; }
-        public string CC_Title { get; set; }
+        public int? CtCalendarTypeId { get; set; }
+        public string CtTitle { get; set; }
+        public int? CtLicenseResultBasicId { get; set; }
+        public string CtRemark { get; set; }
+        public int? CtCourseCategoryId { get; set; }
+        public int? CtInterval { get; set; }
+        public bool? CtIsGeneral { get; set; }
+        public bool? CtStatus { get; set; }
+        public int? CtId { get; set; }
+        public string CcTitle { get; set; }
         public string CaoTypeTitle { get; set; }
         public string CaoTypeRemark { get; set; }
         public string Organization { get; set; }
@@ -60,7 +60,7 @@ namespace APCore.Models
         public bool? IsGeneral { get; set; }
         public int? CourseCustomerId { get; set; }
         public bool? LastCourse { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public DateTime? DateJoinCompany { get; set; }
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }
@@ -68,7 +68,7 @@ namespace APCore.Models
         public int? GroupId { get; set; }
         public string JobGroup { get; set; }
         public string JobGroupCode { get; set; }
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public int SexId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -90,17 +90,17 @@ namespace APCore.Models
         public string StampNumber { get; set; }
         public string StampUrl { get; set; }
         public string TechLogNo { get; set; }
-        public DateTime? DateIssueNDT { get; set; }
-        public int? IntervalNDT { get; set; }
-        public string NDTNumber { get; set; }
-        public int? NDTIntervalCalanderTypeId { get; set; }
-        public string IDNo { get; set; }
+        public DateTime? DateIssueNdt { get; set; }
+        public int? IntervalNdt { get; set; }
+        public string Ndtnumber { get; set; }
+        public int? NdtintervalCalanderTypeId { get; set; }
+        public string Idno { get; set; }
         public string ImageUrl { get; set; }
         public int? CustomerCreatorId { get; set; }
         public int? Age { get; set; }
         public string Sex { get; set; }
         public string CaoIntervalCalanderType { get; set; }
-        public string NDTIntervalCalanderType { get; set; }
+        public string NdtintervalCalanderType { get; set; }
         public string Customer { get; set; }
         public string Remark { get; set; }
         public string CerNumber { get; set; }

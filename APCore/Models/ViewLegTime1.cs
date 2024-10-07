@@ -21,6 +21,7 @@ namespace APCore.Models
         public DateTime? Std { get; set; }
         public DateTime? Sta { get; set; }
         public DateTime? Stdlocal { get; set; }
+        public DateTime? StddayLocal { get; set; }
         public DateTime? Stalocal { get; set; }
         public DateTime? Date { get; set; }
         public int? FlightStatusId { get; set; }
@@ -30,7 +31,9 @@ namespace APCore.Models
         public int? TypeId { get; set; }
         public string FlightNumber { get; set; }
         public int? FromAirport { get; set; }
+        public string FromAirportIcao { get; set; }
         public int? ToAirport { get; set; }
+        public string ToAirportIcao { get; set; }
         public DateTime? Staplanned { get; set; }
         public DateTime? Stdplanned { get; set; }
         public int? FlightHplanned { get; set; }
@@ -100,11 +103,23 @@ namespace APCore.Models
         public int BaggageWeight { get; set; }
         public int CargoWeight { get; set; }
         public int? Freight { get; set; }
+        public DateTime? FlightDateX { get; set; }
         public DateTime? FlightDate { get; set; }
         public int? CargoCount { get; set; }
         public int? BaggageCount { get; set; }
         public int? JlblockTime { get; set; }
         public int? JlflightTime { get; set; }
         public decimal? Fpfuel { get; set; }
+        public decimal? FptripFuel { get; set; }
+        public int? MaxWeightTo { get; set; }
+        public int? MaxWeightLnd { get; set; }
+        public string MaxWeighUnit { get; set; }
+        public string ChrCode { get; set; }
+        public string ChrTitle { get; set; }
+        public int? ChrCapacity { get; set; }
+        public int? ChrAdult { get; set; }
+        public int? ChrChild { get; set; }
+        public int? ChrInfant { get; set; }
+        public long? CargoCost { get; set; }
     }
 }

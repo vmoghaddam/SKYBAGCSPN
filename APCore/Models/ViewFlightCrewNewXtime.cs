@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewFlightCrewNewXTime
+    public partial class ViewFlightCrewNewXtime
     {
-        public int FDPId { get; set; }
-        public int FDPItemId { get; set; }
+        public int Fdpid { get; set; }
+        public int FdpitemId { get; set; }
         public int? CrewId { get; set; }
         public int? FlightId { get; set; }
         public bool? IsPositioning { get; set; }
@@ -24,9 +24,9 @@ namespace APCore.Models
         public int? FlightTime { get; set; }
         public int? FlightTimeActual { get; set; }
         public int? FixTime { get; set; }
-        public int? SITATime { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STDDay { get; set; }
-        public int? FlightStatusID { get; set; }
+        public int? Sitatime { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Stdday { get; set; }
+        public int? FlightStatusId { get; set; }
     }
 }

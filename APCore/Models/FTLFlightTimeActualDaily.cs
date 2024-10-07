@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class FTLFlightTimeActualDaily
+    public partial class FtlflightTimeActualDaily
     {
-        public DateTime? STDDay { get; set; }
+        public DateTime? Stdday { get; set; }
         public int? CrewId { get; set; }
         public int? ScheduledFlightTime { get; set; }
         public int? FlightTime { get; set; }

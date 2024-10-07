@@ -15,7 +15,7 @@ namespace APCore.Models
             CourseAircraftTypes = new HashSet<CourseAircraftType>();
             CourseRelatedAircraftTypes = new HashSet<CourseRelatedAircraftType>();
             Courses = new HashSet<Course>();
-            FlightInformations = new HashSet<FlightInformation>();
+            FlightInformation1s = new HashSet<FlightInformation1>();
             FlightPlanItems = new HashSet<FlightPlanItem>();
             PersonAircraftTypes = new HashSet<PersonAircraftType>();
             PersonRatings = new HashSet<PersonRating>();
@@ -33,7 +33,7 @@ namespace APCore.Models
         public virtual ICollection<CourseAircraftType> CourseAircraftTypes { get; set; }
         public virtual ICollection<CourseRelatedAircraftType> CourseRelatedAircraftTypes { get; set; }
         public virtual ICollection<Course> Courses { get; set; }
-        public virtual ICollection<FlightInformation> FlightInformations { get; set; }
+        public virtual ICollection<FlightInformation1> FlightInformation1s { get; set; }
         public virtual ICollection<FlightPlanItem> FlightPlanItems { get; set; }
         public virtual ICollection<PersonAircraftType> PersonAircraftTypes { get; set; }
         public virtual ICollection<PersonRating> PersonRatings { get; set; }

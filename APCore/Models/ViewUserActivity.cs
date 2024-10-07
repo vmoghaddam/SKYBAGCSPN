@@ -16,8 +16,8 @@ namespace APCore.Models
         public bool IsMain { get; set; }
         public int? CustomerId { get; set; }
         public string Remark { get; set; }
-        public string PID { get; set; }
-        public string NID { get; set; }
+        public string Pid { get; set; }
+        public string Nid { get; set; }
         public string Name { get; set; }
         public string ImageUrl { get; set; }
     }

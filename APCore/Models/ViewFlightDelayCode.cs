@@ -9,8 +9,8 @@ namespace APCore.Models
     {
         public int FlightId { get; set; }
         public int? FlighrDelayId { get; set; }
-        public int? HH { get; set; }
-        public int? MM { get; set; }
+        public int? Hh { get; set; }
+        public int? Mm { get; set; }
         public int? UserId { get; set; }
         public string Category { get; set; }
         public string Title { get; set; }

@@ -11,9 +11,9 @@ namespace APCore.Models
         public int CrewId { get; set; }
         public int? Duration { get; set; }
         public int? DurationLocal { get; set; }
-        public int? FLT28 { get; set; }
-        public int? FLT28Local { get; set; }
-        public int FLTYear { get; set; }
-        public int FLTCYear { get; set; }
+        public int? Flt28 { get; set; }
+        public int? Flt28local { get; set; }
+        public int? Fltyear { get; set; }
+        public int? Fltcyear { get; set; }
     }
 }

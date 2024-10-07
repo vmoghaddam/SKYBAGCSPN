@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class OFPImportItem
+    public partial class OfpimportItem
     {
         public int Id { get; set; }
-        public int OFPId { get; set; }
+        public int Ofpid { get; set; }
         public string Line { get; set; }
 
-        public virtual OFPImport OFP { get; set; }
+        public virtual Ofpimport Ofp { get; set; }
     }
 }

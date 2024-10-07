@@ -15,8 +15,8 @@ namespace APCore.Models
         public string NewRegister { get; set; }
         public string OldRegister { get; set; }
         public int? NewRegisterId { get; set; }
-        public DateTime? OldSTD { get; set; }
-        public DateTime? NewSTD { get; set; }
+        public DateTime? OldStd { get; set; }
+        public DateTime? NewStd { get; set; }
         public string OldFlightNumer { get; set; }
         public string NewFlightNumber { get; set; }
         public int? OldFromAirportId { get; set; }
@@ -39,7 +39,7 @@ namespace APCore.Models
         public DateTime? NewOnBlock { get; set; }
         public int? OldToAirportId { get; set; }
         public int? NewToAirportId { get; set; }
-        public DateTime? OldSTA { get; set; }
-        public DateTime? NewSTA { get; set; }
+        public DateTime? OldSta { get; set; }
+        public DateTime? NewSta { get; set; }
     }
 }

@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperFDPItemNODH
+    public partial class HelperFdpitemNodh
     {
         public int Id { get; set; }
-        public int FDPId { get; set; }
+        public int Fdpid { get; set; }
         public int? FlightId { get; set; }
         public bool IsSector { get; set; }
         public int? SplitDutyPairId { get; set; }

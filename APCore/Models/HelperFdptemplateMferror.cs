@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperFDPTemplateMFError
+    public partial class HelperFdptemplateMferror
     {
         public int Id { get; set; }
         public int? FlightId { get; set; }

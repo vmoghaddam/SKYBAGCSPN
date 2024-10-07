@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class RptNoFDPMonthlyPersian
+    public partial class RptNoFdpmonthlyPersian
     {
-        public int? PYear { get; set; }
+        public int? Pyear { get; set; }
         public string PeriodFixTime { get; set; }
         public string DutyTypeTitle { get; set; }
         public int DutyType { get; set; }
@@ -17,7 +17,7 @@ namespace APCore.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int? Duration { get; set; }
-        public int? FX { get; set; }
+        public int? Fx { get; set; }
         public int? Count { get; set; }
         public string JobGroup { get; set; }
         public int? GroupId { get; set; }

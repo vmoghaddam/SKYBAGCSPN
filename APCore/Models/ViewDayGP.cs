@@ -5,19 +5,19 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewDayGP
+    public partial class ViewDayGp
     {
-        public DateTime GDate { get; set; }
-        public string PDate { get; set; }
-        public string PYearName { get; set; }
-        public int? PYear { get; set; }
-        public string PMonthName { get; set; }
-        public int? PMonth { get; set; }
-        public string PDayName { get; set; }
+        public DateTime Gdate { get; set; }
+        public string Pdate { get; set; }
+        public string PyearName { get; set; }
+        public int? Pyear { get; set; }
+        public string PmonthName { get; set; }
+        public int? Pmonth { get; set; }
+        public string PdayName { get; set; }
         public int? UtcDiff { get; set; }
         public DateTime? LocalDate { get; set; }
         public string PeriodFixTime { get; set; }
-        public int? PDate2 { get; set; }
-        public int? PDay { get; set; }
+        public int? Pdate2 { get; set; }
+        public int? Pday { get; set; }
     }
 }

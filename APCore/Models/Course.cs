@@ -11,7 +11,6 @@ namespace APCore.Models
         {
             CourseAircraftTypes = new HashSet<CourseAircraftType>();
             CourseCatRates = new HashSet<CourseCatRate>();
-            CoursePeople = new HashSet<CoursePerson>();
             CourseRelatedAircraftTypes = new HashSet<CourseRelatedAircraftType>();
             CourseRelatedCourseCourses = new HashSet<CourseRelatedCourse>();
             CourseRelatedCourseRelatedCourses = new HashSet<CourseRelatedCourse>();
@@ -19,9 +18,6 @@ namespace APCore.Models
             CourseRelatedEmployees = new HashSet<CourseRelatedEmployee>();
             CourseRelatedGroups = new HashSet<CourseRelatedGroup>();
             CourseRelatedStudyFields = new HashSet<CourseRelatedStudyField>();
-            CourseSessionFDPs = new HashSet<CourseSessionFDP>();
-            CourseSessionPresenceDetails = new HashSet<CourseSessionPresenceDetail>();
-            CourseSessionPresences = new HashSet<CourseSessionPresence>();
             CourseSessions = new HashSet<CourseSession>();
             PersonCourses = new HashSet<PersonCourse>();
         }
@@ -65,28 +61,13 @@ namespace APCore.Models
         public int? CustomerId { get; set; }
         public string No { get; set; }
         public bool? IsNotificationEnabled { get; set; }
-        public string HoldingType { get; set; }
-        public bool? SendLetter { get; set; }
-        public bool? InForm { get; set; }
-        public bool? Financial { get; set; }
-        public bool? Certificate { get; set; }
-        public int? Instructor2 { get; set; }
-        public string SMSIns1 { get; set; }
-        public string SMSIns2 { get; set; }
-        public string SMSIns1Status { get; set; }
-        public string SMSIns2Status { get; set; }
-        public DateTime? SMSInsDate { get; set; }
-        public decimal? Cost { get; set; }
-        public string AttForm { get; set; }
 
         public virtual AircraftModel AircraftModel { get; set; }
         public virtual AircraftType AircraftType { get; set; }
         public virtual CaoType CaoType { get; set; }
         public virtual CourseType CourseType { get; set; }
-        public virtual Teacher Currency { get; set; }
         public virtual ICollection<CourseAircraftType> CourseAircraftTypes { get; set; }
         public virtual ICollection<CourseCatRate> CourseCatRates { get; set; }
-        public virtual ICollection<CoursePerson> CoursePeople { get; set; }
         public virtual ICollection<CourseRelatedAircraftType> CourseRelatedAircraftTypes { get; set; }
         public virtual ICollection<CourseRelatedCourse> CourseRelatedCourseCourses { get; set; }
         public virtual ICollection<CourseRelatedCourse> CourseRelatedCourseRelatedCourses { get; set; }
@@ -94,9 +75,6 @@ namespace APCore.Models
         public virtual ICollection<CourseRelatedEmployee> CourseRelatedEmployees { get; set; }
         public virtual ICollection<CourseRelatedGroup> CourseRelatedGroups { get; set; }
         public virtual ICollection<CourseRelatedStudyField> CourseRelatedStudyFields { get; set; }
-        public virtual ICollection<CourseSessionFDP> CourseSessionFDPs { get; set; }
-        public virtual ICollection<CourseSessionPresenceDetail> CourseSessionPresenceDetails { get; set; }
-        public virtual ICollection<CourseSessionPresence> CourseSessionPresences { get; set; }
         public virtual ICollection<CourseSession> CourseSessions { get; set; }
         public virtual ICollection<PersonCourse> PersonCourses { get; set; }
     }

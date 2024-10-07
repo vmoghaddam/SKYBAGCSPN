@@ -20,11 +20,5 @@ namespace APCore.Models
         public string Category { get; set; }
         public string CalenderType { get; set; }
         public int? CoursesCount { get; set; }
-        public int? Duration { get; set; }
-        public int? CertificateTypeId { get; set; }
-        public string CertificateType { get; set; }
-        public string JobGroups { get; set; }
-        public string JobGroupsCode { get; set; }
-        public int? Mandatory { get; set; }
     }
 }

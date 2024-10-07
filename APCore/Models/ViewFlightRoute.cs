@@ -10,10 +10,10 @@ namespace APCore.Models
         public int Id { get; set; }
         public int AirlineId { get; set; }
         public int FromAirportId { get; set; }
-        public string FromAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
         public string FromAirportName { get; set; }
         public int ToAirportId { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string ToAirportIata { get; set; }
         public string ToAirportName { get; set; }
         public string Title { get; set; }
         public int? Stops { get; set; }

@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class NOTAMItem
+    public partial class Notamitem
     {
         public int Id { get; set; }
-        public int NOTAMId { get; set; }
+        public int Notamid { get; set; }
         public string Text { get; set; }
 
-        public virtual NOTAM NOTAM { get; set; }
+        public virtual Notam Notam { get; set; }
     }
 }

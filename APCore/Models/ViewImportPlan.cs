@@ -20,12 +20,12 @@ namespace APCore.Models
         public int FromId { get; set; }
         public string To { get; set; }
         public int ToId { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
         public string Duration { get; set; }
         public int? FlightTime { get; set; }
-        public DateTime? STDUtc { get; set; }
-        public DateTime? STAUtc { get; set; }
+        public DateTime? Stdutc { get; set; }
+        public DateTime? Stautc { get; set; }
         public string Line { get; set; }
         public int LineId { get; set; }
         public int? RouteId { get; set; }

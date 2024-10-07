@@ -11,9 +11,9 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
     catch (e) {
 
     }
-    
-    
-   
+
+
+
     // var m1=moment().format();     // 2013-02-04T10:35:24-08:00
     // var m2 = moment.utc().format(); // 2013-02-04T18:35:24+00:00
     // console.log(m1);
@@ -59,9 +59,9 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         $rootScope.page_title = 'Flights';
     }
     $scope.prms = $routeParams.prms;
-     
+
     $scope.scroll_btns = {
-        direction: 'horizontal', 
+        direction: 'horizontal',
         bounceEnabled: false,
         showScrollbar: 'never',
         pulledDownText: '',
@@ -78,9 +78,9 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
 
         },
         width: '100%',
-        height:'100%',
+        height: '100%',
         bindingOptions: {
-             
+
         }
 
     };
@@ -115,9 +115,9 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             $scope.bind();
         }
     };
-   //  $scope.dt_from = new Date(2021,9, 28);
-   //  $scope.dt_to = new Date(2021, 7, 26);
-    $scope.dt_from = (new Date()); 
+    //  $scope.dt_from = new Date(2021,9, 28);
+    //  $scope.dt_to = new Date(2021, 7, 26);
+    $scope.dt_from = (new Date());
     $scope.dt_to = (new Date($scope.dt_from)).addDays(0);
     $scope.date_from = {
         displayFormat: "yy MMM dd",
@@ -155,9 +155,9 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
                 }
                 catch (ee) {
                 }
-              
+
             }
-            var data = { Id: $scope.selectedFlight.FlightId, crewId: $scope.selectedFlight.CrewId,remFuel:rem };
+            var data = { Id: $scope.selectedFlight.FlightId, crewId: $scope.selectedFlight.CrewId, remFuel: rem };
 
             $rootScope.$broadcast('InitLogAdd', data);
 
@@ -184,7 +184,8 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             //}
             var data = { FlightId: $scope.selectedFlight.FlightId };
 
-            $rootScope.$broadcast('InitAsrAdd', data);
+            //$rootScope.$broadcast('InitAsrAdd', data);
+            $rootScope.$broadcast('InitAsrTaban', data);
 
         },
         bindingOptions: {
@@ -213,7 +214,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             disabled: 'IsLegLocked'
         }
     };
-     $scope.btn_trip = {
+    $scope.btn_trip = {
         text: 'Trip Info',
         type: 'default',
         //icon: 'search',
@@ -247,9 +248,9 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             //    alert('You are OFFLINE.Please check your internet connection.');
             //    return;
             //}
-            var data = { FlightId: $scope.selectedFlight.FlightId };
+            var data = { FlightId: $scope.selectedFlight.FlightId, user: $scope.user };
 
-            $rootScope.$broadcast('InitVrAdd', data);
+            $rootScope.$broadcast('InitVrTaban', data);
 
         },
         bindingOptions: {
@@ -267,7 +268,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             //    alert('You are OFFLINE.Please check your internet connection.');
             //    return;
             //}
-            
+
             var data = { FlightId: $scope.selectedFlight.FlightId };
 
             $rootScope.$broadcast('InitDrAdd', data);
@@ -359,12 +360,12 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         $scope.bind();
     };
     $scope.clickDay = function (n) {
-        
-        
+
+
         //flightService.syncUnsignedOFPS(function (result) { });
 
-       // return;
-        
+        // return;
+
         var dt = (new Date()).addDays(n);
         $scope.dt_from = dt;
         $scope.dt_to = dt;
@@ -379,10 +380,10 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
     $scope.preFlight = null;
     $scope.showFlight = function (item, items, index) {
         $scope.preFlight = null;
-        $scope.selectedFlight = item; 
-        if (index && index>0) {
+        $scope.selectedFlight = item;
+        if (index && index > 0) {
             $scope.preFlight = items[index - 1];
-          
+
         }
         //if (item.FlightNumber == '6919')
         //    $scope.imgurl = staticFiles + 'Weather/SIGWX/ADDS/a.png';
@@ -403,7 +404,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
 
         //}, function (err) { $scope.loadingVisible = false; General.ShowNotify(err.message, 'error'); });
 
-         
+
         //if (!detector.tablet()) {
         //    $scope.flight = item;
         //    $scope.popup_flight_visible = true;
@@ -426,7 +427,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
 
         //    $scope.getCrewAbs(item.FlightId, n);
         //}
-      //  $scope.atctitle = 'AFP (✓)';
+        //  $scope.atctitle = 'AFP (✓)';
         db.GetSeenHistory({ FlightId: $scope.selectedFlight.FlightId, Type: 'ATC' }, function (item) {
             $scope.isMetarSeen = item != null ? $scope.atctitle = 'AFP (✓)' : $scope.atctitle = 'AFP';
         });
@@ -582,7 +583,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         width: '100%',
         title: 'Message',
         showTitle: false,
-        shading:true,
+        shading: true,
         toolbarItems: [
 
 
@@ -590,17 +591,17 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             {
                 widget: 'dxButton', location: 'after', options: {
                     type: 'danger', text: 'Cloas', onClick: function (e) {
-                        
+
                         $scope.popup_loading_visible = false;
 
                     }
                 }, toolbar: 'bottom'
             },
-            
+
 
         ],
         position: 'top',
-        animation: { show: { type: 'fadeIn', duration: 400 }, hide: { type: 'fadeOut', duration: 400 }},
+        animation: { show: { type: 'fadeIn', duration: 400 }, hide: { type: 'fadeOut', duration: 400 } },
         visible: false,
         dragEnabled: true,
         closeOnOutsideClick: false,
@@ -648,7 +649,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
                 return;
             }
         });
-        
+
         //var fid = item.FlightId;
         //flightService.epGetFlightLocal(fid).then(function (response) {
         //    if (response.IsSuccess) {
@@ -719,10 +720,10 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         { text: "AVIATION WEATHER CENTER", id: 'adds', visible_btn: false },
         { text: "AVMET WEATHER", id: 'avmet', visible_btn: false },
         { text: "IRIMO (IRAN)", id: 'irimo', visible_btn: false },
-    
-    ]; 
+
+    ];
     $scope.tabs = tabs;
-    $scope.selectedTabIndex =-1;
+    $scope.selectedTabIndex = -1;
     $scope.$watch("selectedTabIndex", function (newValue) {
 
         try {
@@ -814,10 +815,10 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             $scope.selectedTabIndex = 0;
 
 
-            
+
         },
         onShown: function (e) {
-           
+
         },
         onHiding: function () {
 
@@ -844,7 +845,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         var _url = staticFiles + 'Weather/WIND/ADDS/' + fn;
         $scope.showImage({ url: _url, caption: 'Wind & Temperature Level: ' + lvl + ' Valid: ' + valid });
     };
-    $scope.showIRIMOSIGWX = function (valid,rem) {
+    $scope.showIRIMOSIGWX = function (valid, rem) {
         //SIGWX_IRIMO_20210824_VALID00LVLIRAN
         var dt = moment(new Date($scope.selectedGroup.items[0].STADayLocal)).format('YYYYMMDD');
         var fn = 'SIGWX_IRIMO_' + dt + '_VALID' + valid + 'LVL' + 'IRAN' + '.png';
@@ -865,9 +866,9 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
     $scope.showAVMETSIGWX = function (valid, rem) {
         //SIGWX_IRIMO_20210824_VALID00LVLIRAN
         var dt = moment(new Date($scope.selectedGroup.items[0].STADayLocal)).format('YYYYMMDD');
-        var fn =dt+'-'+ 'sig'   + valid   + '.png';
+        var fn = dt + '-' + 'sig' + valid + '.png';
         var _url = staticFiles + 'Weather/AVMET/' + fn;
-      
+
         $scope.showImage({ url: _url, caption: 'SIGWX Chart' + ' Valid: ' + rem });
 
     };
@@ -880,7 +881,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         var data = { url: item.url, caption: item.caption, hidden: item.hidden };
 
         $rootScope.$broadcast('InitPdfViewer', data);
-       
+
     };
     $scope.folderSIGWX = [];
     function replaceAll(str, find, replace) {
@@ -956,15 +957,15 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
 
                     $rootScope.$broadcast('InitSignAdd', data);
 
-                   
+
                 }
                 else {
                     General.ShowNotify("You are OFFLINE.Please check your internet connection", 'error');
                 }
-              
+
             });
         }
-     
+
     };
 
     $scope.jlClick = function (g) {
@@ -1004,7 +1005,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
                     var data = { FlightId: ids, documentType: 'ofpsall' };
 
                     $rootScope.$broadcast('InitSignAdd', data);
-                   
+
                 }
                 else {
                     General.ShowNotify("You are OFFLINE.Please check your internet connection", 'error');
@@ -1042,7 +1043,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
 
 
 
-            
+
 
 
 
@@ -1052,11 +1053,11 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         arr = Enumerable.From(arr).Distinct().ToArray();
         console.log('wind dates', arr);
         $.each(arr, function (_i, dt) {
-            
+
             //var dt = moment(new Date(_g.items[0].STADayLocal)).format('YYYYMMDD')
             $.each(lvls, function (_i, lvl) {
                 $.each(valids, function (_j, valid) {
-                   // console.log('get wind ', dt+'  '+lvl+'  '+valid);
+                    // console.log('get wind ', dt+'  '+lvl+'  '+valid);
                     var fn = 'WIND_ADDS_' + dt + '_FL' + lvl + '_VALID' + valid + '.png';
                     var _url = staticFiles + 'Weather/WIND/ADDS/' + fn;
                     $http.get(_url).then(res => { console.log(_url); });
@@ -1079,14 +1080,14 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             var lastSTA = new Date(_g.items[_g.items.length - 1].STALocal);
             var diffSTD = Math.abs((new Date()).getTime() - (firstSTD).getTime()) / 3600000;
             var diffSTA = Math.abs((new Date()).getTime() - (lastSTA).getTime()) / 3600000;
-             
+
             var std = moment(firstSTD).format('YYYYMMDD');
             var std_dd = Number(moment(firstSTD).format('DD'));
             var sta = moment(lastSTA).format('YYYYMMDD');
             var sta_dd = Number(moment(lastSTA).format('DD'));
             var now_dd = Number(moment(new Date()).format('DD'));
 
-            
+
             if (diffSTA <= 24 && sta_dd <= now_dd)
                 arr.push(sta);
             if (diffSTD <= 24 && std_dd <= now_dd)
@@ -1107,12 +1108,12 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         ///////////////
         arr = Enumerable.From(arr).Distinct().ToArray();
         console.log('wx irimo dates', arr);
-        $.each(arr, function (_i, dt) { 
-             
-           // var dt = moment(new Date(_g.items[0].STADayLocal)).format('YYYYMMDD')
+        $.each(arr, function (_i, dt) {
+
+            // var dt = moment(new Date(_g.items[0].STADayLocal)).format('YYYYMMDD')
             $.each(lvls, function (_i, lvl) {
                 $.each(valids, function (_j, valid) {
-                    console.log('get irimo ', dt+'  '+lvl+'   '+valid);
+                    console.log('get irimo ', dt + '  ' + lvl + '   ' + valid);
                     var fn = 'SIGWX_IRIMO_' + dt + '_VALID' + valid + 'LVL' + lvl + '.png';
                     var _url = staticFiles + 'Weather/SIGWX/IRIMO/' + fn;
                     $http.get(_url).then(res => { console.log(_url); });
@@ -1120,13 +1121,13 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
                 });
             });
         });
-         
+
         ///////////////
 
 
     }
     function _getIRIMOFF(grps) {
-       //FF_IRIMO_20210824_VALID00LVLIRAN
+        //FF_IRIMO_20210824_VALID00LVLIRAN
         //var lvls = ['IRAN'];
         //var valids = ['00', '06',/* '12', '18'*/  ]; 
         //$.each(grps, function (_k, _g) {
@@ -1163,7 +1164,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
 
 
     }
-    
+
     function _getWeatherCharts(grps) {
 
         // var lastSTA = moment(new Date(_g.items[_g.items.length - 1].STADayLocal)).format('YYYYMMDD');
@@ -1178,26 +1179,26 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             var lastSTA = new Date(_g.items[_g.items.length - 1].STALocal);
             var diffSTD = Math.abs((new Date()).getTime() - (firstSTD).getTime()) / 3600000;
             var diffSTA = Math.abs((new Date()).getTime() - (lastSTA).getTime()) / 3600000;
-           
-            
+
+
 
             //var std = moment(new Date(_g.items[0].STDDayLocal)).format('YYYYMMDD');
-            
+
             //var sta = moment(new Date(_g.items[0].STADayLocal)).format('YYYYMMDD');
             var std = moment(firstSTD).format('YYYYMMDD');
-            var std_dd =Number( moment(firstSTD).format('DD'));
+            var std_dd = Number(moment(firstSTD).format('DD'));
             var sta = moment(lastSTA).format('YYYYMMDD');
             var sta_dd = Number(moment(lastSTA).format('DD'));
             var now_dd = Number(moment(new Date()).format('DD'));
 
-           // var arr = [];
+            // var arr = [];
             if (diffSTA <= 24 && sta_dd <= now_dd)
                 arr.push(sta);
             if (diffSTD <= 24 && std_dd <= now_dd)
                 arr.push(std);
-          
+
             //var _dt = arr[0];
-           
+
 
 
         });
@@ -1226,7 +1227,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
                             );
                         }
 
-                         
+
 
 
                     );
@@ -1243,7 +1244,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         _g.tafLoading = true;
 
         flightService.getTAFs(_g.FDPId, _g.doInfo).then(function (_taf) {
-            
+
             _g.tafLoading = false;
             _tafcnt++;
             if (_taf.IsSuccess) { _g.TAF = _taf.Data; }
@@ -1257,14 +1258,21 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
 
     }
 
+    function HighLighter(metar) {
+        console.log("metar", metar);
+    }
+
+
     var _metarcnt = 0;
     function _getMETAR(_g, grps) {
         _g.metarLoading = true;
         flightService.getMETARs(_g.FDPId, _g.doInfo).then(function (_taf) {
             _g.metarLoading = false;
             _metarcnt++;
-            if (_taf.IsSuccess)
+            if (_taf.IsSuccess) {
                 _g.METAR = _taf.Data;
+                HighLighter(_g.METAR);
+            }
 
             if (_metarcnt < grps.length) { _getMETAR(grps[_metarcnt], grps); }
             else {
@@ -1349,11 +1357,11 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
     };
 
     $scope.showTAF = function (g) {
-        
-        
+
+
         db.DeleteSeenHistory(g.FDPId, 'TAF', function () {
             db.AddSeenHistory({ FlightId: g.FDPId, Type: 'TAF' }, function () { $scope.isTafSeen = true; });
-          });
+        });
         $rootScope.$broadcast('InitTAF', g);
     };
     $scope.showMETAR = function (g) {
@@ -1424,25 +1432,25 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
 
         });
 
-         
-       _tafcnt = 0;
+
+        _tafcnt = 0;
         //9-18
         // _getTAF(_grps[0], _grps);
 
-        
+
         if ($rootScope.getOnlineStatus()) {
             $rootScope.checkInternet(function (st) {
                 if (st) {
-                    
+
                     _getTAF(_grps[0], _grps);
                     if (grps && grps.length > 0) {
 
                         var grpsFlightIds = [];
                         $.each(grps, function (_i, _g) {
                             if (_g.DutyType == 1165)
-                            $.each(_g.items, function (_j, _flt) {
-                                grpsFlightIds.push(_flt.FlightId);
-                            });
+                                $.each(_g.items, function (_j, _flt) {
+                                    grpsFlightIds.push(_flt.FlightId);
+                                });
                         });
                         var _fdto = { ids: grpsFlightIds };
 
@@ -1478,15 +1486,15 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
                     }
                 }
             });
-           // _tafcnt = 0;
-           // _getTAF(_grps[0], _grps);
-           
-            
+            // _tafcnt = 0;
+            // _getTAF(_grps[0], _grps);
+
+
         }
-       
+
 
     };
-    
+
     $scope.bind = function (show) {
         if (!authService.isAuthorized())
             return;
@@ -1501,15 +1509,15 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         var _d1 = moment($scope.dt_from).format('YYYY-MM-DDT00:00:00');
 
         var _d2 = moment($scope.dt_to).format('YYYY-MM-DDT00:00:00');
-        
-        
-         if ($rootScope.userName == 'fazeli') {
-             //alert('test1'); 
-         }
+
+
+        if ($rootScope.userName == 'fazeli') {
+            //alert('test1'); 
+        }
         $scope.loadingVisible = true;
         flightService.epGetCrewFlights(_d1, _d2).then(function (response) {
 
-           
+
             $scope.loadingVisible = false;
 
             if (response.IsSuccess) {
@@ -1541,9 +1549,9 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
                                 notamLoading: false,
                                 items: Enumerable.From(g.source).OrderBy(function (x) {
                                     return x.DutyType == 1165 ? DateTimeToNumber(new Date(x.STD)) : 1;
-                                }).ToArray(), 
+                                }).ToArray(),
 
-                                 
+
 
                             };
                             _item.IStart = (_item.items[0].DutyType == 1165) ? _item.items[0].STD : _item.items[0].IStart;
@@ -1581,6 +1589,10 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         flightService.epGetFlightCrews(flightId).then(function (response) {
             //$scope.loadingVisible = false;
             console.log(response);
+            $.each(response.Data, function (_i, _d) {
+                $scope.user = _d.Name;
+
+            });
             if (response.IsSuccess) {
                 $scope.selectedFlightCrews = response.Data;
 
@@ -1620,7 +1632,7 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             var _fdp = Enumerable.From($scope.groupedFlights).Where('$.FDPId==' + $scope.selectedFlight.FDPId).FirstOrDefault();
 
             var data = { FlightId: $scope.selectedFlight.FlightId, fdp: _fdp, station: $scope.selectedFlight.FromAirportIATA };
-           
+
             $rootScope.$broadcast('InitTOAdd', data);
 
         },
@@ -1640,10 +1652,10 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             //    alert('You are OFFLINE.Please check your internet connection.');
             //    return;
             //}
-           // throw "Too big";
+            // throw "Too big";
             //
             var _fdp = Enumerable.From($scope.groupedFlights).Where('$.FDPId==' + $scope.selectedFlight.FDPId).FirstOrDefault();
-            var data = { FlightId: $scope.selectedFlight.FlightId, fdp: _fdp, station: $scope.selectedFlight.ToAirportIATA  };
+            var data = { FlightId: $scope.selectedFlight.FlightId, fdp: _fdp, station: $scope.selectedFlight.ToAirportIATA };
 
             $rootScope.$broadcast('InitLdgAdd', data);
 
@@ -1679,12 +1691,12 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
             db.DeleteSeenHistory($scope.selectedFlight.FlightId, 'ATC', function () {
                 db.AddSeenHistory({ FlightId: $scope.selectedFlight.FlightId, Type: 'ATC' }, function () { $scope.atctitle = 'AFP (✓)'; });
             });
-            
+
 
         },
         bindingOptions: {
             disabled: 'IsLegLocked',
-            text:'atctitle'
+            text: 'atctitle'
         }
     };
     $scope.atltitle = 'ATL';
@@ -1695,22 +1707,22 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         width: 120,
 
         onClick: function (e) {
-           // console.log($scope.selectedFlight);
-           // $rootScope.$broadcast('InitCamera', { type: 'ATL', flight: /*$scope.selectedFlight.FlightId*/-1, fdp: $scope.selectedFlight.FDPId});
+            // console.log($scope.selectedFlight);
+            // $rootScope.$broadcast('InitCamera', { type: 'ATL', flight: /*$scope.selectedFlight.FlightId*/-1, fdp: $scope.selectedFlight.FDPId});
 
 
             flightService.epGetATL($scope.selectedFlight.FDPId).then(function (response) {
                 //$scope.loadingVisible = false;
-                console.log('ATL',response);
+                console.log('ATL', response);
                 if (response.IsSuccess) {
                     var data = response.Data;
                     //if (data)
-                    var imgdata = { url: data ? data.Data : null, caption: 'ATL', type: 'ATL', flight: -1, fdp: $scope.selectedFlight.FDPId, camera: true};
+                    var imgdata = { url: data ? data.Data : null, caption: 'ATL', type: 'ATL', flight: -1, fdp: $scope.selectedFlight.FDPId, camera: true };
 
                     $rootScope.$broadcast('InitImageViewer', imgdata);
-                       
-                  //  else
-                  //      $rootScope.$broadcast('InitCamera', { type: 'ATL', flight: /*$scope.selectedFlight.FlightId*/-1, fdp: $scope.selectedFlight.FDPId });
+
+                    //  else
+                    //      $rootScope.$broadcast('InitCamera', { type: 'ATL', flight: /*$scope.selectedFlight.FlightId*/-1, fdp: $scope.selectedFlight.FDPId });
 
                 }
                 else
@@ -1740,17 +1752,17 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
         }
     };
     $scope.permissionClick = function (g) {
-       
+
     };
     $scope.atcClick = function (g) {
-       
+
     };
     $scope.atlClick = function (g) {
-       
-       
+
+
         //var data = { FlightId: $scope.selectedFlight.FlightId };
     };
-   
+
     /////////////////////////////////
 
     var appWindow = angular.element($window);
@@ -1804,10 +1816,10 @@ app.controller('epLogBookController', ['$scope', '$location', '$routeParams', '$
     });
     $scope.$on('COMMAND', function (evt, data) {
         if (data.title == 'BIND_FLIGHTS') {
-             
+
             $scope.bind();
         };
-        
+
     });
 
     $('.main-button').click(function () {

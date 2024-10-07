@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class OFPImport
+    public partial class Ofpimport
     {
-        public OFPImport()
+        public Ofpimport()
         {
-            OFPImportItems = new HashSet<OFPImportItem>();
-            OFPImportProps = new HashSet<OFPImportProp>();
+            OfpimportItems = new HashSet<OfpimportItem>();
+            OfpimportProps = new HashSet<OfpimportProp>();
         }
 
         public int Id { get; set; }
@@ -27,23 +27,14 @@ namespace APCore.Models
         public string DateUpdate { get; set; }
         public DateTime? DateConfirmed { get; set; }
         public string UserConfirmed { get; set; }
-        public int? PICId { get; set; }
-        public DateTime? JLDatePICApproved { get; set; }
-        public string JLSignedBy { get; set; }
-        public string PIC { get; set; }
-        public decimal? FPFuel { get; set; }
-        public decimal? FPTripFuel { get; set; }
-        public decimal? MCI { get; set; }
-        public decimal? FLL { get; set; }
-        public decimal? DOW { get; set; }
-        public string Source { get; set; }
-        public string JPlan { get; set; }
-        public string JAPlan1 { get; set; }
-        public string JAPlan2 { get; set; }
-        public string JFuel { get; set; }
+        public int? Picid { get; set; }
+        public DateTime? JldatePicapproved { get; set; }
+        public string JlsignedBy { get; set; }
+        public string Pic { get; set; }
+        public decimal? Fpfuel { get; set; }
+        public decimal? FptripFuel { get; set; }
 
-        public virtual FlightInformation Flight { get; set; }
-        public virtual ICollection<OFPImportItem> OFPImportItems { get; set; }
-        public virtual ICollection<OFPImportProp> OFPImportProps { get; set; }
+        public virtual ICollection<OfpimportItem> OfpimportItems { get; set; }
+        public virtual ICollection<OfpimportProp> OfpimportProps { get; set; }
     }
 }

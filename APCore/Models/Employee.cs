@@ -12,11 +12,12 @@ namespace APCore.Models
             BookRelatedEmployees = new HashSet<BookRelatedEmployee>();
             BoxCrews = new HashSet<BoxCrew>();
             CourseRelatedEmployees = new HashSet<CourseRelatedEmployee>();
-            CourseSessionFDPs = new HashSet<CourseSessionFDP>();
-            EFBDSPReleases = new HashSet<EFBDSPRelease>();
+            CourseSessionPresences = new HashSet<CourseSessionPresence>();
+            Efbdspreleases = new HashSet<Efbdsprelease>();
             EmployeeBookStatuses = new HashSet<EmployeeBookStatus>();
             EmployeeLocations = new HashSet<EmployeeLocation>();
-            FDPs = new HashSet<FDP>();
+            FdmeventActions = new HashSet<FdmeventAction>();
+            Fdps = new HashSet<Fdp>();
             FlightCrews = new HashSet<FlightCrew>();
             FlightGroups = new HashSet<FlightGroup>();
             FlightPlanCalanderCrews = new HashSet<FlightPlanCalanderCrew>();
@@ -24,7 +25,7 @@ namespace APCore.Models
         }
 
         public int Id { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public string Phone { get; set; }
         public int? CurrentLocationAirport { get; set; }
         public int? BaseAirportId { get; set; }
@@ -41,11 +42,12 @@ namespace APCore.Models
         public virtual ICollection<BookRelatedEmployee> BookRelatedEmployees { get; set; }
         public virtual ICollection<BoxCrew> BoxCrews { get; set; }
         public virtual ICollection<CourseRelatedEmployee> CourseRelatedEmployees { get; set; }
-        public virtual ICollection<CourseSessionFDP> CourseSessionFDPs { get; set; }
-        public virtual ICollection<EFBDSPRelease> EFBDSPReleases { get; set; }
+        public virtual ICollection<CourseSessionPresence> CourseSessionPresences { get; set; }
+        public virtual ICollection<Efbdsprelease> Efbdspreleases { get; set; }
         public virtual ICollection<EmployeeBookStatus> EmployeeBookStatuses { get; set; }
         public virtual ICollection<EmployeeLocation> EmployeeLocations { get; set; }
-        public virtual ICollection<FDP> FDPs { get; set; }
+        public virtual ICollection<FdmeventAction> FdmeventActions { get; set; }
+        public virtual ICollection<Fdp> Fdps { get; set; }
         public virtual ICollection<FlightCrew> FlightCrews { get; set; }
         public virtual ICollection<FlightGroup> FlightGroups { get; set; }
         public virtual ICollection<FlightPlanCalanderCrew> FlightPlanCalanderCrews { get; set; }

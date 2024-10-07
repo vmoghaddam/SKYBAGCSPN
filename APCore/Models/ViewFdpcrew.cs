@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewFDPCrew
+    public partial class ViewFdpcrew
     {
         public int Id { get; set; }
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
         public string Name { get; set; }
         public string ScheduleName { get; set; }
         public string Position { get; set; }

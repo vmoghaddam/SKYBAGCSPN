@@ -7,14 +7,14 @@ namespace APCore.Models
 {
     public partial class DlyGrpFlightCatAirport
     {
-        public int? PYear { get; set; }
-        public string PMonthName { get; set; }
-        public int? PMonth { get; set; }
-        public string PDate { get; set; }
+        public int? Pyear { get; set; }
+        public string PmonthName { get; set; }
+        public int? Pmonth { get; set; }
+        public string Pdate { get; set; }
         public int FlightId { get; set; }
-        public string ICategory { get; set; }
+        public string Icategory { get; set; }
         public int? FromAirport { get; set; }
-        public string FromAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
         public int? Delay { get; set; }
         public int? BlockTime { get; set; }
         public int? FlightTime { get; set; }

@@ -8,7 +8,7 @@ namespace APCore.Models
     public partial class ViewEmployeeSimple
     {
         public int Id { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public DateTime? DateJoinCompany { get; set; }
         public bool IsActive { get; set; }
         public DateTime? DateRegister { get; set; }
@@ -21,7 +21,7 @@ namespace APCore.Models
         public string JobGroup { get; set; }
         public string JobGroupCode { get; set; }
         public int MarriageId { get; set; }
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public int SexId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -37,8 +37,8 @@ namespace APCore.Models
         public DateTime? DatePassportExpire { get; set; }
         public string Address { get; set; }
         public DateTime? DateJoinAvation { get; set; }
-        public DateTime? DateLastCheckUP { get; set; }
-        public DateTime? DateNextCheckUP { get; set; }
+        public DateTime? DateLastCheckUp { get; set; }
+        public DateTime? DateNextCheckUp { get; set; }
         public DateTime? DateYearOfExperience { get; set; }
         public string CaoCardNumber { get; set; }
         public DateTime? DateCaoCardIssue { get; set; }
@@ -50,14 +50,14 @@ namespace APCore.Models
         public string StampNumber { get; set; }
         public string StampUrl { get; set; }
         public string TechLogNo { get; set; }
-        public DateTime? DateIssueNDT { get; set; }
-        public int? IntervalNDT { get; set; }
-        public string NDTNumber { get; set; }
-        public int? NDTIntervalCalanderTypeId { get; set; }
+        public DateTime? DateIssueNdt { get; set; }
+        public int? IntervalNdt { get; set; }
+        public string Ndtnumber { get; set; }
+        public int? NdtintervalCalanderTypeId { get; set; }
         public string Nickname { get; set; }
         public int? CityId { get; set; }
         public string FatherName { get; set; }
-        public string IDNo { get; set; }
+        public string Idno { get; set; }
         public string UserId { get; set; }
         public string ImageUrl { get; set; }
         public int? CustomerCreatorId { get; set; }
@@ -65,7 +65,7 @@ namespace APCore.Models
         public string MaritalStatus { get; set; }
         public string Sex { get; set; }
         public string CaoIntervalCalanderType { get; set; }
-        public string NDTIntervalCalanderType { get; set; }
+        public string NdtintervalCalanderType { get; set; }
         public string City { get; set; }
         public int? StateId { get; set; }
         public string State { get; set; }

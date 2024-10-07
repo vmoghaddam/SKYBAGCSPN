@@ -15,7 +15,7 @@ namespace APCore.Models
         public string Remark { get; set; }
         public DateTime? ReportingTime { get; set; }
         public string Position { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public int PersonId { get; set; }
         public DateTime? DateJoinCompany { get; set; }
         public int? ExpCompany { get; set; }
@@ -25,7 +25,7 @@ namespace APCore.Models
         public string JobGroup { get; set; }
         public int MarriageId { get; set; }
         public string ImageUrl { get; set; }
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public int SexId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -41,8 +41,8 @@ namespace APCore.Models
         public string Address { get; set; }
         public DateTime? DateJoinAvation { get; set; }
         public int? Exp { get; set; }
-        public DateTime? DateLastCheckUP { get; set; }
-        public DateTime? DateNextCheckUP { get; set; }
+        public DateTime? DateLastCheckUp { get; set; }
+        public DateTime? DateNextCheckUp { get; set; }
         public DateTime? DateYearOfExperience { get; set; }
         public string CaoCardNumber { get; set; }
         public DateTime? DateCaoCardIssue { get; set; }
@@ -50,64 +50,64 @@ namespace APCore.Models
         public int? CaoInterval { get; set; }
         public DateTime? DateCaoCardExpire { get; set; }
         public int IsMedicalExpired { get; set; }
-        public string PPLNumber { get; set; }
-        public DateTime? PPLDateIssue { get; set; }
-        public DateTime? PPLDateExpire { get; set; }
-        public int? PPLExpireStatus { get; set; }
-        public string CPLNumber { get; set; }
-        public DateTime? CPLDateIssue { get; set; }
-        public DateTime? CPLDateExpire { get; set; }
-        public int? CPLExpireStatus { get; set; }
-        public string ATPLNumber { get; set; }
-        public DateTime? ATPLDateIssue { get; set; }
-        public DateTime? ATPLDateExpire { get; set; }
-        public int? ATPLExpireStatus { get; set; }
-        public string MCCNumber { get; set; }
-        public DateTime? MCCDateIssue { get; set; }
-        public DateTime? MCCDateExpire { get; set; }
-        public int? MCCExpireStatus { get; set; }
+        public string Pplnumber { get; set; }
+        public DateTime? PpldateIssue { get; set; }
+        public DateTime? PpldateExpire { get; set; }
+        public int? PplexpireStatus { get; set; }
+        public string Cplnumber { get; set; }
+        public DateTime? CpldateIssue { get; set; }
+        public DateTime? CpldateExpire { get; set; }
+        public int? CplexpireStatus { get; set; }
+        public string Atplnumber { get; set; }
+        public DateTime? AtpldateIssue { get; set; }
+        public DateTime? AtpldateExpire { get; set; }
+        public int? AtplexpireStatus { get; set; }
+        public string Mccnumber { get; set; }
+        public DateTime? MccdateIssue { get; set; }
+        public DateTime? MccdateExpire { get; set; }
+        public int? MccexpireStatus { get; set; }
         public int? CurrentLocationAirportId { get; set; }
-        public string CurrentLocationAirporIATA { get; set; }
+        public string CurrentLocationAirporIata { get; set; }
         public int IsAvSecExpired { get; set; }
-        public int IsCCRMExpired { get; set; }
-        public int IsCMCExpired { get; set; }
+        public int IsCcrmexpired { get; set; }
+        public int IsCmcexpired { get; set; }
         public int IsColdWeatherExpired { get; set; }
-        public int IsCRMExpired { get; set; }
-        public int IsDGExpired { get; set; }
+        public int IsCrmexpired { get; set; }
+        public int IsDgexpired { get; set; }
         public int IsHotWeatherExpired { get; set; }
         public int IsLicenceExpired { get; set; }
-        public int IsLicenceIRExpired { get; set; }
-        public int IsLPRExpired { get; set; }
+        public int IsLicenceIrexpired { get; set; }
+        public int IsLprexpired { get; set; }
         public int IsFirstAidExpired { get; set; }
         public int? RemainFirstAid { get; set; }
         public int IsPassportExpired { get; set; }
         public int IsProficiencyExpired { get; set; }
-        public int IsSEPTExpired { get; set; }
-        public int IsSEPTPExpired { get; set; }
-        public int IsSMSExpired { get; set; }
+        public int IsSeptexpired { get; set; }
+        public int IsSeptpexpired { get; set; }
+        public int IsSmsexpired { get; set; }
         public int IsUpsetRecoveryTrainingExpired { get; set; }
         public int? RemainAvSec { get; set; }
-        public int? RemainCAO { get; set; }
-        public int? RemainCCRM { get; set; }
-        public int? RemainCMC { get; set; }
+        public int? RemainCao { get; set; }
+        public int? RemainCcrm { get; set; }
+        public int? RemainCmc { get; set; }
         public int? RemainColdWeather { get; set; }
-        public int? RemainCRM { get; set; }
-        public int? RemainDG { get; set; }
+        public int? RemainCrm { get; set; }
+        public int? RemainDg { get; set; }
         public int? RemainHotWeather { get; set; }
         public int? RemainLicence { get; set; }
-        public int? RemainLicenceIR { get; set; }
-        public int? RemainLPR { get; set; }
+        public int? RemainLicenceIr { get; set; }
+        public int? RemainLpr { get; set; }
         public int? RemainMedical { get; set; }
         public int? RemainPassport { get; set; }
         public int? RemainProficiency { get; set; }
-        public int? RemainSEPT { get; set; }
-        public int? RemainSEPTP { get; set; }
-        public int? RemainSMS { get; set; }
+        public int? RemainSept { get; set; }
+        public int? RemainSeptp { get; set; }
+        public int? RemainSms { get; set; }
         public int? RemainUpsetRecoveryTraining { get; set; }
         public string ScheduleName { get; set; }
         public string Code { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
         public int? FromAirportId { get; set; }
         public int? ToAirportId { get; set; }
         public int? Duty { get; set; }

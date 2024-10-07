@@ -283,6 +283,14 @@ app.config(function ($routeProvider) {
         // type: 'book',
     });
 
+    $routeProvider.when("/fdm/:year/:month", {
+        controller: "fdmController",
+        templateUrl: routePrefix + "/views/fdm.html?vx=2",
+    });
+     $routeProvider.when("/fdm/summery", {
+        controller: "fdmSummeryController",
+        templateUrl: routePrefix + "/views/fdmSummery.html?vx=2",
+    });
 
     $routeProvider.otherwise({ redirectTo: "/appflight" });
 

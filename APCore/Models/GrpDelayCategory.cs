@@ -7,6 +7,6 @@ namespace APCore.Models
 {
     public partial class GrpDelayCategory
     {
-        public string ICategory { get; set; }
+        public string Icategory { get; set; }
     }
 }

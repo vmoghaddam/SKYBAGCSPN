@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewFormAMonthlyInt
+    public partial class ViewFormAmonthlyInt
     {
         public int Year { get; set; }
         public int Month { get; set; }

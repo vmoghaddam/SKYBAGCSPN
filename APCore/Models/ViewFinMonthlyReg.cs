@@ -13,7 +13,7 @@ namespace APCore.Models
         public string MonthName { get; set; }
         public string YearMonth { get; set; }
         public string Register { get; set; }
-        public int? RegisterID { get; set; }
+        public int? RegisterId { get; set; }
         public string AircraftType { get; set; }
         public int? TypeId { get; set; }
         public int? Legs { get; set; }

@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperFDPDate
+    public partial class HelperFdpdate
     {
-        public DateTime CDate { get; set; }
+        public DateTime Cdate { get; set; }
     }
 }

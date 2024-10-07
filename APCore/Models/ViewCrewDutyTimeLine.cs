@@ -43,7 +43,7 @@ namespace APCore.Models
         public DateTime? InitEnd { get; set; }
         public string InitFlts { get; set; }
         public string InitRoute { get; set; }
-        public string InitFromIATA { get; set; }
+        public string InitFromIata { get; set; }
         public string InitNo { get; set; }
         public string InitKey { get; set; }
         public int? InitHomeBase { get; set; }
@@ -55,10 +55,10 @@ namespace APCore.Models
         public double? Split { get; set; }
         public string Remark { get; set; }
         public string Remark2 { get; set; }
-        public decimal? MaxFDP { get; set; }
+        public decimal? MaxFdp { get; set; }
         public int? DurationDuty { get; set; }
-        public int? DurationFDP { get; set; }
-        public int IsFDPOver { get; set; }
+        public int? DurationFdp { get; set; }
+        public int IsFdpover { get; set; }
         public int? InteruptedId { get; set; }
     }
 }

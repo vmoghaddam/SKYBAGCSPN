@@ -7,8 +7,8 @@ namespace APCore.Models
 {
     public partial class ViewFlightCrewX
     {
-        public int FDPId { get; set; }
-        public int FDPItemId { get; set; }
+        public int Fdpid { get; set; }
+        public int FdpitemId { get; set; }
         public int? CrewId { get; set; }
         public int? FlightId { get; set; }
         public bool? IsPositioning { get; set; }
@@ -23,17 +23,17 @@ namespace APCore.Models
         public string Sex { get; set; }
         public int GroupOrder { get; set; }
         public int IsCockpit { get; set; }
-        public DateTime? STDDay { get; set; }
-        public DateTime? STDDayEnd { get; set; }
+        public DateTime? Stdday { get; set; }
+        public DateTime? StddayEnd { get; set; }
         public string FlightNumber { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public int? FromAirport { get; set; }
         public int? ToAirport { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
         public string Register { get; set; }
         public int? RegisterId { get; set; }
         public DateTime? ChocksOut { get; set; }
@@ -48,17 +48,17 @@ namespace APCore.Models
         public int? FlightTime { get; set; }
         public int? FlightTimeActual { get; set; }
         public int? Fixtime { get; set; }
-        public int? SITATime { get; set; }
+        public int? Sitatime { get; set; }
         public string FlightStatus { get; set; }
         public int? FlightStatusId { get; set; }
         public string Airline { get; set; }
-        public int? AirlineOperatorsID { get; set; }
-        public int? CPCrewId { get; set; }
-        public string CPInstructor { get; set; }
-        public string CPP1 { get; set; }
-        public string CPP2 { get; set; }
-        public string CPSCCM { get; set; }
-        public string CPISCCM { get; set; }
+        public int? AirlineOperatorsId { get; set; }
+        public int? CpcrewId { get; set; }
+        public string Cpinstructor { get; set; }
+        public string Cpp1 { get; set; }
+        public string Cpp2 { get; set; }
+        public string Cpsccm { get; set; }
+        public string Cpisccm { get; set; }
         public bool? SplitDuty { get; set; }
         public int NightTime { get; set; }
         public int? DayTime { get; set; }

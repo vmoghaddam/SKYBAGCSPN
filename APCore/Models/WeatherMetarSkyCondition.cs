@@ -9,8 +9,8 @@ namespace APCore.Models
     {
         public int Id { get; set; }
         public int MetarId { get; set; }
-        public string sky_cover { get; set; }
-        public int? cloud_base_ft_agl { get; set; }
+        public string SkyCover { get; set; }
+        public int? CloudBaseFtAgl { get; set; }
 
         public virtual WeatherMetar Metar { get; set; }
     }

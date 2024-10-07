@@ -7,27 +7,27 @@ namespace APCore.Models
 {
     public partial class ViewRosterSheet
     {
-        public int ID { get; set; }
-        public DateTime? STDDay { get; set; }
+        public int Id { get; set; }
+        public DateTime? Stdday { get; set; }
         public string Register { get; set; }
         public string FlightNumber { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public int? FromAirport { get; set; }
         public int? ToAirport { get; set; }
         public string Route { get; set; }
-        public string FSTDLocal { get; set; }
-        public string FSTALocal { get; set; }
-        public string FSTD { get; set; }
-        public string FSTA { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
+        public string Fstdlocal { get; set; }
+        public string Fstalocal { get; set; }
+        public string Fstd { get; set; }
+        public string Fsta { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
         public string Duration { get; set; }
         public int? DurationMinutes { get; set; }
         public string FlightStatus { get; set; }
-        public int? FlightStatusID { get; set; }
+        public int? FlightStatusId { get; set; }
         public int IsCanceled { get; set; }
         public DateTime? Departure { get; set; }
         public DateTime? DepartureLocal { get; set; }
@@ -35,93 +35,93 @@ namespace APCore.Models
         public DateTime? ArrivalLocal { get; set; }
         public int? FlightTimeActual { get; set; }
         public int? BlockTime { get; set; }
-        public int? IP1 { get; set; }
-        public string IP1Name { get; set; }
-        public bool? IP1DH { get; set; }
-        public int? IP2 { get; set; }
-        public string IP2Name { get; set; }
-        public bool? IP2DH { get; set; }
+        public int? Ip1 { get; set; }
+        public string Ip1name { get; set; }
+        public bool? Ip1dh { get; set; }
+        public int? Ip2 { get; set; }
+        public string Ip2name { get; set; }
+        public bool? Ip2dh { get; set; }
         public int? P11 { get; set; }
-        public string P11Name { get; set; }
-        public bool? P11DH { get; set; }
+        public string P11name { get; set; }
+        public bool? P11dh { get; set; }
         public int? P12 { get; set; }
-        public string P12Name { get; set; }
-        public bool? P12DH { get; set; }
+        public string P12name { get; set; }
+        public bool? P12dh { get; set; }
         public int? P13 { get; set; }
-        public string P13Name { get; set; }
-        public bool? P13DH { get; set; }
+        public string P13name { get; set; }
+        public bool? P13dh { get; set; }
         public int? P14 { get; set; }
-        public string P14Name { get; set; }
-        public bool? P14DH { get; set; }
+        public string P14name { get; set; }
+        public bool? P14dh { get; set; }
         public int? P15 { get; set; }
-        public string P15Name { get; set; }
-        public bool? P15DH { get; set; }
+        public string P15name { get; set; }
+        public bool? P15dh { get; set; }
         public int? P21 { get; set; }
-        public string P21Name { get; set; }
-        public bool? P21DH { get; set; }
+        public string P21name { get; set; }
+        public bool? P21dh { get; set; }
         public int? P22 { get; set; }
-        public string P22Name { get; set; }
-        public bool? P22DH { get; set; }
+        public string P22name { get; set; }
+        public bool? P22dh { get; set; }
         public int? P23 { get; set; }
-        public string P23Name { get; set; }
-        public bool? P23DH { get; set; }
+        public string P23name { get; set; }
+        public bool? P23dh { get; set; }
         public int? P24 { get; set; }
-        public string P24Name { get; set; }
-        public bool? P24DH { get; set; }
+        public string P24name { get; set; }
+        public bool? P24dh { get; set; }
         public int? P25 { get; set; }
-        public string P25Name { get; set; }
-        public bool? P25DH { get; set; }
+        public string P25name { get; set; }
+        public bool? P25dh { get; set; }
         public int? Safety1 { get; set; }
         public string Safety1Name { get; set; }
-        public bool? Safety1DH { get; set; }
+        public bool? Safety1Dh { get; set; }
         public int? Safety2 { get; set; }
         public string Safety2Name { get; set; }
-        public bool? Safety2DH { get; set; }
-        public int? ISCCM1 { get; set; }
-        public string ISCCM1Name { get; set; }
-        public bool? ISCCM1DH { get; set; }
-        public int? SCCM1 { get; set; }
-        public string SCCM1Name { get; set; }
-        public bool? SCCM1DH { get; set; }
-        public int? SCCM2 { get; set; }
-        public string SCCM2Name { get; set; }
-        public bool? SCCM2DH { get; set; }
-        public int? SCCM3 { get; set; }
-        public int? SCCM4 { get; set; }
-        public int? SCCM5 { get; set; }
-        public string SCCM3Name { get; set; }
-        public string SCCM4Name { get; set; }
-        public string SCCM5Name { get; set; }
-        public bool? SCCM3DH { get; set; }
-        public bool? SCCM4DH { get; set; }
-        public bool? SCCM5DH { get; set; }
-        public int? CCM1 { get; set; }
-        public string CCM1Name { get; set; }
-        public bool? CCM1DH { get; set; }
-        public int? CCM2 { get; set; }
-        public string CCM2Name { get; set; }
-        public bool? CCM2DH { get; set; }
-        public int? CCM3 { get; set; }
-        public string CCM3Name { get; set; }
-        public bool? CCM3DH { get; set; }
-        public int? CCM4 { get; set; }
-        public string CCM4Name { get; set; }
-        public bool? CCM4DH { get; set; }
-        public int? CCM5 { get; set; }
-        public string CCM5Name { get; set; }
-        public bool? CCM5DH { get; set; }
-        public int? OBS1 { get; set; }
-        public string OBS1Name { get; set; }
-        public bool? OBS1DH { get; set; }
-        public int? OBS2 { get; set; }
-        public string OBS2Name { get; set; }
-        public bool? OBS2DH { get; set; }
-        public int? CHECK1 { get; set; }
-        public string CHECK1Name { get; set; }
-        public bool? CHECK1DH { get; set; }
-        public int? CHECK2 { get; set; }
-        public string CHECK2Name { get; set; }
-        public bool? CHECK2DH { get; set; }
+        public bool? Safety2Dh { get; set; }
+        public int? Isccm1 { get; set; }
+        public string Isccm1name { get; set; }
+        public bool? Isccm1dh { get; set; }
+        public int? Sccm1 { get; set; }
+        public string Sccm1name { get; set; }
+        public bool? Sccm1dh { get; set; }
+        public int? Sccm2 { get; set; }
+        public string Sccm2name { get; set; }
+        public bool? Sccm2dh { get; set; }
+        public int? Sccm3 { get; set; }
+        public int? Sccm4 { get; set; }
+        public int? Sccm5 { get; set; }
+        public string Sccm3name { get; set; }
+        public string Sccm4name { get; set; }
+        public string Sccm5name { get; set; }
+        public bool? Sccm3dh { get; set; }
+        public bool? Sccm4dh { get; set; }
+        public bool? Sccm5dh { get; set; }
+        public int? Ccm1 { get; set; }
+        public string Ccm1name { get; set; }
+        public bool? Ccm1dh { get; set; }
+        public int? Ccm2 { get; set; }
+        public string Ccm2name { get; set; }
+        public bool? Ccm2dh { get; set; }
+        public int? Ccm3 { get; set; }
+        public string Ccm3name { get; set; }
+        public bool? Ccm3dh { get; set; }
+        public int? Ccm4 { get; set; }
+        public string Ccm4name { get; set; }
+        public bool? Ccm4dh { get; set; }
+        public int? Ccm5 { get; set; }
+        public string Ccm5name { get; set; }
+        public bool? Ccm5dh { get; set; }
+        public int? Obs1 { get; set; }
+        public string Obs1name { get; set; }
+        public bool? Obs1dh { get; set; }
+        public int? Obs2 { get; set; }
+        public string Obs2name { get; set; }
+        public bool? Obs2dh { get; set; }
+        public int? Check1 { get; set; }
+        public string Check1name { get; set; }
+        public bool? Check1dh { get; set; }
+        public int? Check2 { get; set; }
+        public string Check2name { get; set; }
+        public bool? Check2dh { get; set; }
         public int? FlightTime { get; set; }
         public string DeadHeads { get; set; }
         public string Color1 { get; set; }

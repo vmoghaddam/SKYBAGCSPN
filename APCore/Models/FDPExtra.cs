@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class FDPExtra
+    public partial class Fdpextra
     {
         public int Id { get; set; }
-        public int FDPId { get; set; }
-        public decimal? MaxFDP { get; set; }
+        public int Fdpid { get; set; }
+        public decimal? MaxFdp { get; set; }
 
-        public virtual FDP FDP { get; set; }
+        public virtual Fdp Fdp { get; set; }
     }
 }

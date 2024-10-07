@@ -9,9 +9,9 @@ namespace APCore.Models
     {
         public DateTime Date { get; set; }
         public int CrewId { get; set; }
-        public int? Duration { get; set; }
-        public int? DurationLocal { get; set; }
-        public int? Duty7 { get; set; }
+        public double? Duration { get; set; }
+        public double? DurationLocal { get; set; }
+        public double? Duty7 { get; set; }
         public double? Duty7Local { get; set; }
     }
 }

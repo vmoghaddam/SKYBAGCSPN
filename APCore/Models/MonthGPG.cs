@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class MonthGPG
+    public partial class MonthGpg
     {
         public int? Year { get; set; }
         public int? Month { get; set; }

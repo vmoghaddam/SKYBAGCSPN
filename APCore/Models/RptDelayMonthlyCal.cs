@@ -16,9 +16,9 @@ namespace APCore.Models
         public decimal? DelayPerLeg { get; set; }
         public decimal PreDelayPerLeg { get; set; }
         public decimal? DelayPerLegDiff { get; set; }
-        public decimal? DelayPerBL { get; set; }
-        public decimal PreDelayPerBL { get; set; }
-        public decimal? DelayPerBLDiff { get; set; }
+        public decimal? DelayPerBl { get; set; }
+        public decimal PreDelayPerBl { get; set; }
+        public decimal? DelayPerBldiff { get; set; }
         public int? OnTimeFlightCount { get; set; }
         public int PreOnTimeFlightCount { get; set; }
         public decimal? OnTimeFlightCountDiff { get; set; }
@@ -151,32 +151,32 @@ namespace APCore.Models
         public int FlightCount { get; set; }
         public int PreFlightCount { get; set; }
         public decimal? FlightCountDiff { get; set; }
-        public int? AFlightCount { get; set; }
-        public int PreAFlightCount { get; set; }
-        public decimal? AFlightCountDiff { get; set; }
+        public int? AflightCount { get; set; }
+        public int PreAflightCount { get; set; }
+        public decimal? AflightCountDiff { get; set; }
         public int BlockTime { get; set; }
         public int PreBlockTime { get; set; }
         public decimal? BlockTimeDiff { get; set; }
-        public int? ABlockTime { get; set; }
-        public int PreABlockTime { get; set; }
-        public decimal? ABlockTimeDiff { get; set; }
+        public int? AblockTime { get; set; }
+        public int PreAblockTime { get; set; }
+        public decimal? AblockTimeDiff { get; set; }
         public int FlightTime { get; set; }
         public int PreFlightTime { get; set; }
         public decimal? FlightTimeDiff { get; set; }
-        public int? AFlightTime { get; set; }
-        public int PreAFlightTime { get; set; }
-        public decimal? AFlightTimeDiff { get; set; }
+        public int? AflightTime { get; set; }
+        public int PreAflightTime { get; set; }
+        public decimal? AflightTimeDiff { get; set; }
         public int TotalPax { get; set; }
         public int PreTotalPax { get; set; }
         public decimal? TotalPaxDiff { get; set; }
-        public int? ATotalPax { get; set; }
-        public int PreATotalPax { get; set; }
-        public decimal? ATotalPaxDiff { get; set; }
+        public int? AtotalPax { get; set; }
+        public int PreAtotalPax { get; set; }
+        public decimal? AtotalPaxDiff { get; set; }
         public int TotalPaxAll { get; set; }
         public int PreTotalPaxAll { get; set; }
         public decimal? TotalPaxAllDiff { get; set; }
-        public int? ATotalPaxAll { get; set; }
-        public int PreATotalPaxAll { get; set; }
-        public decimal? ATotalPaxAllDiff { get; set; }
+        public int? AtotalPaxAll { get; set; }
+        public int PreAtotalPaxAll { get; set; }
+        public decimal? AtotalPaxAllDiff { get; set; }
     }
 }

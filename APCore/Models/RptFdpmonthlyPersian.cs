@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class RptFDPMonthlyPersian
+    public partial class RptFdpmonthlyPersian
     {
-        public int? PYear { get; set; }
+        public int? Pyear { get; set; }
         public string PeriodFixTime { get; set; }
         public int? CrewId { get; set; }
         public string Name { get; set; }
@@ -30,19 +30,19 @@ namespace APCore.Models
         public int? Leg6 { get; set; }
         public int? Leg7 { get; set; }
         public int? Leg8 { get; set; }
-        public int? RankOrder { get; set; }
+        public int RankOrder { get; set; }
         public int? StandBy { get; set; }
         public int? Misson { get; set; }
         public int? FixTimeTotal { get; set; }
-        public int? FX300000 { get; set; }
-        public int? FX300001 { get; set; }
-        public int? FX300002 { get; set; }
-        public int? FX300003 { get; set; }
-        public int? FX300004 { get; set; }
-        public int? FX300005 { get; set; }
-        public int? FX300006 { get; set; }
-        public int? FX300007 { get; set; }
-        public int? FX300008 { get; set; }
-        public int? FX300009 { get; set; }
+        public int? Fx300000 { get; set; }
+        public int? Fx300001 { get; set; }
+        public int? Fx300002 { get; set; }
+        public int? Fx300003 { get; set; }
+        public int? Fx300004 { get; set; }
+        public int? Fx300005 { get; set; }
+        public int? Fx300006 { get; set; }
+        public int? Fx300007 { get; set; }
+        public int? Fx300008 { get; set; }
+        public int? Fx300009 { get; set; }
     }
 }

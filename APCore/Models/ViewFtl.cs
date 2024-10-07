@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewFTL
+    public partial class ViewFtl
     {
         public DateTime Date { get; set; }
         public int CrewId { get; set; }
@@ -16,9 +16,6 @@ namespace APCore.Models
         public double? Flight1Local { get; set; }
         public double? Flight28Local { get; set; }
         public double? FlightYearLocal { get; set; }
-        public double? FlightCYearLocal { get; set; }
-        public int? _Flight1Local { get; set; }
-        public int? _Flight28Local { get; set; }
-        public int? _FlightYearLocal { get; set; }
+        public double? FlightCyearLocal { get; set; }
     }
 }

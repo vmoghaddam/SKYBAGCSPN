@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class SMSGroup
+    public partial class Smsgroup
     {
         public int Id { get; set; }
         public int Type { get; set; }

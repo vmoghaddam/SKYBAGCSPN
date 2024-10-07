@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class RptFDPMonthly
+    public partial class RptFdpmonthly
     {
         public int? Year { get; set; }
         public int? Month { get; set; }

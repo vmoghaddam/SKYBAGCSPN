@@ -25,6 +25,9 @@ namespace APCore.Models
         public string Password { get; set; }
         public int? CustomerId { get; set; }
         public int? GroupId { get; set; }
+        public int? C1groupId { get; set; }
+        public int? C2groupId { get; set; }
+        public int? C3groupId { get; set; }
 
         public virtual Customer Customer { get; set; }
         public virtual JobGroup Group { get; set; }

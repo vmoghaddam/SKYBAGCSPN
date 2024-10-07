@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewTableDutyFDP
+    public partial class ViewTableDutyFdp
     {
-        public DateTime CDate { get; set; }
+        public DateTime Cdate { get; set; }
         public int? CrewId { get; set; }
         public double? Duration { get; set; }
         public double? DurationLocal { get; set; }

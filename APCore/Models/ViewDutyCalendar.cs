@@ -7,7 +7,7 @@ namespace APCore.Models
 {
     public partial class ViewDutyCalendar
     {
-        public DateTime CDate { get; set; }
+        public DateTime Cdate { get; set; }
         public DateTime? DatePart { get; set; }
         public int CrewCalendarId { get; set; }
         public int EmployeeId { get; set; }

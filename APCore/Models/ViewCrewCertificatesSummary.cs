@@ -14,40 +14,40 @@ namespace APCore.Models
         public DateTime? MedicalNextChechup { get; set; }
         public int IsMedicalExpired { get; set; }
         public int? RemainMedical { get; set; }
-        public DateTime? LPRExpireDate { get; set; }
-        public int IsLPRExpired { get; set; }
-        public int? RemainLPR { get; set; }
+        public DateTime? LprexpireDate { get; set; }
+        public int IsLprexpired { get; set; }
+        public int? RemainLpr { get; set; }
         public DateTime? ProficiencyCheckDate { get; set; }
         public DateTime? ProficiencyExpireDate { get; set; }
         public int? RemainProficiency { get; set; }
         public int IsProficiencyExpired { get; set; }
-        public DateTime? CMCExpireDate { get; set; }
-        public int? RemainCMC { get; set; }
-        public int IsCMCExpired { get; set; }
-        public DateTime? CCRMIssueDate { get; set; }
-        public DateTime? CCRMExpireDate { get; set; }
-        public int? RemainCCRM { get; set; }
-        public int IsCCRMExpired { get; set; }
+        public DateTime? CmcexpireDate { get; set; }
+        public int? RemainCmc { get; set; }
+        public int IsCmcexpired { get; set; }
+        public DateTime? CcrmissueDate { get; set; }
+        public DateTime? CcrmexpireDate { get; set; }
+        public int? RemainCcrm { get; set; }
+        public int IsCcrmexpired { get; set; }
         public DateTime? AvSecIssueDate { get; set; }
         public DateTime? AvSecExpireDate { get; set; }
         public int? RemainAvSec { get; set; }
         public int IsAvSecExpired { get; set; }
-        public DateTime? SEPTIssueDate { get; set; }
-        public DateTime? SEPTExpireDate { get; set; }
-        public int? RemainSEPT { get; set; }
-        public int IsSEPTExpired { get; set; }
-        public DateTime? SEPTPracticalIssueDate { get; set; }
-        public DateTime? SEPTPracticalExpireDate { get; set; }
-        public int? RemainSEPTP { get; set; }
-        public int IsSEPTPExpired { get; set; }
-        public DateTime? DGIssueDate { get; set; }
-        public DateTime? DGExpireDate { get; set; }
-        public int? RemainDG { get; set; }
-        public int IsDGExpired { get; set; }
-        public DateTime? SMSIssueDate { get; set; }
-        public DateTime? SMSExpireDate { get; set; }
-        public int? RemainSMS { get; set; }
-        public int IsSMSExpired { get; set; }
+        public DateTime? SeptissueDate { get; set; }
+        public DateTime? SeptexpireDate { get; set; }
+        public int? RemainSept { get; set; }
+        public int IsSeptexpired { get; set; }
+        public DateTime? SeptpracticalIssueDate { get; set; }
+        public DateTime? SeptpracticalExpireDate { get; set; }
+        public int? RemainSeptp { get; set; }
+        public int IsSeptpexpired { get; set; }
+        public DateTime? DgissueDate { get; set; }
+        public DateTime? DgexpireDate { get; set; }
+        public int? RemainDg { get; set; }
+        public int IsDgexpired { get; set; }
+        public DateTime? SmsissueDate { get; set; }
+        public DateTime? SmsexpireDate { get; set; }
+        public int? RemainSms { get; set; }
+        public int IsSmsexpired { get; set; }
         public DateTime? FirstAidIssueDate { get; set; }
         public DateTime? FirstAidExpireDate { get; set; }
         public int? RemainFirstAid { get; set; }

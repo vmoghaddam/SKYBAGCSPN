@@ -133,7 +133,7 @@
 
                 <table style="margin-top:10px;border:1px solid #eee;width:100%;color:lightgray" class="dx-border">
                     <tr>
-                        <td colspan="6" style="background-color:lightgray;padding:7px;text-align:left;color:black;font-weight:bold">
+                        <td colspan="10" style="background-color:lightgray;padding:7px;text-align:left;color:black;font-weight:bold">
                             WEATHER
                         </td>
                     </tr>
@@ -142,8 +142,24 @@
                         <td style="padding:7px;text-align:left;"><div dx-select-box="sb_MET" class="center"></div>
                         <td style="padding: 7px;text-align:left; font-weight:bold">SIG. WX:</td>
                         <td style="padding:7px;text-align:left;"><div dx-select-box="sb_SignificantWxType" class="center"></div></td>
-                        <td style="padding:7px;text-align:left;"><div dx-select-box="sb_SignificantWx" class="center"></div></td>
+                        <td style="padding:7px;text-align:left;" colspan="2"><div dx-select-box="sb_SignificantWx" class="center"></div></td>
 
+
+                    </tr>
+                    <tr>
+                        <td style="padding: 7px;text-align:left;width:30px;font-weight: bold">VISIBILITY:</td>
+                        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_visibility" class="center"></div>
+                        <td style="padding: 7px;text-align:left;width:30px;font-weight: bold">WIND:</td>
+                        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_windAngle" class="center"></div>
+                        <td style="padding: 7px;text-align:left;width:30px;font-weight: bold">/</td>
+                        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_windSpeed" class="center"></div>
+
+                    </tr>
+                    <tr>
+                        <td style="padding: 7px;text-align:left;width:30px;font-weight: bold">TEMP. (°C):</td>
+                        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_temp" class="center"></div>
+                        <td style="padding: 7px;text-align:left;width:30px;font-weight: bold">QNH (mb):</td>
+                        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_qnh" class="center"></div>
 
                     </tr>
                     <tr>
@@ -151,15 +167,34 @@
                     </tr>
 
                     <tr>
-                        <td style="padding:7px;text-align:left;" colspan="5"><div dx-text-area="ActualWX"></div></td>
+                        <td style="padding:7px;text-align:left;" colspan="10"><div dx-text-area="ActualWX"></div></td>
                     </tr>
                 </table>
+
+                <table style="margin-top:10px;border:1px solid #eee;width:100%;color:lightgray" class="dx-border">
+                    <tr>
+                        <td colspan="6" style="background-color:lightgray;padding:7px;text-align:left;color:black;font-weight:bold">
+                            CLOUD
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 7px;text-align:left;width:30px;font-weight: bold">Type:</td>
+                        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_cloudType" class="center"></div>
+                        <td style="padding: 7px;text-align:left; font-weight:bold">Height:</td>
+                        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_cloudHeight" class="center"></div></td>
+                        <td style="padding: 7px;text-align:left; font-weight:bold">Amount:</td>
+                        <td style="padding:7px;text-align:left;"><div dx-text-box="txt_cloudAmount" class="center"></div></td>
+                    </tr>
+                </table>
+
 
                 <table style="margin-top:10px;border:1px solid #eee;width:100%;color:lightgray" class="dx-border">
 
                     <tr>
                         <td style="padding: 7px;text-align:left;width:30px;font-weight: bold" colspan="2"> RUNWAY CONDTION:</td>
                         <td style="padding:7px;text-align:left;" colspan="3"><div dx-select-box="sb_RunwayCondition"></div></td>
+                        <td style="padding: 7px;text-align:left;width:30px;font-weight: bold" colspan="2"> RUNWAY STATE:</td>
+                        <td style="padding:7px;text-align:left;" colspan="3"><div dx-select-box="sb_RunwayState"></div></td>
                     </tr>
 
                 </table>

@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class RptFDP
+    public partial class RptFdp
     {
-        public int FDPId { get; set; }
+        public int Fdpid { get; set; }
         public int? CrewId { get; set; }
         public string Name { get; set; }
         public string FirstName { get; set; }
@@ -16,10 +16,10 @@ namespace APCore.Models
         public string JobGroup { get; set; }
         public string JobGroupCode { get; set; }
         public string JobGroupRoot { get; set; }
-        public DateTime? STDDay { get; set; }
-        public DateTime? STADay { get; set; }
-        public DateTime? STDDayUTC { get; set; }
-        public DateTime? STADayUTC { get; set; }
+        public DateTime? Stdday { get; set; }
+        public DateTime? Staday { get; set; }
+        public DateTime? StddayUtc { get; set; }
+        public DateTime? StadayUtc { get; set; }
         public string Flights { get; set; }
         public string Route { get; set; }
         public int? Legs { get; set; }
@@ -27,17 +27,17 @@ namespace APCore.Models
         public int? BlockTime { get; set; }
         public int? ScheduledTime { get; set; }
         public TimeSpan? FixTime2 { get; set; }
-        public TimeSpan? HFixTime2 { get; set; }
+        public TimeSpan? HfixTime2 { get; set; }
         public int? FixTime { get; set; }
         public string DayName { get; set; }
-        public string PDayName { get; set; }
+        public string PdayName { get; set; }
         public int? Year { get; set; }
-        public int? PYear { get; set; }
+        public int? Pyear { get; set; }
         public string MonthName { get; set; }
-        public string PMonthName { get; set; }
+        public string PmonthName { get; set; }
         public int? Month { get; set; }
-        public int? PMonth { get; set; }
-        public string PDate { get; set; }
+        public int? Pmonth { get; set; }
+        public string Pdate { get; set; }
         public string PeriodFixTime { get; set; }
         public int Leg1 { get; set; }
         public int Leg2 { get; set; }

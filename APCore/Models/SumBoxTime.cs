@@ -11,7 +11,7 @@ namespace APCore.Models
         public DateTime? Date { get; set; }
         public int? CalanderId { get; set; }
         public int? Duty { get; set; }
-        public int? FDP { get; set; }
+        public int? Fdp { get; set; }
         public int? Flight { get; set; }
         public int? Sector { get; set; }
     }

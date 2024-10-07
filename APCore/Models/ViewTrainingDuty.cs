@@ -27,11 +27,11 @@ namespace APCore.Models
         public DateTime? DutyEndLocal { get; set; }
         public string Remark { get; set; }
         public DateTime? LocalDate { get; set; }
-        public string PDate { get; set; }
-        public string PYearName { get; set; }
-        public int? PYear { get; set; }
-        public string PMonthName { get; set; }
-        public int? PMonth { get; set; }
+        public string Pdate { get; set; }
+        public string PyearName { get; set; }
+        public int? Pyear { get; set; }
+        public string PmonthName { get; set; }
+        public int? Pmonth { get; set; }
         public string MonthName { get; set; }
         public string Month { get; set; }
         public string DayName { get; set; }

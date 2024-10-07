@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewEFBVoyageIrr
+    public partial class ViewEfbvoyageIrr
     {
         public int? VoyageReportId { get; set; }
         public int Id { get; set; }

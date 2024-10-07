@@ -7,7 +7,7 @@ namespace APCore.Models
 {
     public partial class ViewIdeaLast
     {
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string CourseTitle { get; set; }

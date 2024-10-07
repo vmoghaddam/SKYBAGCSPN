@@ -13,7 +13,7 @@ namespace APCore.Models
         public string Description { get; set; }
         public DateTime? DateIssue { get; set; }
         public DateTime? DateExpire { get; set; }
-        public DateTime? DateIRValid { get; set; }
+        public DateTime? DateIrvalid { get; set; }
         public int? AcTypeId { get; set; }
         public string Rating { get; set; }
         public int? Class { get; set; }

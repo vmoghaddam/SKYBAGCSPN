@@ -7,11 +7,11 @@ namespace APCore.Models
 {
     public partial class DlyGrpFlight
     {
-        public int? PYear { get; set; }
-        public string PMonthName { get; set; }
-        public int? PMonth { get; set; }
-        public string PDate { get; set; }
-        public DateTime? STDDay { get; set; }
+        public int? Pyear { get; set; }
+        public string PmonthName { get; set; }
+        public int? Pmonth { get; set; }
+        public string Pdate { get; set; }
+        public DateTime? Stdday { get; set; }
         public int FlightId { get; set; }
         public int? Delay { get; set; }
         public string FlightNumber { get; set; }
@@ -21,14 +21,14 @@ namespace APCore.Models
         public DateTime? ChocksOut { get; set; }
         public DateTime? DepartureLocal { get; set; }
         public DateTime? ArrivalLocal { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
-        public int? RegisterID { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
+        public int? RegisterId { get; set; }
         public string Register { get; set; }
         public int? TypeId { get; set; }
         public string AircraftType { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public int? FromAirport { get; set; }
         public int? ToAirport { get; set; }
         public int? BlockTime { get; set; }

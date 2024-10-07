@@ -5,31 +5,31 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class XFlight
+    public partial class Xflight
     {
-        public DateTime? XSTD { get; set; }
-        public DateTime? XSTA { get; set; }
-        public int? XFlightH { get; set; }
-        public int? XFlightM { get; set; }
-        public DateTime? XDateUTC { get; set; }
-        public DateTime? XOffBlock { get; set; }
-        public DateTime? XTakeOff { get; set; }
-        public DateTime? XLanding { get; set; }
-        public DateTime? XOnBlock { get; set; }
-        public string XFromAirport { get; set; }
-        public int? XFromAirportId { get; set; }
-        public string XToAirport { get; set; }
-        public int? XToAirportId { get; set; }
-        public string XFlightNumber { get; set; }
-        public string ACReg { get; set; }
-        public int? XRegisterId { get; set; }
-        public int XFlightStatusId { get; set; }
-        public string DateUTC { get; set; }
-        public string ACType { get; set; }
-        public string STD { get; set; }
-        public string STA { get; set; }
-        public string ATD { get; set; }
-        public string ATA { get; set; }
+        public DateTime? Xstd { get; set; }
+        public DateTime? Xsta { get; set; }
+        public int? XflightH { get; set; }
+        public int? XflightM { get; set; }
+        public DateTime? XdateUtc { get; set; }
+        public DateTime? XoffBlock { get; set; }
+        public DateTime? XtakeOff { get; set; }
+        public DateTime? Xlanding { get; set; }
+        public DateTime? XonBlock { get; set; }
+        public string XfromAirport { get; set; }
+        public int? XfromAirportId { get; set; }
+        public string XtoAirport { get; set; }
+        public int? XtoAirportId { get; set; }
+        public string XflightNumber { get; set; }
+        public string Acreg { get; set; }
+        public int? XregisterId { get; set; }
+        public int XflightStatusId { get; set; }
+        public string DateUtc { get; set; }
+        public string Actype { get; set; }
+        public string Std { get; set; }
+        public string Sta { get; set; }
+        public string Atd { get; set; }
+        public string Ata { get; set; }
         public string OffBlock { get; set; }
         public string OnBlock { get; set; }
         public string TakeOff { get; set; }
@@ -37,9 +37,9 @@ namespace APCore.Models
         public string SaveTime { get; set; }
         public string Male { get; set; }
         public string Female { get; set; }
-        public string PaxADL { get; set; }
-        public string PaxCHD { get; set; }
-        public string PaxINF { get; set; }
+        public string PaxAdl { get; set; }
+        public string PaxChd { get; set; }
+        public string PaxInf { get; set; }
         public string TotalSeats { get; set; }
         public string OverPax { get; set; }
         public string FuelRemain { get; set; }
@@ -57,7 +57,7 @@ namespace APCore.Models
         public string Tag2 { get; set; }
         public string Tag3 { get; set; }
         public string Parking { get; set; }
-        public string PAXStation { get; set; }
+        public string Paxstation { get; set; }
         public string StationIncomeCurrency { get; set; }
         public string AlternateStation { get; set; }
         public string Status { get; set; }

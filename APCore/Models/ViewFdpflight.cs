@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewFDPFlight
+    public partial class ViewFdpflight
     {
         public int Id { get; set; }
         public int? TotalFlight { get; set; }

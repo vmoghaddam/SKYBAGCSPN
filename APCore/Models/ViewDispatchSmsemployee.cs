@@ -5,11 +5,11 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewDispatchSMSEmployee
+    public partial class ViewDispatchSmsemployee
     {
         public int Id { get; set; }
         public string ImageUrl { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public int PersonId { get; set; }
         public bool IsActive { get; set; }
         public bool IsDeleted { get; set; }
@@ -17,7 +17,7 @@ namespace APCore.Models
         public int? GroupId { get; set; }
         public string JobGroup { get; set; }
         public string JobGroupCode { get; set; }
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Name { get; set; }

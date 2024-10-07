@@ -15,6 +15,8 @@ var serviceBase = 'http://fleet.flypersia.aero/apiv2/';
 var serviceBase2 =  'https://localhost:44399/api/';
  
 var serviceBase3 = 'https://localhost:44399/api/';
+//var ApiFDM = 'https://apifdm.airpocket.online/';
+var apiFdm = 'http://localhost:22554/';
 
 var serviceBaseAPI = 'http://localhost:12271/';
  

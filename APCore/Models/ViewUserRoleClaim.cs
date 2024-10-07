@@ -8,7 +8,7 @@ namespace APCore.Models
     public partial class ViewUserRoleClaim
     {
         public string UserId { get; set; }
-        public string roleId { get; set; }
+        public string RoleId { get; set; }
         public string Name { get; set; }
         public string Name2 { get; set; }
         public string ClaimType { get; set; }

@@ -10,9 +10,9 @@ namespace APCore.Models
         public int Id { get; set; }
         public int? CrewId { get; set; }
         public double? BlockTime { get; set; }
-        public DateTime? CDate { get; set; }
-        public int? FDPId { get; set; }
+        public DateTime? Cdate { get; set; }
+        public int? Fdpid { get; set; }
 
-        public virtual FDP FDP { get; set; }
+        public virtual Fdp Fdp { get; set; }
     }
 }

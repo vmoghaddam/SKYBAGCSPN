@@ -7,15 +7,15 @@ namespace APCore.Models
 {
     public partial class DlyGrpFlightCatRegister
     {
-        public int? PYear { get; set; }
-        public string PMonthName { get; set; }
-        public int? PMonth { get; set; }
-        public string PDate { get; set; }
+        public int? Pyear { get; set; }
+        public string PmonthName { get; set; }
+        public int? Pmonth { get; set; }
+        public string Pdate { get; set; }
         public int FlightId { get; set; }
-        public string ICategory { get; set; }
+        public string Icategory { get; set; }
         public int? TypeId { get; set; }
         public string AircraftType { get; set; }
-        public int? RegisterID { get; set; }
+        public int? RegisterId { get; set; }
         public string Register { get; set; }
         public int? Delay { get; set; }
         public int? BlockTime { get; set; }

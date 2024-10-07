@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class EFBVoyageReport
+    public partial class EfbvoyageReport
     {
-        public EFBVoyageReport()
+        public EfbvoyageReport()
         {
-            EFBFlightIrregularities = new HashSet<EFBFlightIrregularity>();
-            EFBReasons = new HashSet<EFBReason>();
+            EfbflightIrregularities = new HashSet<EfbflightIrregularity>();
+            Efbreasons = new HashSet<Efbreason>();
         }
 
         public int Id { get; set; }
@@ -19,33 +19,32 @@ namespace APCore.Models
         public int? RestReduction { get; set; }
         public int? DutyExtention { get; set; }
         public string Report { get; set; }
-        public DateTime? DatePICSignature { get; set; }
+        public DateTime? DatePicsignature { get; set; }
         public int? ActionedById { get; set; }
         public DateTime? DateActioned { get; set; }
         public DateTime? DateConfirmed { get; set; }
         public int? DepDelay { get; set; }
         public string DateUpdate { get; set; }
         public string User { get; set; }
-        public string JLSignedBy { get; set; }
-        public DateTime? JLDatePICApproved { get; set; }
-        public int? PICId { get; set; }
-        public string PIC { get; set; }
-        public string OPSRemark { get; set; }
-        public DateTime? OPSRemarkDate { get; set; }
-        public int? OPSId { get; set; }
-        public DateTime? OPSConfirmDate { get; set; }
-        public string OPSStaffRemark { get; set; }
-        public DateTime? OPSStaffDateVisit { get; set; }
-        public DateTime? OPSStaffConfirmDate { get; set; }
-        public int? OPSStaffId { get; set; }
-        public DateTime? OPSStaffRemarkDate { get; set; }
-        public string OPSUser { get; set; }
-        public string OPSStaffUser { get; set; }
-        public int? OPSStatusId { get; set; }
-        public int? OPSStaffStatusId { get; set; }
+        public string JlsignedBy { get; set; }
+        public DateTime? JldatePicapproved { get; set; }
+        public int? Picid { get; set; }
+        public string Pic { get; set; }
+        public string Opsremark { get; set; }
+        public DateTime? OpsremarkDate { get; set; }
+        public int? Opsid { get; set; }
+        public DateTime? OpsconfirmDate { get; set; }
+        public string OpsstaffRemark { get; set; }
+        public DateTime? OpsstaffDateVisit { get; set; }
+        public DateTime? OpsstaffConfirmDate { get; set; }
+        public int? OpsstaffId { get; set; }
+        public DateTime? OpsstaffRemarkDate { get; set; }
+        public string Opsuser { get; set; }
+        public string OpsstaffUser { get; set; }
+        public int? OpsstatusId { get; set; }
+        public int? OpsstaffStatusId { get; set; }
 
-        public virtual FlightInformation Flight { get; set; }
-        public virtual ICollection<EFBFlightIrregularity> EFBFlightIrregularities { get; set; }
-        public virtual ICollection<EFBReason> EFBReasons { get; set; }
+        public virtual ICollection<EfbflightIrregularity> EfbflightIrregularities { get; set; }
+        public virtual ICollection<Efbreason> Efbreasons { get; set; }
     }
 }

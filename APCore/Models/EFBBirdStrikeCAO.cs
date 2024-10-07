@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class EFBBirdStrikeCAO
+    public partial class EfbbirdStrikeCao
     {
         public int Id { get; set; }
         public int? FlightId { get; set; }
@@ -16,24 +16,24 @@ namespace APCore.Models
         public string AerodromeName { get; set; }
         public string RunwayUsed { get; set; }
         public string EnRouteLoc { get; set; }
-        public decimal? HeightAGl { get; set; }
-        public decimal? Speed_IAS_ { get; set; }
+        public decimal? HeightAgl { get; set; }
+        public decimal? SpeedIas { get; set; }
         public int? PhaseOrFlightId { get; set; }
-        public int? A_CPartRadom { get; set; }
-        public int? A_CPartWindShield { get; set; }
-        public int? A_CPartNose { get; set; }
-        public int? A_CPartEngineNO1 { get; set; }
-        public int? A_CPartEngineNO2 { get; set; }
-        public int? A_CPartEngineNO3 { get; set; }
-        public int? A_CPartEngineNO4 { get; set; }
-        public int? A_CPartPropeller { get; set; }
-        public int? A_CPartWing_Rotor { get; set; }
-        public int? A_CPartFuselage { get; set; }
-        public int? A_CPartLandingGear { get; set; }
-        public int? A_CPartTail { get; set; }
-        public int? A_CPartLight { get; set; }
-        public int? A_CPartOther_Specify_ { get; set; }
-        public bool? IsEffect__None { get; set; }
+        public int? ACpartRadom { get; set; }
+        public int? ACpartWindShield { get; set; }
+        public int? ACpartNose { get; set; }
+        public int? ACpartEngineNo1 { get; set; }
+        public int? ACpartEngineNo2 { get; set; }
+        public int? ACpartEngineNo3 { get; set; }
+        public int? ACpartEngineNo4 { get; set; }
+        public int? ACpartPropeller { get; set; }
+        public int? ACpartWingRotor { get; set; }
+        public int? ACpartFuselage { get; set; }
+        public int? ACpartLandingGear { get; set; }
+        public int? ACpartTail { get; set; }
+        public int? ACpartLight { get; set; }
+        public int? ACpartOtherSpecify { get; set; }
+        public bool? IsEffectNone { get; set; }
         public bool? IsEffectAbortedTakeOff { get; set; }
         public bool? IsEffectLanding { get; set; }
         public bool? IsEffectEngineShutDown { get; set; }

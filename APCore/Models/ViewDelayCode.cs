@@ -16,6 +16,6 @@ namespace APCore.Models
         public int DelayCategoryId { get; set; }
         public string Remark { get; set; }
         public int? AirlineId { get; set; }
-        public string ICategory { get; set; }
+        public string Icategory { get; set; }
     }
 }

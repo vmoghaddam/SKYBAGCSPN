@@ -14,8 +14,8 @@ namespace APCore.Models
         public string No { get; set; }
         public string From { get; set; }
         public string To { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
         public string Duration { get; set; }
         public string Line { get; set; }
     }

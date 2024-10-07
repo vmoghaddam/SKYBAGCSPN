@@ -5,18 +5,18 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class FDP
+    public partial class Fdp
     {
-        public FDP()
+        public Fdp()
         {
-            CourseSessionFDPs = new HashSet<CourseSessionFDP>();
-            CrewPickupSMs = new HashSet<CrewPickupSM>();
+            CrewPickupSms = new HashSet<CrewPickupSm>();
             EmployeeCalendars = new HashSet<EmployeeCalendar>();
             ExtensionHistories = new HashSet<ExtensionHistory>();
-            FDPExtras = new HashSet<FDPExtra>();
-            FDPItems = new HashSet<FDPItem>();
+            FdmeventActions = new HashSet<FdmeventAction>();
+            Fdpextras = new HashSet<Fdpextra>();
+            Fdpitems = new HashSet<Fdpitem>();
             IdeaSessionItems = new HashSet<IdeaSessionItem>();
-            InverseFDPNavigation = new HashSet<FDP>();
+            InverseFdpNavigation = new HashSet<Fdp>();
             OffItems = new HashSet<OffItem>();
             TableBlockTimes = new HashSet<TableBlockTime>();
         }
@@ -34,19 +34,19 @@ namespace APCore.Models
         public bool IsTemplate { get; set; }
         public int DutyType { get; set; }
         public DateTime? DateContact { get; set; }
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
         public DateTime? DateStart { get; set; }
         public DateTime? DateEnd { get; set; }
         public int? CityId { get; set; }
         public int? TemplateId { get; set; }
-        public DateTime? FDPReportingTime { get; set; }
-        public Guid? GUID { get; set; }
+        public DateTime? FdpreportingTime { get; set; }
+        public Guid? Guid { get; set; }
         public int? FirstFlightId { get; set; }
         public int? LastFlightId { get; set; }
-        public int? UPD { get; set; }
+        public int? Upd { get; set; }
         public bool? IsMain { get; set; }
         public string Key { get; set; }
-        public bool? CP { get; set; }
+        public bool? Cp { get; set; }
         public int? CustomerId { get; set; }
         public string Remark { get; set; }
         public int? LocationId { get; set; }
@@ -55,8 +55,8 @@ namespace APCore.Models
         public DateTime? InitRestTo { get; set; }
         public string InitFlts { get; set; }
         public string InitRoute { get; set; }
-        public string InitFromIATA { get; set; }
-        public string InitToIATA { get; set; }
+        public string InitFromIata { get; set; }
+        public string InitToIata { get; set; }
         public string InitNo { get; set; }
         public string InitKey { get; set; }
         public int? InitHomeBase { get; set; }
@@ -73,21 +73,21 @@ namespace APCore.Models
         public DateTime? DateConfirmed { get; set; }
         public string ConfirmedBy { get; set; }
         public string UserName { get; set; }
-        public decimal? MaxFDP { get; set; }
-        public int? BL { get; set; }
-        public int? FX { get; set; }
+        public decimal? MaxFdp { get; set; }
+        public int? Bl { get; set; }
+        public int? Fx { get; set; }
 
         public virtual Box Box { get; set; }
         public virtual Employee Crew { get; set; }
-        public virtual FDP FDPNavigation { get; set; }
-        public virtual ICollection<CourseSessionFDP> CourseSessionFDPs { get; set; }
-        public virtual ICollection<CrewPickupSM> CrewPickupSMs { get; set; }
+        public virtual Fdp FdpNavigation { get; set; }
+        public virtual ICollection<CrewPickupSm> CrewPickupSms { get; set; }
         public virtual ICollection<EmployeeCalendar> EmployeeCalendars { get; set; }
         public virtual ICollection<ExtensionHistory> ExtensionHistories { get; set; }
-        public virtual ICollection<FDPExtra> FDPExtras { get; set; }
-        public virtual ICollection<FDPItem> FDPItems { get; set; }
+        public virtual ICollection<FdmeventAction> FdmeventActions { get; set; }
+        public virtual ICollection<Fdpextra> Fdpextras { get; set; }
+        public virtual ICollection<Fdpitem> Fdpitems { get; set; }
         public virtual ICollection<IdeaSessionItem> IdeaSessionItems { get; set; }
-        public virtual ICollection<FDP> InverseFDPNavigation { get; set; }
+        public virtual ICollection<Fdp> InverseFdpNavigation { get; set; }
         public virtual ICollection<OffItem> OffItems { get; set; }
         public virtual ICollection<TableBlockTime> TableBlockTimes { get; set; }
     }

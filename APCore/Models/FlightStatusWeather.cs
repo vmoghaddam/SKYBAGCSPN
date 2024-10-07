@@ -23,6 +23,6 @@ namespace APCore.Models
         public string Details { get; set; }
         public string Icon { get; set; }
 
-        public virtual FlightInformation Flight { get; set; }
+        public virtual FlightInformation1 Flight { get; set; }
     }
 }

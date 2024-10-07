@@ -13,8 +13,8 @@ namespace APCore.Models
         public DateTime? DefaultStart { get; set; }
         public DateTime? DefaultEnd { get; set; }
         public int? Sector { get; set; }
-        public int? MaxFDPByReportingTime { get; set; }
-        public double? MaxFDP { get; set; }
+        public int? MaxFdpbyReportingTime { get; set; }
+        public double? MaxFdp { get; set; }
         public int? CalanderId { get; set; }
     }
 }

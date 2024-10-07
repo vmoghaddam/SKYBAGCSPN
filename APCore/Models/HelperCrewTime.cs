@@ -8,7 +8,7 @@ namespace APCore.Models
     public partial class HelperCrewTime
     {
         public int Id { get; set; }
-        public DateTime CDate { get; set; }
+        public DateTime Cdate { get; set; }
         public double Duration { get; set; }
         public double DurationLocal { get; set; }
     }

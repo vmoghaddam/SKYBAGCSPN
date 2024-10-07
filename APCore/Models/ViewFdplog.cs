@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewFDPLog
+    public partial class ViewFdplog
     {
         public int Id { get; set; }
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
         public int? CrewId { get; set; }
         public string Name { get; set; }
         public int? DutyType { get; set; }
@@ -19,8 +19,8 @@ namespace APCore.Models
         public DateTime? InitRestTo { get; set; }
         public string InitFlts { get; set; }
         public string InitRoute { get; set; }
-        public string InitFromIATA { get; set; }
-        public string InitToIATA { get; set; }
+        public string InitFromIata { get; set; }
+        public string InitToIata { get; set; }
         public string InitNo { get; set; }
         public string InitKey { get; set; }
         public string InitRank { get; set; }

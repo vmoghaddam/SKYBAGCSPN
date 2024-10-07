@@ -22,7 +22,7 @@ namespace APCore.Models
         public int? CalendarId { get; set; }
 
         public virtual FlightPlan FlightPlan { get; set; }
-        public virtual Ac_MSN PlannedRegister { get; set; }
-        public virtual Ac_MSN Register { get; set; }
+        public virtual AcMsn PlannedRegister { get; set; }
+        public virtual AcMsn Register { get; set; }
     }
 }

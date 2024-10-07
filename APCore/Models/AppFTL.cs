@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class AppFTL
+    public partial class AppFtl
     {
-        public DateTime CDate { get; set; }
+        public DateTime Cdate { get; set; }
         public int CrewId { get; set; }
         public double? Duty7 { get; set; }
         public double? Duty7Remain { get; set; }
@@ -19,12 +19,12 @@ namespace APCore.Models
         public double? Flight28Remain { get; set; }
         public double? FlightYear { get; set; }
         public double? FlightYearRemain { get; set; }
-        public double? FlightCYear { get; set; }
-        public double? FlightCYearRemain { get; set; }
+        public double? FlightCyear { get; set; }
+        public double? FlightCyearRemain { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Name { get; set; }
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public string Mobile { get; set; }
         public string ScheduleName { get; set; }
         public string JobGroup { get; set; }

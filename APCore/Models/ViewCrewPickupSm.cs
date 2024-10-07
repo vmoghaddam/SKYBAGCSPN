@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewCrewPickupSM
+    public partial class ViewCrewPickupSm
     {
         public int Id { get; set; }
         public int CrewId { get; set; }
@@ -28,14 +28,14 @@ namespace APCore.Models
         public string Name { get; set; }
         public int? PersonId { get; set; }
         public string FlightNumber { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public DateTime? DepartureLocal { get; set; }
         public DateTime? ArrivalLocal { get; set; }
         public string Sender { get; set; }
         public DateTime? DutyDate { get; set; }
         public string DutyType { get; set; }
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
         public string Flts { get; set; }
         public string Routes { get; set; }
         public DateTime? DateLocal { get; set; }

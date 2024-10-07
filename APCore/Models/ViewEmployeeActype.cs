@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewEmployeeACType
+    public partial class ViewEmployeeActype
     {
         public int Id { get; set; }
         public int EmployeeId { get; set; }

@@ -7,23 +7,23 @@ namespace APCore.Models
 {
     public partial class TempAirport
     {
-        public string id { get; set; }
-        public string ident { get; set; }
-        public string type { get; set; }
-        public string name { get; set; }
-        public string latitude_deg { get; set; }
-        public string longitude_deg { get; set; }
-        public string elevation_ft { get; set; }
-        public string continent { get; set; }
-        public string iso_country { get; set; }
-        public string iso_region { get; set; }
-        public string municipality { get; set; }
-        public string scheduled_service { get; set; }
-        public string gps_code { get; set; }
-        public string iata_code { get; set; }
-        public string local_code { get; set; }
-        public string home_link { get; set; }
-        public string wikipedia_link { get; set; }
-        public string keywords { get; set; }
+        public string Id { get; set; }
+        public string Ident { get; set; }
+        public string Type { get; set; }
+        public string Name { get; set; }
+        public string LatitudeDeg { get; set; }
+        public string LongitudeDeg { get; set; }
+        public string ElevationFt { get; set; }
+        public string Continent { get; set; }
+        public string IsoCountry { get; set; }
+        public string IsoRegion { get; set; }
+        public string Municipality { get; set; }
+        public string ScheduledService { get; set; }
+        public string GpsCode { get; set; }
+        public string IataCode { get; set; }
+        public string LocalCode { get; set; }
+        public string HomeLink { get; set; }
+        public string WikipediaLink { get; set; }
+        public string Keywords { get; set; }
     }
 }

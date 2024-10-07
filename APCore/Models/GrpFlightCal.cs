@@ -10,9 +10,9 @@ namespace APCore.Models
         public int Year { get; set; }
         public string MonthName { get; set; }
         public int Month { get; set; }
-        public int PYear { get; set; }
-        public string PMonthName { get; set; }
-        public int PMonth { get; set; }
+        public int Pyear { get; set; }
+        public string PmonthName { get; set; }
+        public int Pmonth { get; set; }
         public int? FlightCount { get; set; }
         public int PreFlightCount { get; set; }
         public decimal? FlightCountDiff { get; set; }

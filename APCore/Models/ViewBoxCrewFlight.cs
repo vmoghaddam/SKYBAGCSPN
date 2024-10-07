@@ -7,8 +7,8 @@ namespace APCore.Models
 {
     public partial class ViewBoxCrewFlight
     {
-        public DateTime? STDFirst { get; set; }
-        public DateTime? STAFirst { get; set; }
+        public DateTime? Stdfirst { get; set; }
+        public DateTime? Stafirst { get; set; }
         public int? CalanderId { get; set; }
         public int BoxId { get; set; }
         public int JobGroupId { get; set; }
@@ -21,13 +21,13 @@ namespace APCore.Models
         public int FlightId { get; set; }
         public int? FlightH { get; set; }
         public byte? FlightM { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
         public string FlightNumber { get; set; }
         public int? FromAirport { get; set; }
         public int? ToAirport { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public decimal FlightTime { get; set; }
         public decimal DutyTime { get; set; }
     }

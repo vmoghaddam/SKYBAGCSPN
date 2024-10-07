@@ -11,7 +11,7 @@ namespace APCore.Models
         public DateTime? DutyStart { get; set; }
         public DateTime? DutyEnd { get; set; }
         public int? Sectors { get; set; }
-        public int? MaxFDP { get; set; }
-        public TimeSpan? MaxFDPH { get; set; }
+        public int? MaxFdp { get; set; }
+        public TimeSpan? MaxFdph { get; set; }
     }
 }

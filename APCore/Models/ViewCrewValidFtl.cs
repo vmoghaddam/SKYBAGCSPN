@@ -5,11 +5,11 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewCrewValidFTL
+    public partial class ViewCrewValidFtl
     {
         public int Id { get; set; }
         public int SexId { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public int PersonId { get; set; }
         public int? CustomerId { get; set; }
         public int? GroupId { get; set; }
@@ -23,7 +23,7 @@ namespace APCore.Models
         public string Mobile { get; set; }
         public string Address { get; set; }
         public int? CurrentLocationAirportId { get; set; }
-        public string CurrentLocationAirporIATA { get; set; }
+        public string CurrentLocationAirporIata { get; set; }
         public string CurrentLocationCity { get; set; }
         public int? CurrentLocationCityId { get; set; }
         public int? LastLocationId { get; set; }
@@ -43,7 +43,7 @@ namespace APCore.Models
         public double? Flight1 { get; set; }
         public double? Flight28 { get; set; }
         public double? FlightYear { get; set; }
-        public double? FlightCYear { get; set; }
+        public double? FlightCyear { get; set; }
         public int? BaseAirportId { get; set; }
         public int? AircraftTypeId { get; set; }
         public DateTime? DateTypeIssue { get; set; }
@@ -54,39 +54,39 @@ namespace APCore.Models
         public int FlightLate { get; set; }
         public DateTime? MedicalExpired { get; set; }
         public DateTime? MedicalIssued { get; set; }
-        public DateTime? CMCExpired { get; set; }
-        public DateTime? SEPTExpired { get; set; }
-        public DateTime? SEPTIssued { get; set; }
-        public DateTime? SEPTPIssued { get; set; }
-        public DateTime? SEPTPExpired { get; set; }
-        public DateTime? DGExpired { get; set; }
-        public DateTime? DGIssued { get; set; }
-        public DateTime? CCRMExpired { get; set; }
-        public DateTime? CCRMIssued { get; set; }
-        public DateTime? CRMIssued { get; set; }
-        public DateTime? CRMExpired { get; set; }
-        public DateTime? SMSExpired { get; set; }
-        public DateTime? SMSIssued { get; set; }
+        public DateTime? Cmcexpired { get; set; }
+        public DateTime? Septexpired { get; set; }
+        public DateTime? Septissued { get; set; }
+        public DateTime? Septpissued { get; set; }
+        public DateTime? Septpexpired { get; set; }
+        public DateTime? Dgexpired { get; set; }
+        public DateTime? Dgissued { get; set; }
+        public DateTime? Ccrmexpired { get; set; }
+        public DateTime? Ccrmissued { get; set; }
+        public DateTime? Crmissued { get; set; }
+        public DateTime? Crmexpired { get; set; }
+        public DateTime? Smsexpired { get; set; }
+        public DateTime? Smsissued { get; set; }
         public DateTime? AvSecExpired { get; set; }
         public DateTime? AvSecIssued { get; set; }
-        public DateTime? ColdWXIssued { get; set; }
-        public DateTime? HotWXIssued { get; set; }
-        public DateTime? ColdWXExpired { get; set; }
-        public DateTime? HotWXExpired { get; set; }
+        public DateTime? ColdWxissued { get; set; }
+        public DateTime? HotWxissued { get; set; }
+        public DateTime? ColdWxexpired { get; set; }
+        public DateTime? HotWxexpired { get; set; }
         public DateTime? LineIssued { get; set; }
         public DateTime? LineExpired { get; set; }
         public DateTime? RecurrentIssued { get; set; }
         public DateTime? RecurrentExpired { get; set; }
-        public DateTime? LPCExpired { get; set; }
-        public DateTime? LPCIssued { get; set; }
-        public DateTime? OPCIssued { get; set; }
-        public DateTime? OPCExpired { get; set; }
-        public DateTime? LPRExpired { get; set; }
+        public DateTime? Lpcexpired { get; set; }
+        public DateTime? Lpcissued { get; set; }
+        public DateTime? Opcissued { get; set; }
+        public DateTime? Opcexpired { get; set; }
+        public DateTime? Lprexpired { get; set; }
         public DateTime? FirstAidExpired { get; set; }
         public DateTime? FirstAidIssued { get; set; }
         public DateTime? LicenceExpired { get; set; }
         public DateTime? LicenceIssued { get; set; }
-        public DateTime? TREExpired { get; set; }
-        public DateTime? TRIExpired { get; set; }
+        public DateTime? Treexpired { get; set; }
+        public DateTime? Triexpired { get; set; }
     }
 }

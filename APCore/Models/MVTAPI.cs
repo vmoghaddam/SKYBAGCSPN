@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class MVTAPI
+    public partial class Mvtapi
     {
         public int Id { get; set; }
         public int FlightId { get; set; }
@@ -13,15 +13,15 @@ namespace APCore.Models
         public string FlightNo { get; set; }
         public int? DayOfMonth { get; set; }
         public string Register { get; set; }
-        public string FromIATA { get; set; }
+        public string FromIata { get; set; }
         public DateTime? OffBlock { get; set; }
         public DateTime? TakeOff { get; set; }
-        public DateTime? ETA { get; set; }
-        public string ToIATA { get; set; }
+        public DateTime? Eta { get; set; }
+        public string ToIata { get; set; }
         public string Pax { get; set; }
         public string Bag { get; set; }
-        public string CPT { get; set; }
-        public string DL { get; set; }
+        public string Cpt { get; set; }
+        public string Dl { get; set; }
         public string Message { get; set; }
         public DateTime? DateCreate { get; set; }
         public DateTime? DateSent { get; set; }
@@ -30,6 +30,6 @@ namespace APCore.Models
         public string SendFrom { get; set; }
         public DateTime? OnBlock { get; set; }
 
-        public virtual FlightInformation Flight { get; set; }
+        public virtual FlightInformation1 Flight { get; set; }
     }
 }

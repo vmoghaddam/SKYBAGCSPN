@@ -13,8 +13,8 @@ namespace APCore.Models
         public string MonthName { get; set; }
         public string YearMonth { get; set; }
         public string Route { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public int? Legs { get; set; }
         public int Child { get; set; }
         public int Infant { get; set; }

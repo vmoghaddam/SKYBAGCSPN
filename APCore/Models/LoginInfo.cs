@@ -11,7 +11,7 @@ namespace APCore.Models
         public string User { get; set; }
         public DateTime? DateCreate { get; set; }
         public string Info { get; set; }
-        public string IP { get; set; }
+        public string Ip { get; set; }
         public string LocationCity { get; set; }
     }
 }

@@ -15,7 +15,5 @@ namespace APCore.Models
         public string Equipment { get; set; }
         public int? FlightH { get; set; }
         public int? FlightM { get; set; }
-        public double? Distance { get; set; }
-        public int? ChartererId { get; set; }
     }
 }

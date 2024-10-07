@@ -9,16 +9,16 @@ namespace APCore.Models
     {
         public FlightGroup()
         {
-            FlightInformations = new HashSet<FlightInformation>();
+            FlightInformation1s = new HashSet<FlightInformation1>();
         }
 
-        public int ID { get; set; }
+        public int Id { get; set; }
         public int EmployeeId { get; set; }
         public int Status { get; set; }
         public DateTime CreateDate { get; set; }
         public string Remark { get; set; }
 
         public virtual Employee Employee { get; set; }
-        public virtual ICollection<FlightInformation> FlightInformations { get; set; }
+        public virtual ICollection<FlightInformation1> FlightInformation1s { get; set; }
     }
 }

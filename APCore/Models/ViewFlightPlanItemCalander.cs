@@ -8,28 +8,28 @@ namespace APCore.Models
     public partial class ViewFlightPlanItemCalander
     {
         public int Id { get; set; }
-        public int taskID { get; set; }
+        public int TaskId { get; set; }
         public DateTime? Date { get; set; }
         public int FlightPlanId { get; set; }
         public int CalendarId { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public int? TypeId { get; set; }
-        public int? FlightTypeID { get; set; }
+        public int? FlightTypeId { get; set; }
         public string FlightType { get; set; }
-        public int? AirlineOperatorsID { get; set; }
+        public int? AirlineOperatorsId { get; set; }
         public string FlightNumber { get; set; }
         public int FromAirport { get; set; }
         public int ToAirport { get; set; }
-        public DateTime? XA { get; set; }
-        public DateTime? STA { get; set; }
-        public DateTime? STD { get; set; }
+        public DateTime? Xa { get; set; }
+        public DateTime? Sta { get; set; }
+        public DateTime? Std { get; set; }
         public int FlightH { get; set; }
         public int FlightM { get; set; }
         public string Unknown { get; set; }
-        public int? status { get; set; }
-        public decimal? duration { get; set; }
-        public DateTime? startDate { get; set; }
+        public int? Status { get; set; }
+        public decimal? Duration { get; set; }
+        public DateTime? StartDate { get; set; }
         public decimal? ToLatitude { get; set; }
         public decimal? ToLongitude { get; set; }
         public decimal? FromLatitude { get; set; }
@@ -48,7 +48,7 @@ namespace APCore.Models
         public string AircraftType { get; set; }
         public int? FlightPlanRegisterId { get; set; }
         public string Register { get; set; }
-        public int RegisterID { get; set; }
+        public int RegisterId { get; set; }
         public int? IsLocked { get; set; }
         public int? IsOpen { get; set; }
         public bool? IsApplied { get; set; }
@@ -57,7 +57,7 @@ namespace APCore.Models
         public string FlightPlan { get; set; }
         public int? BaseId { get; set; }
         public string BaseName { get; set; }
-        public string BaseIATA { get; set; }
+        public string BaseIata { get; set; }
         public DateTime? DateFrom { get; set; }
         public DateTime? DateTo { get; set; }
         public int CustomerId { get; set; }
@@ -85,17 +85,17 @@ namespace APCore.Models
         public int IsApproved90 { get; set; }
         public DateTime? DateApproved90 { get; set; }
         public string FromAirportName { get; set; }
-        public string from { get; set; }
+        public string From { get; set; }
         public int? FromAirportCityId { get; set; }
         public string ToAirportName { get; set; }
-        public string to { get; set; }
+        public string To { get; set; }
         public int? ToAirportCityId { get; set; }
-        public string notes { get; set; }
-        public int progress { get; set; }
-        public string taskName { get; set; }
+        public string Notes { get; set; }
+        public int Progress { get; set; }
+        public string TaskName { get; set; }
         public string FromAirportCity { get; set; }
         public string ToAirportCity { get; set; }
-        public int? MSN { get; set; }
+        public int? Msn { get; set; }
         public int? BoxId { get; set; }
         public int AssignedCrewCount { get; set; }
         public int AssignedCrewProblemCount { get; set; }

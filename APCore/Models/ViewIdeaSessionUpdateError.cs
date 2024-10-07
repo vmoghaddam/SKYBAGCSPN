@@ -9,7 +9,7 @@ namespace APCore.Models
     {
         public int Id { get; set; }
         public int? SessionItemId { get; set; }
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
         public int? EmployeeId { get; set; }
         public string Name { get; set; }
         public string Route { get; set; }

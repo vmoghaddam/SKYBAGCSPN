@@ -7,8 +7,8 @@ namespace APCore.Models
 {
     public partial class ViewFlightCrewNewX
     {
-        public int FDPId { get; set; }
-        public int FDPItemId { get; set; }
+        public int Fdpid { get; set; }
+        public int FdpitemId { get; set; }
         public int? CrewId { get; set; }
         public int? FlightId { get; set; }
         public bool? IsPositioning { get; set; }

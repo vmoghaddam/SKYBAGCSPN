@@ -22,9 +22,9 @@ namespace APCore.Models
         public int? BoxId { get; set; }
         public DateTime? DateCease { get; set; }
         public bool? IsHomeBase { get; set; }
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
 
-        public virtual FDP FDP { get; set; }
+        public virtual Fdp Fdp { get; set; }
         public virtual ICollection<EmployeeCalendarSplited> EmployeeCalendarSpliteds { get; set; }
     }
 }

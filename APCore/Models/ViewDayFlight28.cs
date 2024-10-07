@@ -9,6 +9,6 @@ namespace APCore.Models
     {
         public DateTime Date { get; set; }
         public int CrewId { get; set; }
-        public int? FLT28Local { get; set; }
+        public int? Flt28local { get; set; }
     }
 }

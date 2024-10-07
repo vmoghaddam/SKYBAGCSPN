@@ -17,17 +17,17 @@ namespace APCore.Models
         public int? CalanderId { get; set; }
         public DateTime? DateFlight { get; set; }
         public int FlightPlanId { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public int? TypeId { get; set; }
-        public int? FlightTypeID { get; set; }
+        public int? FlightTypeId { get; set; }
         public string FlightType { get; set; }
-        public int? AirlineOperatorsID { get; set; }
+        public int? AirlineOperatorsId { get; set; }
         public string FlightNumber { get; set; }
         public int FromAirport { get; set; }
         public int ToAirport { get; set; }
-        public DateTime? STA { get; set; }
-        public DateTime? STD { get; set; }
+        public DateTime? Sta { get; set; }
+        public DateTime? Std { get; set; }
         public int FlightH { get; set; }
         public int FlightM { get; set; }
         public int? RouteId { get; set; }
@@ -38,7 +38,7 @@ namespace APCore.Models
         public DateTime? DateApplied { get; set; }
         public int? BaseId { get; set; }
         public string BaseName { get; set; }
-        public string BaseIATA { get; set; }
+        public string BaseIata { get; set; }
         public DateTime? DateFrom { get; set; }
         public DateTime? DateTo { get; set; }
         public int CustomerId { get; set; }

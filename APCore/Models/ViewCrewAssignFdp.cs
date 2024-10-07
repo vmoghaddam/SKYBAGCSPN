@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewCrewAssignFDP
+    public partial class ViewCrewAssignFdp
     {
         public int Id { get; set; }
         public int? CrewId { get; set; }
@@ -13,7 +13,7 @@ namespace APCore.Models
         public string Position { get; set; }
         public int DutyType { get; set; }
         public int? TemplateId { get; set; }
-        public int? fdpId { get; set; }
+        public int? FdpId { get; set; }
         public int? GroupId { get; set; }
         public string JobGroup { get; set; }
         public string Name { get; set; }

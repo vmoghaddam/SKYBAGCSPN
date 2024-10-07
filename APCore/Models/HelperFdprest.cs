@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperFDPRest
+    public partial class HelperFdprest
     {
         public int Id { get; set; }
         public int? CrewId { get; set; }

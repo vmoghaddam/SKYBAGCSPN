@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperFuelAVG
+    public partial class HelperFuelAvg
     {
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public int? TypeId { get; set; }
         public string AircraftType { get; set; }
-        public decimal? AVGFuelBurned { get; set; }
+        public decimal? AvgfuelBurned { get; set; }
     }
 }

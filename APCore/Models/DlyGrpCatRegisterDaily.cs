@@ -7,14 +7,14 @@ namespace APCore.Models
 {
     public partial class DlyGrpCatRegisterDaily
     {
-        public int? PYear { get; set; }
-        public string PMonthName { get; set; }
-        public int? PMonth { get; set; }
-        public string PDayName { get; set; }
-        public string PDate { get; set; }
-        public int? PDay { get; set; }
-        public string ICategory { get; set; }
-        public int RegisterID { get; set; }
+        public int? Pyear { get; set; }
+        public string PmonthName { get; set; }
+        public int? Pmonth { get; set; }
+        public string PdayName { get; set; }
+        public string Pdate { get; set; }
+        public int? Pday { get; set; }
+        public string Icategory { get; set; }
+        public int? RegisterId { get; set; }
         public string Register { get; set; }
         public string AircraftType { get; set; }
         public int? TypeId { get; set; }
@@ -26,13 +26,5 @@ namespace APCore.Models
         public int? Delay120180 { get; set; }
         public int? DelayOver180 { get; set; }
         public int? DelayOver240 { get; set; }
-        public int DelayUnder30Time { get; set; }
-        public int DelayOver30Time { get; set; }
-        public int Delay3060Time { get; set; }
-        public int Delay60120Time { get; set; }
-        public int Delay120180Time { get; set; }
-        public int DelayOver180Time { get; set; }
-        public int DelayOver240Time { get; set; }
-        public int Count { get; set; }
     }
 }

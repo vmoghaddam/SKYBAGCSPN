@@ -9,7 +9,7 @@ namespace APCore.Models
     {
         public int Id { get; set; }
         public string ImageUrl { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public int PersonId { get; set; }
         public DateTime? DateJoinCompany { get; set; }
         public int? ExpCompany { get; set; }
@@ -17,7 +17,7 @@ namespace APCore.Models
         public int? GroupId { get; set; }
         public string JobGroup { get; set; }
         public string JobGroupCode { get; set; }
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public int SexId { get; set; }
         public string Sex { get; set; }
         public string FirstName { get; set; }
@@ -35,8 +35,8 @@ namespace APCore.Models
         public string Address { get; set; }
         public DateTime? DateJoinAvation { get; set; }
         public int? Exp { get; set; }
-        public DateTime? DateLastCheckUP { get; set; }
-        public DateTime? DateNextCheckUP { get; set; }
+        public DateTime? DateLastCheckUp { get; set; }
+        public DateTime? DateNextCheckUp { get; set; }
         public DateTime? DateYearOfExperience { get; set; }
         public string CaoCardNumber { get; set; }
         public DateTime? DateCaoCardIssue { get; set; }
@@ -58,7 +58,7 @@ namespace APCore.Models
         public DateTime? DateTypeIssue { get; set; }
         public DateTime? DateTypeExpire { get; set; }
         public string ValidTypes { get; set; }
-        public int? ICAOLPRLevel { get; set; }
+        public int? Icaolprlevel { get; set; }
         public int? CityId { get; set; }
         public string City { get; set; }
         public int? StateId { get; set; }
@@ -67,21 +67,21 @@ namespace APCore.Models
         public string Country { get; set; }
         public string CityFullName { get; set; }
         public string Types { get; set; }
-        public DateTime? LicenceIRExpireDate { get; set; }
+        public DateTime? LicenceIrexpireDate { get; set; }
         public string LicenceTitle { get; set; }
         public DateTime? LicenceInitialIssue { get; set; }
         public string RaitingCertificates { get; set; }
         public DateTime? LicenceIssueDate { get; set; }
         public string LicenceDescription { get; set; }
-        public DateTime? ICAOLPRValidUntil { get; set; }
+        public DateTime? IcaolprvalidUntil { get; set; }
         public int? MedicalClass { get; set; }
         public string PostalCode { get; set; }
         public string MedicalLimitation { get; set; }
         public string ProficiencyDescription { get; set; }
         public DateTime? VisaExpireDate { get; set; }
-        public string NDTNumber { get; set; }
-        public string CMCEmployedBy { get; set; }
-        public string CMCOccupation { get; set; }
+        public string Ndtnumber { get; set; }
+        public string CmcemployedBy { get; set; }
+        public string Cmcoccupation { get; set; }
         public DateTime? CrewMemberCertificateExpireDate { get; set; }
     }
 }

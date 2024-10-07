@@ -14,9 +14,9 @@ namespace APCore.Models
         public DateTime? Arrival { get; set; }
         public DateTime? ArrivalLocal { get; set; }
         public int? FromAirport { get; set; }
-        public string FromAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
         public int? ToAirport { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string ToAirportIata { get; set; }
         public string Register { get; set; }
         public int? CrewId { get; set; }
         public bool? IsPositioning { get; set; }

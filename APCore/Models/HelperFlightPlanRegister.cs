@@ -7,7 +7,7 @@ namespace APCore.Models
 {
     public partial class HelperFlightPlanRegister
     {
-        public int flightplanid { get; set; }
-        public int? RegisterID { get; set; }
+        public int Flightplanid { get; set; }
+        public int? RegisterId { get; set; }
     }
 }

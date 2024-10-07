@@ -16,25 +16,25 @@ namespace APCore.Models
         }
 
         public int Id { get; set; }
-        public DateTime? fcst_time_from { get; set; }
-        public DateTime? fcst_time_to { get; set; }
-        public string change_indicator { get; set; }
-        public DateTime? time_becoming { get; set; }
-        public double? probability { get; set; }
-        public double? wind_dir_degrees { get; set; }
-        public double? wind_speed_kt { get; set; }
-        public double? wind_gust_kt { get; set; }
-        public double? wind_shear_hgt_ft_agl { get; set; }
-        public double? wind_shear_dir_degrees { get; set; }
-        public double? wind_shear_speed_kt { get; set; }
-        public double? visibility_statute_mi { get; set; }
-        public double? altim_in_hg { get; set; }
-        public double? vert_vis_ft { get; set; }
-        public string wx_string { get; set; }
-        public string not_decoded { get; set; }
-        public int weather_id { get; set; }
+        public DateTime? FcstTimeFrom { get; set; }
+        public DateTime? FcstTimeTo { get; set; }
+        public string ChangeIndicator { get; set; }
+        public DateTime? TimeBecoming { get; set; }
+        public double? Probability { get; set; }
+        public double? WindDirDegrees { get; set; }
+        public double? WindSpeedKt { get; set; }
+        public double? WindGustKt { get; set; }
+        public double? WindShearHgtFtAgl { get; set; }
+        public double? WindShearDirDegrees { get; set; }
+        public double? WindShearSpeedKt { get; set; }
+        public double? VisibilityStatuteMi { get; set; }
+        public double? AltimInHg { get; set; }
+        public double? VertVisFt { get; set; }
+        public string WxString { get; set; }
+        public string NotDecoded { get; set; }
+        public int WeatherId { get; set; }
 
-        public virtual WeatherTaf weather { get; set; }
+        public virtual WeatherTaf Weather { get; set; }
         public virtual ICollection<WeatherForecastIcingCondition> WeatherForecastIcingConditions { get; set; }
         public virtual ICollection<WeatherForecastSkyCondition> WeatherForecastSkyConditions { get; set; }
         public virtual ICollection<WeatherForecastTemperature> WeatherForecastTemperatures { get; set; }

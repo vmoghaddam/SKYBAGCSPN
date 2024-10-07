@@ -7,24 +7,24 @@ namespace APCore.Models
 {
     public partial class RptAirportDaily
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Airline { get; set; }
         public string FlightNumber { get; set; }
         public string Register { get; set; }
-        public string PDate { get; set; }
-        public DateTime? STDDay { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
-        public string PDateTakeOff { get; set; }
+        public string Pdate { get; set; }
+        public DateTime? Stdday { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
+        public string PdateTakeOff { get; set; }
         public DateTime? TakeOff { get; set; }
         public DateTime? TakeOffLocal { get; set; }
         public DateTime? OffBlock { get; set; }
         public DateTime? OffBlockLocal { get; set; }
-        public string PDateOffBlock { get; set; }
+        public string PdateOffBlock { get; set; }
         public int? PaxChild { get; set; }
         public int? PaxInfant { get; set; }
         public int? PaxAdult { get; set; }

@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ClientApp</RootNamespace>
     <AssemblyName>ClientApp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -27,6 +27,7 @@
     <SccProvider>SAK</SccProvider>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,22 +49,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -83,6 +83,7 @@
     <Content Include="app\controllers\appMessageItemController.js" />
     <Content Include="app\controllers\appsController.js" />
     <Content Include="app\controllers\asrAdd.js" />
+    <Content Include="app\controllers\asrTaban.js" />
     <Content Include="app\controllers\associateController.js" />
     <Content Include="app\controllers\calendarController.js" />
     <Content Include="app\controllers\camera.js" />
@@ -91,6 +92,8 @@
     <Content Include="app\controllers\drAdd.js" />
     <Content Include="app\controllers\epLogBook.js" />
     <Content Include="app\controllers\FatigueReportController.js" />
+    <Content Include="app\controllers\fdmController.js" />
+    <Content Include="app\controllers\fdmSummeryController.js" />
     <Content Include="app\controllers\fdpController.js" />
     <Content Include="app\controllers\fdpsController.js" />
     <Content Include="app\controllers\filterController.js" />
@@ -121,11 +124,16 @@
     <Content Include="app\controllers\toAdd.js" />
     <Content Include="app\controllers\toAdd2.js" />
     <Content Include="app\controllers\TripInfoController.js" />
+    <Content Include="app\controllers\vrTaban.js" />
+    <Content Include="app\services\fdmService.js" />
     <Content Include="app\services\statService.js" />
     <Content Include="app\setting.js" />
+    <Content Include="app\views\asrTaban.html" />
     <Content Include="app\views\camera.html" />
     <Content Include="app\views\drAdd.html" />
     <Content Include="app\views\FatigueReport.html" />
+    <Content Include="app\views\fdm.html" />
+    <Content Include="app\views\fdmSummery.html" />
     <Content Include="app\views\fltDoc.html" />
     <Content Include="app\views\imageviewer.html" />
     <Content Include="app\views\jl.html" />
@@ -140,6 +148,7 @@
     <Content Include="app\views\toAdd.html" />
     <Content Include="app\views\toAdd2.html" />
     <Content Include="app\views\TripInfo.html" />
+    <Content Include="app\views\vrTaban.html" />
     <Content Include="pdfjsmodule\pdfviewernew.js" />
     <Content Include="app\controllers\profileController.js" />
     <Content Include="app\controllers\refreshController.js" />

@@ -15,7 +15,7 @@ namespace APCore.Models
         public int? TypeId { get; set; }
         public string AircraftType { get; set; }
         public string Fleet { get; set; }
-        public int? RegisterID { get; set; }
+        public int? RegisterId { get; set; }
         public string Register { get; set; }
         public int? Legs { get; set; }
         public int Child { get; set; }

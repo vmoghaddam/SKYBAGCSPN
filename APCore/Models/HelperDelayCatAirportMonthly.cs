@@ -7,18 +7,18 @@ namespace APCore.Models
 {
     public partial class HelperDelayCatAirportMonthly
     {
-        public int? PYear { get; set; }
-        public string PMonthName { get; set; }
-        public int? PMonth { get; set; }
-        public string ICategory { get; set; }
-        public int? ICategoryId { get; set; }
-        public int FromAirport { get; set; }
-        public string FromAirportIATA { get; set; }
+        public int? Pyear { get; set; }
+        public string PmonthName { get; set; }
+        public int? Pmonth { get; set; }
+        public string Icategory { get; set; }
+        public int? IcategoryId { get; set; }
+        public int? FromAirport { get; set; }
+        public string FromAirportIata { get; set; }
         public int Delay { get; set; }
         public int Count { get; set; }
         public decimal? DelayPerLeg { get; set; }
         public decimal? CountPerLeg { get; set; }
-        public decimal? DelayPerBL { get; set; }
+        public decimal? DelayPerBl { get; set; }
         public int? OnTimeFlightCount { get; set; }
         public decimal? DelayedFlightsPerAll { get; set; }
         public decimal? DelayedFlightsPerOnTime { get; set; }
@@ -44,10 +44,10 @@ namespace APCore.Models
         public int FltDelayOver180 { get; set; }
         public int FltDelayOver240 { get; set; }
         public int FlightCount { get; set; }
-        public int AFlightCount { get; set; }
+        public int AflightCount { get; set; }
         public int BlockTime { get; set; }
-        public int? ABlockTime { get; set; }
+        public int? AblockTime { get; set; }
         public int FlightTime { get; set; }
-        public int? AFlightTime { get; set; }
+        public int? AflightTime { get; set; }
     }
 }

@@ -5,31 +5,31 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class IMPORT2020
+    public partial class Import2020
     {
-        public string DATE { get; set; }
-        public string FLIGHTNO { get; set; }
-        public string FROM { get; set; }
-        public string TO { get; set; }
-        public string REGISTER { get; set; }
-        public string STATUS { get; set; }
-        public string ADULT { get; set; }
-        public string CHILD { get; set; }
-        public string INFANT { get; set; }
-        public string TOTAL { get; set; }
-        public string BAG { get; set; }
-        public string CARGO { get; set; }
-        public string STD { get; set; }
-        public string STA { get; set; }
-        public string TAKEOFF { get; set; }
-        public string LANDING { get; set; }
-        public string OFFBLOCK { get; set; }
-        public string ONBLOCK { get; set; }
-        public string UPLIFT { get; set; }
-        public string USED { get; set; }
-        public int? STATUSID { get; set; }
-        public int? REGISTERID { get; set; }
-        public int? FROMID { get; set; }
-        public int? TOID { get; set; }
+        public string Date { get; set; }
+        public string Flightno { get; set; }
+        public string From { get; set; }
+        public string To { get; set; }
+        public string Register { get; set; }
+        public string Status { get; set; }
+        public string Adult { get; set; }
+        public string Child { get; set; }
+        public string Infant { get; set; }
+        public string Total { get; set; }
+        public string Bag { get; set; }
+        public string Cargo { get; set; }
+        public string Std { get; set; }
+        public string Sta { get; set; }
+        public string Takeoff { get; set; }
+        public string Landing { get; set; }
+        public string Offblock { get; set; }
+        public string Onblock { get; set; }
+        public string Uplift { get; set; }
+        public string Used { get; set; }
+        public int? Statusid { get; set; }
+        public int? Registerid { get; set; }
+        public int? Fromid { get; set; }
+        public int? Toid { get; set; }
     }
 }

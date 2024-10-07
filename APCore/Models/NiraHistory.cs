@@ -8,10 +8,10 @@ namespace APCore.Models
     public partial class NiraHistory
     {
         public int Id { get; set; }
-        public string FLIGHT { get; set; }
-        public string CHTIME { get; set; }
-        public string NEWAIRCRAFT { get; set; }
-        public string NEWSTATUS { get; set; }
+        public string Flight { get; set; }
+        public string Chtime { get; set; }
+        public string Newaircraft { get; set; }
+        public string Newstatus { get; set; }
         public DateTime? DateSend { get; set; }
         public DateTime? DateReplied { get; set; }
         public string Remark { get; set; }

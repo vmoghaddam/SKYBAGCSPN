@@ -15,7 +15,7 @@ namespace APCore.Models
         public DateTime? DateEndLocal { get; set; }
         public string Remark { get; set; }
         public string GroundType { get; set; }
-        public int? MSN { get; set; }
+        public int? Msn { get; set; }
         public string Register { get; set; }
         public string Model { get; set; }
         public int? AircraftTypeId { get; set; }
@@ -23,16 +23,16 @@ namespace APCore.Models
         public int? ManufacturerId { get; set; }
         public string Manufacturer { get; set; }
         public string Customer { get; set; }
-        public bool? isvirtual { get; set; }
+        public bool? Isvirtual { get; set; }
         public string AirlineOperators { get; set; }
         public int CustomerId { get; set; }
-        public int AirlineOperatorsID { get; set; }
-        public decimal? duration { get; set; }
-        public int FlightStatusID { get; set; }
+        public int AirlineOperatorsId { get; set; }
+        public decimal? Duration { get; set; }
+        public int FlightStatusId { get; set; }
         public string FlightStatus { get; set; }
         public int? TypeId { get; set; }
         public int Id { get; set; }
-        public int? taskId { get; set; }
-        public int FlightTypeID { get; set; }
+        public int? TaskId { get; set; }
+        public int FlightTypeId { get; set; }
     }
 }

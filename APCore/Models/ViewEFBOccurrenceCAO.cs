@@ -5,15 +5,15 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewEFBOccurrenceCAO
+    public partial class ViewEfboccurrenceCao
     {
-        public string ACModel { get; set; }
+        public string Acmodel { get; set; }
         public string Register { get; set; }
         public string CallSign { get; set; }
         public string Nationality { get; set; }
         public string SerialNumber { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public int Id { get; set; }
         public int? FlightId { get; set; }
         public int? ReporterId { get; set; }
@@ -24,14 +24,14 @@ namespace APCore.Models
         public string Location { get; set; }
         public string Altitude { get; set; }
         public int? OperatorId { get; set; }
-        public int? ACFlightPhaseId { get; set; }
-        public string ACFlightPhase { get; set; }
-        public string ACFlightPhaseRemark { get; set; }
+        public int? AcflightPhaseId { get; set; }
+        public string AcflightPhase { get; set; }
+        public string AcflightPhaseRemark { get; set; }
         public string EquipmentType { get; set; }
         public string EquipmentAirportPlacard { get; set; }
         public string EquipmentCompany { get; set; }
         public string EquipmentDriverName { get; set; }
-        public string EquipmentIdNO { get; set; }
+        public string EquipmentIdNo { get; set; }
         public string EquipmentContan { get; set; }
         public int? FatalInjuryCrewNr { get; set; }
         public int? FatalInjuryPassengerNr { get; set; }
@@ -48,9 +48,9 @@ namespace APCore.Models
         public int? DamageId { get; set; }
         public string Damage { get; set; }
         public string DamageDetail { get; set; }
-        public string PriorEventWX { get; set; }
-        public string EventTimeWX { get; set; }
-        public string ForcastWX { get; set; }
+        public string PriorEventWx { get; set; }
+        public string EventTimeWx { get; set; }
+        public string ForcastWx { get; set; }
         public bool? IsExplosivesGoods { get; set; }
         public bool? IsRadioActiveGoods { get; set; }
         public string OtherDangerousGood { get; set; }

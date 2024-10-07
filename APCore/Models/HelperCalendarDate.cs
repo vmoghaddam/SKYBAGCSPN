@@ -7,6 +7,6 @@ namespace APCore.Models
 {
     public partial class HelperCalendarDate
     {
-        public DateTime CDate { get; set; }
+        public DateTime Cdate { get; set; }
     }
 }

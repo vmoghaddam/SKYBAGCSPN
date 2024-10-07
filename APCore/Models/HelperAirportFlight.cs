@@ -7,8 +7,8 @@ namespace APCore.Models
 {
     public partial class HelperAirportFlight
     {
-        public DateTime? STDDay { get; set; }
-        public string FromAirportIATA { get; set; }
+        public DateTime? Stdday { get; set; }
+        public string FromAirportIata { get; set; }
         public int? FromAirport { get; set; }
         public int? Count { get; set; }
         public int BlockTime { get; set; }

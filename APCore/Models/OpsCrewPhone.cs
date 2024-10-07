@@ -7,8 +7,8 @@ namespace APCore.Models
 {
     public partial class OpsCrewPhone
     {
-        public string FName { get; set; }
-        public string LName { get; set; }
+        public string Fname { get; set; }
+        public string Lname { get; set; }
         public string CellPhone { get; set; }
     }
 }

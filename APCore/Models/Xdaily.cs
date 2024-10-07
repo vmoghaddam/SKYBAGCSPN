@@ -5,39 +5,39 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class XDaily
+    public partial class Xdaily
     {
-        public DateTime? XSTD { get; set; }
-        public DateTime? XSTA { get; set; }
-        public int? XFlightH { get; set; }
-        public int? XFlightM { get; set; }
-        public DateTime? XDateUTC { get; set; }
-        public DateTime? XOffBlock { get; set; }
-        public DateTime? XTakeOff { get; set; }
-        public DateTime? XLanding { get; set; }
-        public DateTime? XOnBlock { get; set; }
-        public string XFlightNumber { get; set; }
+        public DateTime? Xstd { get; set; }
+        public DateTime? Xsta { get; set; }
+        public int? XflightH { get; set; }
+        public int? XflightM { get; set; }
+        public DateTime? XdateUtc { get; set; }
+        public DateTime? XoffBlock { get; set; }
+        public DateTime? XtakeOff { get; set; }
+        public DateTime? Xlanding { get; set; }
+        public DateTime? XonBlock { get; set; }
+        public string XflightNumber { get; set; }
         public string Reg { get; set; }
-        public int? XRegisterId { get; set; }
-        public int XFlightStatusId { get; set; }
-        public DateTime? DateUTC { get; set; }
-        public string STD { get; set; }
-        public string STA { get; set; }
+        public int? XregisterId { get; set; }
+        public int XflightStatusId { get; set; }
+        public DateTime? DateUtc { get; set; }
+        public string Std { get; set; }
+        public string Sta { get; set; }
         public string OffBlock { get; set; }
         public string OnBlock { get; set; }
         public string TakeOff { get; set; }
         public string Landing { get; set; }
-        public string ADL { get; set; }
-        public string CHD { get; set; }
-        public string INF { get; set; }
+        public string Adl { get; set; }
+        public string Chd { get; set; }
+        public string Inf { get; set; }
         public string Bag { get; set; }
-        public string cargo { get; set; }
-        public string uplift { get; set; }
-        public string trip { get; set; }
+        public string Cargo { get; set; }
+        public string Uplift { get; set; }
+        public string Trip { get; set; }
         public string Status { get; set; }
-        public string XFromAirport { get; set; }
-        public int? XFromAirportId { get; set; }
-        public string XToAirport { get; set; }
-        public int? XToAirportId { get; set; }
+        public string XfromAirport { get; set; }
+        public int? XfromAirportId { get; set; }
+        public string XtoAirport { get; set; }
+        public int? XtoAirportId { get; set; }
     }
 }

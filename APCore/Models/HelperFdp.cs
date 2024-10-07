@@ -5,15 +5,15 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperFDP
+    public partial class HelperFdp
     {
         public int Id { get; set; }
         public int? CrewId { get; set; }
         public int? Sectors { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
         public DateTime? Departure { get; set; }
         public DateTime? Arrival { get; set; }
         public DateTime? DepartureLocal { get; set; }
@@ -22,27 +22,27 @@ namespace APCore.Models
         public DateTime? DefaultReportingTimeLocal { get; set; }
         public DateTime? ReportingTime { get; set; }
         public DateTime? ReportingTimeLocal { get; set; }
-        public DateTime? FDPStart { get; set; }
-        public DateTime? FDPEnd { get; set; }
-        public double? MaxFDP { get; set; }
+        public DateTime? Fdpstart { get; set; }
+        public DateTime? Fdpend { get; set; }
+        public double? MaxFdp { get; set; }
         public int DelayAmount { get; set; }
         public DateTime? DelayedReportingTime { get; set; }
         public DateTime? NextNotification { get; set; }
         public DateTime? RevisedDelayedReportingTime { get; set; }
         public DateTime? FirstNotification { get; set; }
         public int? FromAirportId { get; set; }
-        public string FromAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
         public int? FromAirportCityId { get; set; }
         public string FromAirport { get; set; }
         public int? ToAirportId { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string ToAirportIata { get; set; }
         public string ToAirport { get; set; }
-        public int? ACTypeId { get; set; }
+        public int? ActypeId { get; set; }
         public int ExtendedBySplitDuty { get; set; }
         public int? StandById { get; set; }
         public DateTime? StandByStart { get; set; }
         public int? StandByDuration { get; set; }
-        public double? FDPReductionByStandBy { get; set; }
+        public double? FdpreductionByStandBy { get; set; }
         public DateTime? DateStart { get; set; }
         public DateTime? DutyStart { get; set; }
         public DateTime? DutyStartLocal { get; set; }

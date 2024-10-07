@@ -7,7 +7,7 @@ namespace APCore.Models
 {
     public partial class ViewFlightMatchingList
     {
-        public long RN { get; set; }
+        public long Rn { get; set; }
         public int? FlightId { get; set; }
         public double? FirstCrewId { get; set; }
         public double? SecondCrewId { get; set; }

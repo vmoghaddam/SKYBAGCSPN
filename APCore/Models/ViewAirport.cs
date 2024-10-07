@@ -8,8 +8,8 @@ namespace APCore.Models
     public partial class ViewAirport
     {
         public string Name { get; set; }
-        public string IATA { get; set; }
-        public string ICAO { get; set; }
+        public string Iata { get; set; }
+        public string Icao { get; set; }
         public int CityId { get; set; }
         public int Id { get; set; }
         public string City { get; set; }

@@ -9,7 +9,7 @@ namespace APCore.Models
     {
         public int Id { get; set; }
         public string ImageUrl { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public int PersonId { get; set; }
         public DateTime? DateJoinCompany { get; set; }
         public int? ExpCompany { get; set; }
@@ -24,7 +24,7 @@ namespace APCore.Models
         public string JobGroup { get; set; }
         public string JobGroupCode { get; set; }
         public int MarriageId { get; set; }
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public int SexId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -41,8 +41,8 @@ namespace APCore.Models
         public string Address { get; set; }
         public DateTime? DateJoinAvation { get; set; }
         public int? Exp { get; set; }
-        public DateTime? DateLastCheckUP { get; set; }
-        public DateTime? DateNextCheckUP { get; set; }
+        public DateTime? DateLastCheckUp { get; set; }
+        public DateTime? DateNextCheckUp { get; set; }
         public DateTime? DateYearOfExperience { get; set; }
         public string CaoCardNumber { get; set; }
         public DateTime? DateCaoCardIssue { get; set; }
@@ -54,40 +54,40 @@ namespace APCore.Models
         public int AvStatusId { get; set; }
         public string AvStatus { get; set; }
         public int IsAvSecExpired { get; set; }
-        public int IsCCRMExpired { get; set; }
-        public int IsCMCExpired { get; set; }
+        public int IsCcrmexpired { get; set; }
+        public int IsCmcexpired { get; set; }
         public int IsColdWeatherExpired { get; set; }
-        public int IsCRMExpired { get; set; }
-        public int IsDGExpired { get; set; }
+        public int IsCrmexpired { get; set; }
+        public int IsDgexpired { get; set; }
         public int IsHotWeatherExpired { get; set; }
         public int IsLicenceExpired { get; set; }
-        public int IsLicenceIRExpired { get; set; }
-        public int IsLPRExpired { get; set; }
+        public int IsLicenceIrexpired { get; set; }
+        public int IsLprexpired { get; set; }
         public int IsFirstAidExpired { get; set; }
         public int? RemainFirstAid { get; set; }
         public int IsPassportExpired { get; set; }
         public int IsProficiencyExpired { get; set; }
-        public int IsSEPTExpired { get; set; }
-        public int IsSEPTPExpired { get; set; }
-        public int IsSMSExpired { get; set; }
+        public int IsSeptexpired { get; set; }
+        public int IsSeptpexpired { get; set; }
+        public int IsSmsexpired { get; set; }
         public int IsUpsetRecoveryTrainingExpired { get; set; }
         public int? RemainAvSec { get; set; }
-        public int? RemainCAO { get; set; }
-        public int? RemainCCRM { get; set; }
-        public int? RemainCMC { get; set; }
+        public int? RemainCao { get; set; }
+        public int? RemainCcrm { get; set; }
+        public int? RemainCmc { get; set; }
         public int? RemainColdWeather { get; set; }
-        public int? RemainCRM { get; set; }
-        public int? RemainDG { get; set; }
+        public int? RemainCrm { get; set; }
+        public int? RemainDg { get; set; }
         public int? RemainHotWeather { get; set; }
         public int? RemainLicence { get; set; }
-        public int? RemainLicenceIR { get; set; }
-        public int? RemainLPR { get; set; }
+        public int? RemainLicenceIr { get; set; }
+        public int? RemainLpr { get; set; }
         public int? RemainMedical { get; set; }
         public int? RemainPassport { get; set; }
         public int? RemainProficiency { get; set; }
-        public int? RemainSEPT { get; set; }
-        public int? RemainSEPTP { get; set; }
-        public int? RemainSMS { get; set; }
+        public int? RemainSept { get; set; }
+        public int? RemainSeptp { get; set; }
+        public int? RemainSms { get; set; }
         public int? RemainUpsetRecoveryTraining { get; set; }
         public string ScheduleName { get; set; }
         public string Code { get; set; }

@@ -7,11 +7,11 @@ namespace APCore.Models
 {
     public partial class AirportOpenFlight
     {
-        public string ID { get; set; }
+        public string Id { get; set; }
         public string Title { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-        public string IATA { get; set; }
+        public string Iata { get; set; }
         public string Code { get; set; }
         public string Lt { get; set; }
         public string Lg { get; set; }

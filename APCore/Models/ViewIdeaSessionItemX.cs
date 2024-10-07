@@ -14,8 +14,8 @@ namespace APCore.Models
         public DateTime? DateFromUtc { get; set; }
         public DateTime? DateToUtc { get; set; }
         public string Remark { get; set; }
-        public int? FDPId { get; set; }
-        public string NID { get; set; }
+        public int? Fdpid { get; set; }
+        public string Nid { get; set; }
         public int PersonId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

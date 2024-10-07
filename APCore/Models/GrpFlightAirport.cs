@@ -7,11 +7,11 @@ namespace APCore.Models
 {
     public partial class GrpFlightAirport
     {
-        public int PYear { get; set; }
-        public string PMonthName { get; set; }
+        public int Pyear { get; set; }
+        public string PmonthName { get; set; }
         public int Pmonth { get; set; }
         public int? FromAirport { get; set; }
-        public string FromAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
         public int? FlightCount { get; set; }
         public int? BlockTime { get; set; }
         public int? FlightTime { get; set; }

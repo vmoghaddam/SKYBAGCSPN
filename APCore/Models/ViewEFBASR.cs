@@ -5,29 +5,29 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewEFBASR
+    public partial class ViewEfbasr
     {
         public int Id { get; set; }
         public int FlightId { get; set; }
         public int? FlightPhaseId { get; set; }
         public string FlightPhase { get; set; }
         public int? EventTypeId { get; set; }
-        public int? METId { get; set; }
-        public int? SigxWXId { get; set; }
+        public int? Metid { get; set; }
+        public int? SigxWxid { get; set; }
         public int? RunwayConditionId { get; set; }
         public string EventType { get; set; }
-        public string SigxWX { get; set; }
-        public string MET { get; set; }
+        public string SigxWx { get; set; }
+        public string Met { get; set; }
         public string RunwayCondition { get; set; }
-        public string AATRisk { get; set; }
-        public string AATTCASAlert { get; set; }
-        public string WTTurning { get; set; }
-        public string WTGlideSlopePos { get; set; }
-        public string WTExtendedCenterlinePos { get; set; }
-        public string WTAttitudeChange { get; set; }
-        public string BSNrStruck { get; set; }
-        public string BSNrSeen { get; set; }
-        public string BSTime { get; set; }
+        public string Aatrisk { get; set; }
+        public string Aattcasalert { get; set; }
+        public string Wtturning { get; set; }
+        public string WtglideSlopePos { get; set; }
+        public string WtextendedCenterlinePos { get; set; }
+        public string WtattitudeChange { get; set; }
+        public string BsnrStruck { get; set; }
+        public string BsnrSeen { get; set; }
+        public string Bstime { get; set; }
         public DateTime? BlockOn { get; set; }
         public DateTime? Landing { get; set; }
         public DateTime? TakeOff { get; set; }
@@ -36,30 +36,30 @@ namespace APCore.Models
         public DateTime? LandingLocal { get; set; }
         public DateTime? TakeOffLocal { get; set; }
         public DateTime? BlockOffLocal { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
-        public int? FlightStatusID { get; set; }
-        public int? RegisterID { get; set; }
-        public int? FlightTypeID { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
+        public int? FlightStatusId { get; set; }
+        public int? RegisterId { get; set; }
+        public int? FlightTypeId { get; set; }
         public string AircraftType { get; set; }
         public int? TypeId { get; set; }
         public string FlightNumber { get; set; }
         public int? FromAirport { get; set; }
         public int? ToAirport { get; set; }
         public int? CustomerId { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
         public string Register { get; set; }
-        public int MSN { get; set; }
+        public int Msn { get; set; }
         public string FlightStatus { get; set; }
         public string ArrivalRemark { get; set; }
         public string DepartureRemark { get; set; }
-        public DateTime? STDDay { get; set; }
-        public DateTime? STADay { get; set; }
-        public DateTime? STDDayLocal { get; set; }
-        public DateTime? STADayLocal { get; set; }
+        public DateTime? Stdday { get; set; }
+        public DateTime? Staday { get; set; }
+        public DateTime? StddayLocal { get; set; }
+        public DateTime? StadayLocal { get; set; }
         public int? DelayBlockOff { get; set; }
         public int? DelayTakeoff { get; set; }
         public DateTime? Departure { get; set; }
@@ -69,14 +69,14 @@ namespace APCore.Models
         public int? BlockTime { get; set; }
         public int? FlightTime { get; set; }
         public int? ScheduledFlightTime { get; set; }
-        public int? FPFlightTime { get; set; }
-        public int? PFLR { get; set; }
+        public int? FpflightTime { get; set; }
+        public int? Pflr { get; set; }
         public int? PaxChild { get; set; }
         public int? PaxInfant { get; set; }
         public int? PaxAdult { get; set; }
         public int? PaxTotal { get; set; }
         public int? PaxRevenued { get; set; }
-        public int? FuelUnitID { get; set; }
+        public int? FuelUnitId { get; set; }
         public decimal? FuelRemaining { get; set; }
         public decimal? FuelUplift { get; set; }
         public decimal? FuelUsed { get; set; }
@@ -88,137 +88,137 @@ namespace APCore.Models
         public DateTime? FlightDate { get; set; }
         public int? CargoCount { get; set; }
         public int? BaggageCount { get; set; }
-        public decimal? FPFuel { get; set; }
-        public int? CPCrewId { get; set; }
-        public string CPRegister { get; set; }
-        public int? CPPositionId { get; set; }
-        public int? CPFlightTypeId { get; set; }
-        public int? CPFDPItemId { get; set; }
-        public bool? CPDH { get; set; }
-        public int? CPFDPId { get; set; }
-        public string CPP1 { get; set; }
-        public string CPInstructor { get; set; }
-        public string CPP2 { get; set; }
-        public string CPSCCM { get; set; }
-        public string CPISCCM { get; set; }
+        public decimal? Fpfuel { get; set; }
+        public int? CpcrewId { get; set; }
+        public string Cpregister { get; set; }
+        public int? CppositionId { get; set; }
+        public int? CpflightTypeId { get; set; }
+        public int? CpfdpitemId { get; set; }
+        public bool? Cpdh { get; set; }
+        public int? Cpfdpid { get; set; }
+        public string Cpp1 { get; set; }
+        public string Cpinstructor { get; set; }
+        public string Cpp2 { get; set; }
+        public string Cpsccm { get; set; }
+        public string Cpisccm { get; set; }
         public int NightTime { get; set; }
         public int? DayTime { get; set; }
-        public int? JLUserId { get; set; }
-        public int? JLApproverId { get; set; }
-        public DateTime? JLDate { get; set; }
-        public DateTime? JLDateApproved { get; set; }
-        public string JLNo { get; set; }
+        public int? JluserId { get; set; }
+        public int? JlapproverId { get; set; }
+        public DateTime? Jldate { get; set; }
+        public DateTime? JldateApproved { get; set; }
+        public string Jlno { get; set; }
         public string SerialNo { get; set; }
-        public decimal? RVSM_GND_CPT { get; set; }
-        public string LTR { get; set; }
-        public decimal? RVSM_GND_STBY { get; set; }
-        public decimal? RVSM_GND_FO { get; set; }
-        public decimal? RVSM_FLT_CPT { get; set; }
-        public decimal? RVSM_FLT_STBY { get; set; }
-        public decimal? RVSM_FLT_FO { get; set; }
-        public decimal? CARGO { get; set; }
+        public decimal? RvsmGndCpt { get; set; }
+        public string Ltr { get; set; }
+        public decimal? RvsmGndStby { get; set; }
+        public decimal? RvsmGndFo { get; set; }
+        public decimal? RvsmFltCpt { get; set; }
+        public decimal? RvsmFltStby { get; set; }
+        public decimal? RvsmFltFo { get; set; }
+        public decimal? Cargo { get; set; }
         public decimal? FuelDensity { get; set; }
         public string CommanderNote { get; set; }
-        public bool? AttASR { get; set; }
+        public bool? AttAsr { get; set; }
         public bool? AttVoyageReport { get; set; }
         public bool? AttRepositioning1 { get; set; }
         public bool? AttRepositioning2 { get; set; }
-        public string JLUser { get; set; }
-        public string JLApprover { get; set; }
-        public int IsJL { get; set; }
-        public int IsJLApproved { get; set; }
-        public string PF { get; set; }
-        public string IPName { get; set; }
-        public int? IPId { get; set; }
-        public string IPScheduleName { get; set; }
-        public string P1Name { get; set; }
-        public int? P1Id { get; set; }
-        public string P1ScheduleName { get; set; }
-        public string P2Name { get; set; }
-        public int? P2Id { get; set; }
-        public string P2ScheduleName { get; set; }
-        public string PIC { get; set; }
-        public int? PICId { get; set; }
-        public string SIC { get; set; }
-        public int? SICId { get; set; }
-        public DateTime? JLDatePICApproved { get; set; }
+        public string Jluser { get; set; }
+        public string Jlapprover { get; set; }
+        public int IsJl { get; set; }
+        public int IsJlapproved { get; set; }
+        public string Pf { get; set; }
+        public string Ipname { get; set; }
+        public int? Ipid { get; set; }
+        public string IpscheduleName { get; set; }
+        public string P1name { get; set; }
+        public int? P1id { get; set; }
+        public string P1scheduleName { get; set; }
+        public string P2name { get; set; }
+        public int? P2id { get; set; }
+        public string P2scheduleName { get; set; }
+        public string Pic { get; set; }
+        public int? Picid { get; set; }
+        public string Sic { get; set; }
+        public int? Sicid { get; set; }
+        public DateTime? JldatePicapproved { get; set; }
         public DateTime? OccurrenceDate { get; set; }
         public bool? IsDay { get; set; }
-        public string SQUAWK { get; set; }
+        public string Squawk { get; set; }
         public decimal? FuelJettisoned { get; set; }
         public decimal? Altitude { get; set; }
         public double? Speed { get; set; }
-        public decimal? ACWeight { get; set; }
-        public string TechLogPageNO { get; set; }
-        public string TechLogItemNO { get; set; }
-        public string LOCAirport { get; set; }
-        public string LOCStand { get; set; }
-        public string LOCRunway { get; set; }
-        public string LOCGEOLongtitude { get; set; }
-        public string LOCGEOAltitude { get; set; }
-        public string ActualWX { get; set; }
-        public string ACConfigAP { get; set; }
-        public string ACConfigATHR { get; set; }
-        public string ACConfigGear { get; set; }
-        public string ACConfigFlap { get; set; }
-        public string ACConfigSlat { get; set; }
+        public decimal? Acweight { get; set; }
+        public string TechLogPageNo { get; set; }
+        public string TechLogItemNo { get; set; }
+        public string Locairport { get; set; }
+        public string Locstand { get; set; }
+        public string Locrunway { get; set; }
+        public string Locgeolongtitude { get; set; }
+        public string Locgeoaltitude { get; set; }
+        public string ActualWx { get; set; }
+        public string AcconfigAp { get; set; }
+        public string AcconfigAthr { get; set; }
+        public string AcconfigGear { get; set; }
+        public string AcconfigFlap { get; set; }
+        public string AcconfigSlat { get; set; }
         public string Summary { get; set; }
         public string Result { get; set; }
         public string OthersInfo { get; set; }
-        public string ACConfigSpoilers { get; set; }
-        public int? AATRiskId { get; set; }
-        public bool? AATIsActionTaken { get; set; }
-        public string AATReportedToATC { get; set; }
-        public string AATATCInstruction { get; set; }
-        public string AATFrequency { get; set; }
-        public decimal? AATHeading { get; set; }
-        public string AATClearedAltitude { get; set; }
-        public string AATMinVerticalSep { get; set; }
-        public string AATMinHorizontalSep { get; set; }
-        public int? AATTCASAlertId { get; set; }
-        public string AATTypeRA { get; set; }
-        public bool? AATIsRAFollowed { get; set; }
-        public string AATVerticalDeviation { get; set; }
-        public string AATOtherACType { get; set; }
-        public string AATMarkingColour { get; set; }
-        public string AATCallSign { get; set; }
-        public string AATLighting { get; set; }
-        public decimal? WTHeading { get; set; }
-        public int? WTTurningId { get; set; }
-        public int? WTGlideSlopePosId { get; set; }
-        public int? WTExtendedCenterlinePosId { get; set; }
-        public int? WTAttitudeChangeId { get; set; }
-        public decimal? WTAttitudeChangeDeg { get; set; }
-        public bool? WTIsBuffet { get; set; }
-        public bool? WTIsStickShaker { get; set; }
-        public string WTSuspect { get; set; }
-        public string WTDescribeVA { get; set; }
-        public string WTPrecedingAC { get; set; }
-        public bool? WTIsAware { get; set; }
-        public string BSBirdType { get; set; }
-        public int? BSNrSeenId { get; set; }
-        public int? BSNrStruckId { get; set; }
-        public int? BSTimeId { get; set; }
-        public DateTime? PICDate { get; set; }
+        public string AcconfigSpoilers { get; set; }
+        public int? AatriskId { get; set; }
+        public bool? AatisActionTaken { get; set; }
+        public string AatreportedToAtc { get; set; }
+        public string Aatatcinstruction { get; set; }
+        public string Aatfrequency { get; set; }
+        public decimal? Aatheading { get; set; }
+        public string AatclearedAltitude { get; set; }
+        public string AatminVerticalSep { get; set; }
+        public string AatminHorizontalSep { get; set; }
+        public int? AattcasalertId { get; set; }
+        public string AattypeRa { get; set; }
+        public bool? AatisRafollowed { get; set; }
+        public string AatverticalDeviation { get; set; }
+        public string AatotherActype { get; set; }
+        public string AatmarkingColour { get; set; }
+        public string AatcallSign { get; set; }
+        public string Aatlighting { get; set; }
+        public decimal? Wtheading { get; set; }
+        public int? WtturningId { get; set; }
+        public int? WtglideSlopePosId { get; set; }
+        public int? WtextendedCenterlinePosId { get; set; }
+        public int? WtattitudeChangeId { get; set; }
+        public decimal? WtattitudeChangeDeg { get; set; }
+        public bool? WtisBuffet { get; set; }
+        public bool? WtisStickShaker { get; set; }
+        public string Wtsuspect { get; set; }
+        public string WtdescribeVa { get; set; }
+        public string WtprecedingAc { get; set; }
+        public bool? WtisAware { get; set; }
+        public string BsbirdType { get; set; }
+        public int? BsnrSeenId { get; set; }
+        public int? BsnrStruckId { get; set; }
+        public int? BstimeId { get; set; }
+        public DateTime? Picdate { get; set; }
         public int? DayNightStatusId { get; set; }
         public int? IncidentTypeId { get; set; }
-        public int? AATXAbove { get; set; }
-        public int? AATYAbove { get; set; }
-        public int? AATXAstern { get; set; }
-        public int? AATYAstern { get; set; }
-        public int? AATHorizontalPlane { get; set; }
-        public string BSImpactDec { get; set; }
+        public int? Aatxabove { get; set; }
+        public int? Aatyabove { get; set; }
+        public int? Aatxastern { get; set; }
+        public int? Aatyastern { get; set; }
+        public int? AathorizontalPlane { get; set; }
+        public string BsimpactDec { get; set; }
         public bool? IsSecurityEvent { get; set; }
-        public bool? IsAirproxATC { get; set; }
-        public bool? IsTCASRA { get; set; }
+        public bool? IsAirproxAtc { get; set; }
+        public bool? IsTcasra { get; set; }
         public bool? IsWakeTur { get; set; }
         public bool? IsBirdStrike { get; set; }
         public bool? IsOthers { get; set; }
         public double? MachNo { get; set; }
-        public int? SigxWXTypeId { get; set; }
+        public int? SigxWxtypeId { get; set; }
         public string DateUpdate { get; set; }
         public string User { get; set; }
-        public double? BSHeading { get; set; }
-        public int? BSTurningId { get; set; }
+        public double? Bsheading { get; set; }
+        public int? BsturningId { get; set; }
     }
 }

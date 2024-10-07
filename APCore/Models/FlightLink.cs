@@ -12,7 +12,7 @@ namespace APCore.Models
         public int ReasonId { get; set; }
         public string Remark { get; set; }
 
-        public virtual FlightInformation Flight1 { get; set; }
-        public virtual FlightInformation Flight2 { get; set; }
+        public virtual FlightInformation1 Flight1 { get; set; }
+        public virtual FlightInformation1 Flight2 { get; set; }
     }
 }

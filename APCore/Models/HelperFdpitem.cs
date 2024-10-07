@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperFDPItem
+    public partial class HelperFdpitem
     {
         public int Id { get; set; }
-        public int FDPId { get; set; }
+        public int Fdpid { get; set; }
         public int? FlightId { get; set; }
         public bool IsSector { get; set; }
         public int? SplitDutyPairId { get; set; }
@@ -18,6 +18,7 @@ namespace APCore.Models
         public int? PositionId { get; set; }
         public int? RosterPositionId { get; set; }
         public DateTime? Pickup { get; set; }
+        public string Remark { get; set; }
         public int CrewId { get; set; }
         public string ScheduleName { get; set; }
         public string Name { get; set; }

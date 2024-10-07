@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class MV
+    public partial class Mv
     {
         public int Id { get; set; }
-        public DateTime CDate { get; set; }
+        public DateTime Cdate { get; set; }
     }
 }

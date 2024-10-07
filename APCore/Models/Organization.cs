@@ -9,10 +9,10 @@ namespace APCore.Models
     {
         public Organization()
         {
-            Ac_MSNs = new HashSet<Ac_MSN>();
+            AcMsns = new HashSet<AcMsn>();
             AircraftTypes = new HashSet<AircraftType>();
             Books = new HashSet<Book>();
-            FlightInformations = new HashSet<FlightInformation>();
+            FlightInformation1s = new HashSet<FlightInformation1>();
             FlightPlanItems = new HashSet<FlightPlanItem>();
             Ratings = new HashSet<Rating>();
         }
@@ -30,10 +30,10 @@ namespace APCore.Models
         public int? TypeId { get; set; }
         public int CountryId { get; set; }
 
-        public virtual ICollection<Ac_MSN> Ac_MSNs { get; set; }
+        public virtual ICollection<AcMsn> AcMsns { get; set; }
         public virtual ICollection<AircraftType> AircraftTypes { get; set; }
         public virtual ICollection<Book> Books { get; set; }
-        public virtual ICollection<FlightInformation> FlightInformations { get; set; }
+        public virtual ICollection<FlightInformation1> FlightInformation1s { get; set; }
         public virtual ICollection<FlightPlanItem> FlightPlanItems { get; set; }
         public virtual ICollection<Rating> Ratings { get; set; }
     }

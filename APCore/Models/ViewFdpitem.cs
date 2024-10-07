@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewFDPItem
+    public partial class ViewFdpitem
     {
         public int Id { get; set; }
-        public int FDPId { get; set; }
+        public int Fdpid { get; set; }
         public int? FlightId { get; set; }
         public bool? IsSector { get; set; }
         public bool? IsOff { get; set; }
@@ -20,19 +20,19 @@ namespace APCore.Models
         public DateTime? ArrivalLocal { get; set; }
         public DateTime? Departure { get; set; }
         public DateTime? Arrival { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
-        public int? FlightStatusID { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
+        public int? FlightStatusId { get; set; }
         public int? FromAirport { get; set; }
         public int? FromAirportCityId { get; set; }
         public int? ToAirport { get; set; }
-        public string FromAirportIATA { get; set; }
-        public string ToAirportIATA { get; set; }
-        public int? ACTypeId { get; set; }
+        public string FromAirportIata { get; set; }
+        public string ToAirportIata { get; set; }
+        public int? ActypeId { get; set; }
         public string Register { get; set; }
         public string AircraftType { get; set; }
         public int? Break { get; set; }
-        public int? WOCL { get; set; }
+        public int? Wocl { get; set; }
         public decimal? SplitDutyExtension { get; set; }
         public int? SplitDutyPairId { get; set; }
         public bool? SplitDuty { get; set; }

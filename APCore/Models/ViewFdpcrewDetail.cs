@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewFDPCrewDetail
+    public partial class ViewFdpcrewDetail
     {
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
         public int Id { get; set; }
         public string Name { get; set; }
         public string ScheduleName { get; set; }
@@ -17,7 +17,7 @@ namespace APCore.Models
         public string Mobile { get; set; }
         public string Route { get; set; }
         public string Flights { get; set; }
-        public DateTime? DaySTDLocal { get; set; }
+        public DateTime? DayStdlocal { get; set; }
         public DateTime? DepartureLocal { get; set; }
         public DateTime? ArrivalLocal { get; set; }
     }

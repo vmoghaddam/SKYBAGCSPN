@@ -13,7 +13,7 @@ namespace APCore.Models
         public double? Lat { get; set; }
         public double? Lng { get; set; }
         public int? AirportId { get; set; }
-        public int? TOffset { get; set; }
+        public int? Toffset { get; set; }
         public DateTime? Sunrise { get; set; }
         public DateTime? Sunset { get; set; }
         public DateTime? SolarNoon { get; set; }

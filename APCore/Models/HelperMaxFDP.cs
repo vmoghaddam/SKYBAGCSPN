@@ -5,11 +5,11 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperMaxFDP
+    public partial class HelperMaxFdp
     {
         public int Id { get; set; }
-        public double? MaxFDP { get; set; }
-        public double? FDPReductionByStandBy { get; set; }
-        public double? MaxFDPExtended { get; set; }
+        public double? MaxFdp { get; set; }
+        public double? FdpreductionByStandBy { get; set; }
+        public double? MaxFdpextended { get; set; }
     }
 }

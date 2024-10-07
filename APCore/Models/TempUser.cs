@@ -7,10 +7,10 @@ namespace APCore.Models
 {
     public partial class TempUser
     {
-        public string DEP { get; set; }
-        public string PID { get; set; }
+        public string Dep { get; set; }
+        public string Pid { get; set; }
         public string Name { get; set; }
         public string Username { get; set; }
-        public string MOBILE { get; set; }
+        public string Mobile { get; set; }
     }
 }

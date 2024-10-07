@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class EFBOccurrenceCAO
+    public partial class EfboccurrenceCao
     {
         public int Id { get; set; }
         public int? FlightId { get; set; }
@@ -16,13 +16,13 @@ namespace APCore.Models
         public string Location { get; set; }
         public string Altitude { get; set; }
         public int? OperatorId { get; set; }
-        public int? ACFlightPhaseId { get; set; }
-        public string ACFlightPhaseRemark { get; set; }
+        public int? AcflightPhaseId { get; set; }
+        public string AcflightPhaseRemark { get; set; }
         public string EquipmentType { get; set; }
         public string EquipmentAirportPlacard { get; set; }
         public string EquipmentCompany { get; set; }
         public string EquipmentDriverName { get; set; }
-        public string EquipmentIdNO { get; set; }
+        public string EquipmentIdNo { get; set; }
         public string EquipmentContan { get; set; }
         public int? FatalInjuryCrewNr { get; set; }
         public int? FatalInjuryPassengerNr { get; set; }
@@ -38,9 +38,9 @@ namespace APCore.Models
         public int? NoneInjuryOtherNr { get; set; }
         public int? DamageId { get; set; }
         public string DamageDetail { get; set; }
-        public string PriorEventWX { get; set; }
-        public string EventTimeWX { get; set; }
-        public string ForcastWX { get; set; }
+        public string PriorEventWx { get; set; }
+        public string EventTimeWx { get; set; }
+        public string ForcastWx { get; set; }
         public bool? IsExplosivesGoods { get; set; }
         public bool? IsRadioActiveGoods { get; set; }
         public string OtherDangerousGood { get; set; }

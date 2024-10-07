@@ -11,7 +11,6 @@ namespace APCore.Models
         {
             BookRelatedGroups = new HashSet<BookRelatedGroup>();
             CourseRelatedGroups = new HashSet<CourseRelatedGroup>();
-            CourseTypeJobGroups = new HashSet<CourseTypeJobGroup>();
             InverseParent = new HashSet<JobGroup>();
             PersonCustomers = new HashSet<PersonCustomer>();
         }
@@ -29,7 +28,6 @@ namespace APCore.Models
         public virtual JobGroup Parent { get; set; }
         public virtual ICollection<BookRelatedGroup> BookRelatedGroups { get; set; }
         public virtual ICollection<CourseRelatedGroup> CourseRelatedGroups { get; set; }
-        public virtual ICollection<CourseTypeJobGroup> CourseTypeJobGroups { get; set; }
         public virtual ICollection<JobGroup> InverseParent { get; set; }
         public virtual ICollection<PersonCustomer> PersonCustomers { get; set; }
     }

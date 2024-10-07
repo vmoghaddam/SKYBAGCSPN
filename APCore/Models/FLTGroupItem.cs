@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class FLTGroupItem
+    public partial class FltgroupItem
     {
         public int Id { get; set; }
         public int FlightId { get; set; }
-        public int FLTGroupId { get; set; }
+        public int FltgroupId { get; set; }
 
-        public virtual FLTGroup FLTGroup { get; set; }
-        public virtual FlightInformation Flight { get; set; }
+        public virtual FlightInformation1 Flight { get; set; }
+        public virtual Fltgroup Fltgroup { get; set; }
     }
 }

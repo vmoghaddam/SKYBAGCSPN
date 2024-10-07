@@ -9,12 +9,12 @@ namespace APCore.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public string ISBN { get; set; }
+        public string Isbn { get; set; }
         public DateTime? DateRelease { get; set; }
         public int? PublisherId { get; set; }
-        public string ISSNPrint { get; set; }
-        public string ISSNElectronic { get; set; }
-        public string DOI { get; set; }
+        public string Issnprint { get; set; }
+        public string Issnelectronic { get; set; }
+        public string Doi { get; set; }
         public string Pages { get; set; }
         public int CategoryId { get; set; }
         public int? CustomerId { get; set; }

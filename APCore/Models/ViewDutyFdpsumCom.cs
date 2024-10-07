@@ -5,16 +5,16 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewDutyFDPSumCom
+    public partial class ViewDutyFdpsumCom
     {
-        public DateTime CDate { get; set; }
+        public DateTime Cdate { get; set; }
         public DateTime? DatePart { get; set; }
         public int? CrewId { get; set; }
         public double? Duration { get; set; }
         public double? DurationLocal { get; set; }
-        public int? FDPCount { get; set; }
-        public double? Day7_Duty { get; set; }
-        public double? Day14_Duty { get; set; }
-        public double? Day28_Duty { get; set; }
+        public int? Fdpcount { get; set; }
+        public double? Day7Duty { get; set; }
+        public double? Day14Duty { get; set; }
+        public double? Day28Duty { get; set; }
     }
 }

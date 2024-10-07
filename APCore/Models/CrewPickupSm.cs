@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class CrewPickupSM
+    public partial class CrewPickupSm
     {
         public int Id { get; set; }
         public int CrewId { get; set; }
@@ -24,11 +24,11 @@ namespace APCore.Models
         public string Sender { get; set; }
         public DateTime? DutyDate { get; set; }
         public string DutyType { get; set; }
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
         public string Flts { get; set; }
         public string Routes { get; set; }
         public string FltIds { get; set; }
 
-        public virtual FDP FDP { get; set; }
+        public virtual Fdp Fdp { get; set; }
     }
 }

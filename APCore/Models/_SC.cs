@@ -9,7 +9,5 @@ namespace APCore.Models
     {
         public int Id { get; set; }
         public string name { get; set; }
-        public string remark2 { get; set; }
-        public DateTime? DateCreate { get; set; }
     }
 }

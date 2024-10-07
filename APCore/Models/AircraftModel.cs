@@ -9,7 +9,7 @@ namespace APCore.Models
     {
         public AircraftModel()
         {
-            Ac_MSNs = new HashSet<Ac_MSN>();
+            AcMsns = new HashSet<AcMsn>();
             Courses = new HashSet<Course>();
         }
 
@@ -19,7 +19,7 @@ namespace APCore.Models
         public string Remark { get; set; }
 
         public virtual AircraftType AircraftType { get; set; }
-        public virtual ICollection<Ac_MSN> Ac_MSNs { get; set; }
+        public virtual ICollection<AcMsn> AcMsns { get; set; }
         public virtual ICollection<Course> Courses { get; set; }
     }
 }

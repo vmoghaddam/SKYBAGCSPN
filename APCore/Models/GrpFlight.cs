@@ -7,8 +7,8 @@ namespace APCore.Models
 {
     public partial class GrpFlight
     {
-        public int PYear { get; set; }
-        public string PMonthName { get; set; }
+        public int Pyear { get; set; }
+        public string PmonthName { get; set; }
         public int Pmonth { get; set; }
         public int? FlightCount { get; set; }
         public int? BlockTime { get; set; }

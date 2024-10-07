@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class IDEAPerson
+    public partial class Ideaperson
     {
-        public string PID { get; set; }
-        public string NID { get; set; }
+        public string Pid { get; set; }
+        public string Nid { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Name { get; set; }

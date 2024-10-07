@@ -5,14 +5,14 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class RptNoFDP
+    public partial class RptNoFdp
     {
         public int Id { get; set; }
         public int DutyType { get; set; }
         public string DutyTypeTitle { get; set; }
-        public string PDate { get; set; }
+        public string Pdate { get; set; }
         public string PeriodFixTime { get; set; }
-        public int? PYear { get; set; }
+        public int? Pyear { get; set; }
         public DateTime? Date { get; set; }
         public DateTime? DateStart { get; set; }
         public DateTime? DateEnd { get; set; }
@@ -27,6 +27,6 @@ namespace APCore.Models
         public string JobGroupCode { get; set; }
         public string JobGroupRoot { get; set; }
         public int? Duration { get; set; }
-        public int? FX { get; set; }
+        public int? Fx { get; set; }
     }
 }

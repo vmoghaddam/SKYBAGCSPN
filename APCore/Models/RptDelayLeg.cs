@@ -7,27 +7,27 @@ namespace APCore.Models
 {
     public partial class RptDelayLeg
     {
-        public int ID { get; set; }
-        public DateTime? STDDay { get; set; }
-        public DateTime? STDDayLocal { get; set; }
+        public int Id { get; set; }
+        public DateTime? Stdday { get; set; }
+        public DateTime? StddayLocal { get; set; }
         public string MonthName { get; set; }
         public string DayName { get; set; }
         public string YearName { get; set; }
         public DateTime? LocalDate { get; set; }
-        public string PDate { get; set; }
-        public string PYearName { get; set; }
-        public int? PYear { get; set; }
-        public string PMonthName { get; set; }
-        public int? PMonth { get; set; }
+        public string Pdate { get; set; }
+        public string PyearName { get; set; }
+        public int? Pyear { get; set; }
+        public string PmonthName { get; set; }
+        public int? Pmonth { get; set; }
         public int Season { get; set; }
         public string SeasonTitle { get; set; }
-        public string PDayName { get; set; }
-        public int? PDay { get; set; }
-        public string PYearMonthName { get; set; }
+        public string PdayName { get; set; }
+        public int? Pday { get; set; }
+        public string PyearMonthName { get; set; }
         public int FlightId { get; set; }
         public int DelayCodeId { get; set; }
-        public int? DelayHH { get; set; }
-        public int? DelayMM { get; set; }
+        public int? DelayHh { get; set; }
+        public int? DelayMm { get; set; }
         public int? Delay { get; set; }
         public int IsDelay { get; set; }
         public int DelayUnder30 { get; set; }
@@ -45,7 +45,7 @@ namespace APCore.Models
         public int? DelayOver180Time { get; set; }
         public int? DelayOver240Time { get; set; }
         public string Remark { get; set; }
-        public string ICategory { get; set; }
+        public string Icategory { get; set; }
         public string Category { get; set; }
         public string Title { get; set; }
         public string Code { get; set; }
@@ -57,12 +57,12 @@ namespace APCore.Models
         public DateTime? Landing { get; set; }
         public DateTime? Takeoff { get; set; }
         public DateTime? ChocksOut { get; set; }
-        public DateTime? STD { get; set; }
-        public DateTime? STA { get; set; }
+        public DateTime? Std { get; set; }
+        public DateTime? Sta { get; set; }
         public DateTime? Date { get; set; }
-        public int? FlightStatusID { get; set; }
-        public int? RegisterID { get; set; }
-        public int? FlightTypeID { get; set; }
+        public int? FlightStatusId { get; set; }
+        public int? RegisterId { get; set; }
+        public int? FlightTypeId { get; set; }
         public string FlightType { get; set; }
         public string FlightTypeAbr { get; set; }
         public int? TypeId { get; set; }
@@ -71,31 +71,31 @@ namespace APCore.Models
         public int? ToAirport { get; set; }
         public int? CustomerId { get; set; }
         public string FromAirportName { get; set; }
-        public string FromAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
         public int FromAirportCityId { get; set; }
         public string ToAirportName { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string ToAirportIata { get; set; }
         public int? ToAirportCityId { get; set; }
         public string FromAirportCity { get; set; }
         public string ToAirportCity { get; set; }
         public string AircraftType { get; set; }
         public string Register { get; set; }
         public string FlightStatus { get; set; }
-        public decimal? duration { get; set; }
+        public decimal? Duration { get; set; }
         public int? DelayOffBlock { get; set; }
         public int? DelayTakeoff { get; set; }
         public int? DelayOnBlock { get; set; }
         public int? DelayLanding { get; set; }
-        public int ActualFlightHOffBlock { get; set; }
-        public decimal ActualFlightMOffBlock { get; set; }
-        public int ActualFlightHTakeoff { get; set; }
-        public decimal ActualFlightMTakeoff { get; set; }
+        public int ActualFlightHoffBlock { get; set; }
+        public decimal ActualFlightMoffBlock { get; set; }
+        public int ActualFlightHtakeoff { get; set; }
+        public decimal ActualFlightMtakeoff { get; set; }
         public int BaseId { get; set; }
-        public string BaseIATA { get; set; }
+        public string BaseIata { get; set; }
         public string BaseName { get; set; }
         public string Route { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
         public DateTime? DepartureLocal { get; set; }
         public DateTime? ArrivalLocal { get; set; }
         public int? BlockTime { get; set; }

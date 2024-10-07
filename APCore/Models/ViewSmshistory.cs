@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewSMSHistory
+    public partial class ViewSmshistory
     {
         public int Id { get; set; }
         public string RecName { get; set; }

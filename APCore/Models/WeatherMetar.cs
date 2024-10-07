@@ -17,34 +17,34 @@ namespace APCore.Models
         public DateTime? DateCreate { get; set; }
         public string StationId { get; set; }
         public string RawText { get; set; }
-        public DateTime? observation_time { get; set; }
-        public double? latitude { get; set; }
-        public double? longitude { get; set; }
-        public double? temp_c { get; set; }
-        public double? dewpoint_c { get; set; }
-        public int? wind_dir_degrees { get; set; }
-        public int? wind_speed_kt { get; set; }
-        public int? wind_gust_kt { get; set; }
-        public double? visibility_statute_mi { get; set; }
-        public double? altim_in_hg { get; set; }
-        public double? sea_level_pressure_mb { get; set; }
-        public string flight_category { get; set; }
-        public double? three_hr_pressure_tendency_mb { get; set; }
-        public double? maxT_c { get; set; }
-        public double? minT_c { get; set; }
-        public double? maxT24hr_c { get; set; }
-        public double? minT24hr_c { get; set; }
-        public double? precip_in { get; set; }
-        public double? pcp3hr_in { get; set; }
-        public double? pcp6hr_in { get; set; }
-        public double? pcp24hr_in { get; set; }
-        public double? snow_in { get; set; }
-        public int? vert_vis_ft { get; set; }
-        public string metar_type { get; set; }
-        public double? elevation_m { get; set; }
+        public DateTime? ObservationTime { get; set; }
+        public double? Latitude { get; set; }
+        public double? Longitude { get; set; }
+        public double? TempC { get; set; }
+        public double? DewpointC { get; set; }
+        public int? WindDirDegrees { get; set; }
+        public int? WindSpeedKt { get; set; }
+        public int? WindGustKt { get; set; }
+        public double? VisibilityStatuteMi { get; set; }
+        public double? AltimInHg { get; set; }
+        public double? SeaLevelPressureMb { get; set; }
+        public string FlightCategory { get; set; }
+        public double? ThreeHrPressureTendencyMb { get; set; }
+        public double? MaxTC { get; set; }
+        public double? MinTC { get; set; }
+        public double? MaxT24hrC { get; set; }
+        public double? MinT24hrC { get; set; }
+        public double? PrecipIn { get; set; }
+        public double? Pcp3hrIn { get; set; }
+        public double? Pcp6hrIn { get; set; }
+        public double? Pcp24hrIn { get; set; }
+        public double? SnowIn { get; set; }
+        public int? VertVisFt { get; set; }
+        public string MetarType { get; set; }
+        public double? ElevationM { get; set; }
         public DateTime? DateDay { get; set; }
         public int? FlightId { get; set; }
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
 
         public virtual ICollection<WeatherMetarQualityControl> WeatherMetarQualityControls { get; set; }
         public virtual ICollection<WeatherMetarSkyCondition> WeatherMetarSkyConditions { get; set; }

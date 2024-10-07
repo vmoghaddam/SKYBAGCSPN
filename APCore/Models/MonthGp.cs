@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class MonthGP
+    public partial class MonthGp
     {
-        public int? PYear { get; set; }
-        public int? PMonth { get; set; }
-        public string PMonthName { get; set; }
+        public int? Pyear { get; set; }
+        public int? Pmonth { get; set; }
+        public string PmonthName { get; set; }
     }
 }

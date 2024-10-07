@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class EFBFlightIrregularity
+    public partial class EfbflightIrregularity
     {
         public int Id { get; set; }
         public int? VoyageReportId { get; set; }
         public int? IrrId { get; set; }
 
-        public virtual EFBVoyageReport VoyageReport { get; set; }
+        public virtual EfbvoyageReport VoyageReport { get; set; }
     }
 }

@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class journals2
+    public partial class Journals2
     {
         public string Title { get; set; }
-        public bool? done { get; set; }
+        public bool? Done { get; set; }
         public bool? Ok { get; set; }
         public string Title2 { get; set; }
     }

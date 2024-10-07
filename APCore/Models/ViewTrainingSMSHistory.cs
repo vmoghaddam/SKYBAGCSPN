@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class ViewTrainingSMSHistory
+    public partial class ViewTrainingSmshistory
     {
         public int Id { get; set; }
         public int CrewId { get; set; }
@@ -29,6 +29,6 @@ namespace APCore.Models
         public int? PersonId { get; set; }
         public string Sender { get; set; }
         public DateTime? DutyDate { get; set; }
-        public int? FDPId { get; set; }
+        public int? Fdpid { get; set; }
     }
 }

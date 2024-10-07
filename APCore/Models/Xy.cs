@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class xy
+    public partial class Xy
     {
         public double? X { get; set; }
         public double? Y { get; set; }

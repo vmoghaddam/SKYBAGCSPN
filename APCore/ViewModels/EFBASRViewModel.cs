@@ -97,6 +97,36 @@ namespace APCore.ViewModels
         public int? SigxWXTypeId { get; set; }
         public double? BSHeading { get; set; }
         public int? BSTurningId { get; set; }
+        public string CallSign { get; set; }
+        public string DivertedTo { get; set; }
+        public int FuelQuantity { get; set; }
+        public string FuelLocation { get; set; }
+        public DateTime? FuelDumpTime { get; set; }
+        public int ATLRefNo { get; set; }
+        public int WindDir { get; set; }
+        public int WindSpeed { get; set; }
+        public int Temp { get; set; }
+        public string Visibility { get; set; }
+        public string QNH { get; set; }
+        public string CloudType { get; set; }
+        public int CloudHeight { get; set; }
+        public string CloudAmount { get; set; }
+        public string NatureOfFlight { get; set; }
+        public string Airspace { get; set; }
+        public string Runway { get; set; }
+        public string ACPart { get; set; }
+        public string ACPartStat { get; set; }
+        public string RunwaySurface { get; set; }
+        public int ProximitryVer { get; set; }
+        public int ProximitryHor { get; set; }
+        public string DescriptionOfIncidentRunway { get; set; }
+        public string CommunicationDiff { get; set; }
+        public string ATCMemory { get; set; }
+        public int ReactionTime { get; set; }
+        public string CorrectiveAction { get; set; }
+        public string CommunicationReviewed { get; set; }
+        public string CM2 { get; set; }
+        public int FlightLevel { get; set; }
         public string User { get; set; }
         public int Id { get; set; }
     }

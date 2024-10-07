@@ -18,18 +18,18 @@ namespace APCore.Models
         public int? GroupId { get; set; }
         public string JobGroup { get; set; }
         public string JobGroupCode { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public string Name { get; set; }
         public string ImageUrl { get; set; }
         public string Mobile { get; set; }
         public string Email { get; set; }
-        public int? FlightStatusID { get; set; }
-        public int? ActualFlightHOffBlock { get; set; }
-        public decimal? ActualFlightMOffBlock { get; set; }
+        public int? FlightStatusId { get; set; }
+        public int? ActualFlightHoffBlock { get; set; }
+        public decimal? ActualFlightMoffBlock { get; set; }
         public DateTime? ChocksOut { get; set; }
         public DateTime? ChocksIn { get; set; }
-        public int? ActualFlightHTakeoff { get; set; }
-        public decimal? ActualFlightMTakeoff { get; set; }
+        public int? ActualFlightHtakeoff { get; set; }
+        public decimal? ActualFlightMtakeoff { get; set; }
         public int? TotalFlightMinutesOffBlock { get; set; }
         public decimal? TotalFlightHoursOffBlock { get; set; }
         public decimal? PastHoursFromOffBlock { get; set; }

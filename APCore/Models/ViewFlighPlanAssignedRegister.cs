@@ -16,24 +16,24 @@ namespace APCore.Models
         public DateTime DateTo { get; set; }
         public string DateFromTo { get; set; }
         public int? TypeId { get; set; }
-        public int? FlightTypeID { get; set; }
+        public int? FlightTypeId { get; set; }
         public string FlightType { get; set; }
-        public int? AirlineOperatorsID { get; set; }
+        public int? AirlineOperatorsId { get; set; }
         public string FlightNumber { get; set; }
         public int FromAirport { get; set; }
         public int ToAirport { get; set; }
-        public DateTime? STA { get; set; }
-        public DateTime? STD { get; set; }
+        public DateTime? Sta { get; set; }
+        public DateTime? Std { get; set; }
         public int FlightH { get; set; }
         public int FlightM { get; set; }
         public string FlightPlan { get; set; }
         public int CustomerId { get; set; }
         public string Customer { get; set; }
         public string FromAirportName { get; set; }
-        public string FromAirportIATA { get; set; }
+        public string FromAirportIata { get; set; }
         public int? FromAirportCityId { get; set; }
         public string ToAirportName { get; set; }
-        public string ToAirportIATA { get; set; }
+        public string ToAirportIata { get; set; }
         public int? ToAirportCityId { get; set; }
         public string FromAirportCity { get; set; }
         public string ToAirportCity { get; set; }

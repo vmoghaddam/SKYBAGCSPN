@@ -5,17 +5,17 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class HelperMSN
+    public partial class HelperMsn
     {
-        public int ID { get; set; }
-        public int? AC_ModelID { get; set; }
+        public int Id { get; set; }
+        public int? AcModelId { get; set; }
         public int? TypeId { get; set; }
         public string Type { get; set; }
         public int? TotalSeat { get; set; }
-        public int? MSN { get; set; }
+        public int? Msn { get; set; }
         public string Register { get; set; }
-        public int? MaxWeightTO { get; set; }
-        public int? MaxWeightLND { get; set; }
+        public int? MaxWeightTo { get; set; }
+        public int? MaxWeightLnd { get; set; }
         public string MaxWeighUnit { get; set; }
     }
 }

@@ -22,15 +22,15 @@ namespace APCore.Models
         public string Route { get; set; }
         public int DutyType { get; set; }
         public string DutyTypeTitle { get; set; }
-        public DateTime? STDLocal { get; set; }
-        public DateTime? STALocal { get; set; }
+        public DateTime? Stdlocal { get; set; }
+        public DateTime? Stalocal { get; set; }
         public DateTime? DateStartLocal { get; set; }
         public DateTime? DateEndLocal { get; set; }
         public DateTime? Start { get; set; }
         public DateTime? End { get; set; }
-        public DateTime? StartUTC { get; set; }
-        public DateTime? EndUTC { get; set; }
-        public string REgister { get; set; }
+        public DateTime? StartUtc { get; set; }
+        public DateTime? EndUtc { get; set; }
+        public string Register { get; set; }
         public string AircraftType { get; set; }
         public string Remark { get; set; }
         public int OrderIndex { get; set; }
@@ -46,7 +46,7 @@ namespace APCore.Models
         public string CanceledRoute { get; set; }
         public double ExtendedBySplitDuty { get; set; }
         public int IsExtendedBySplitDuty { get; set; }
-        public double? MaxFDPExtended { get; set; }
+        public double? MaxFdpextended { get; set; }
         public double? DutyScheduled { get; set; }
         public double? Duty { get; set; }
         public int? IsOver { get; set; }
@@ -61,8 +61,8 @@ namespace APCore.Models
         public string ResStr { get; set; }
         public DateTime? ResDate { get; set; }
         public string Delivery { get; set; }
-        public int? SMSId { get; set; }
-        public string SMS { get; set; }
+        public int? Smsid { get; set; }
+        public string Sms { get; set; }
         public DateTime? DateSent { get; set; }
         public DateTime? DateVisit { get; set; }
         public int IsVisited { get; set; }

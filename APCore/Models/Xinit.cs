@@ -5,15 +5,15 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class XInit
+    public partial class Xinit
     {
         public int Id { get; set; }
         public DateTime? InitStart { get; set; }
         public DateTime? InitEnd { get; set; }
         public DateTime? InitRestTo { get; set; }
         public string InitScheduleName { get; set; }
-        public int? InitFromIATA { get; set; }
-        public int? InitToIATA { get; set; }
+        public int? InitFromIata { get; set; }
+        public int? InitToIata { get; set; }
         public string InitGroup { get; set; }
         public int? InitHomeBase { get; set; }
         public string InitFlts { get; set; }

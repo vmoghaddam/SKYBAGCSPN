@@ -11,7 +11,7 @@ namespace APCore.Models
         public string Title { get; set; }
         public int? BaseId { get; set; }
         public string BaseName { get; set; }
-        public string BaseIATA { get; set; }
+        public string BaseIata { get; set; }
         public DateTime? DateFrom { get; set; }
         public DateTime? DateTo { get; set; }
         public DateTime? DateFirst { get; set; }

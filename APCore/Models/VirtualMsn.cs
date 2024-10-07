@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace APCore.Models
 {
-    public partial class VirtualMSN
+    public partial class VirtualMsn
     {
         public int Id { get; set; }
         public int? ModelId { get; set; }

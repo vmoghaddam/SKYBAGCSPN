@@ -8,14 +8,14 @@ namespace APCore.Models
     public partial class ViewEmployee
     {
         public int Id { get; set; }
-        public string PID { get; set; }
+        public string Pid { get; set; }
         public int? BaseAirportId { get; set; }
         public string BaseAirport { get; set; }
         public int? CurrentLocationAirport { get; set; }
         public string CurrentLocationCity { get; set; }
-        public int? CurrentLocationCityId { get; set; }
+        public int CurrentLocationCityId { get; set; }
         public DateTime? DateJoinCompany { get; set; }
-        public int? ExpCompany { get; set; }
+        public int ExpCompany { get; set; }
         public bool IsActive { get; set; }
         public DateTime? DateRegister { get; set; }
         public DateTime? DateConfirmed { get; set; }
@@ -24,11 +24,18 @@ namespace APCore.Models
         public string Password { get; set; }
         public int? CustomerId { get; set; }
         public int? GroupId { get; set; }
+        public int? C1groupId { get; set; }
+        public string JobGroupC1 { get; set; }
+        public string JobGroupCodeC1 { get; set; }
+        public int? C2groupId { get; set; }
+        public string JobGroupC2 { get; set; }
+        public string JobGroupCodeC2 { get; set; }
+        public int? C3groupId { get; set; }
         public string JobGroup { get; set; }
         public string JobGroupCode { get; set; }
         public string JobGroupRoot { get; set; }
         public int MarriageId { get; set; }
-        public string NID { get; set; }
+        public string Nid { get; set; }
         public int SexId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -44,9 +51,9 @@ namespace APCore.Models
         public DateTime? DatePassportExpire { get; set; }
         public string Address { get; set; }
         public DateTime? DateJoinAvation { get; set; }
-        public int? Exp { get; set; }
-        public DateTime? DateLastCheckUP { get; set; }
-        public DateTime? DateNextCheckUP { get; set; }
+        public int Exp { get; set; }
+        public DateTime? DateLastCheckUp { get; set; }
+        public DateTime? DateNextCheckUp { get; set; }
         public DateTime? DateYearOfExperience { get; set; }
         public string CaoCardNumber { get; set; }
         public DateTime? DateCaoCardIssue { get; set; }
@@ -58,18 +65,18 @@ namespace APCore.Models
         public string StampNumber { get; set; }
         public string StampUrl { get; set; }
         public string TechLogNo { get; set; }
-        public DateTime? DateIssueNDT { get; set; }
-        public int? IntervalNDT { get; set; }
-        public string NDTNumber { get; set; }
-        public int? NDTIntervalCalanderTypeId { get; set; }
+        public DateTime? DateIssueNdt { get; set; }
+        public int? IntervalNdt { get; set; }
+        public string Ndtnumber { get; set; }
+        public int? NdtintervalCalanderTypeId { get; set; }
         public string Nickname { get; set; }
         public int? CityId { get; set; }
         public string FatherName { get; set; }
-        public string IDNo { get; set; }
+        public string Idno { get; set; }
         public string UserId { get; set; }
         public string ImageUrl { get; set; }
         public int? CustomerCreatorId { get; set; }
-        public int? Age { get; set; }
+        public int Age { get; set; }
         public int LocationId { get; set; }
         public int? OrgRoleId { get; set; }
         public string LocationPhone { get; set; }
@@ -77,11 +84,11 @@ namespace APCore.Models
         public string MaritalStatus { get; set; }
         public string Sex { get; set; }
         public string CaoIntervalCalanderType { get; set; }
-        public string NDTIntervalCalanderType { get; set; }
+        public string NdtintervalCalanderType { get; set; }
         public string City { get; set; }
-        public int? StateId { get; set; }
+        public int StateId { get; set; }
         public string State { get; set; }
-        public int? CountryId { get; set; }
+        public int CountryId { get; set; }
         public string Country { get; set; }
         public string CityFullName { get; set; }
         public string Customer { get; set; }
@@ -91,24 +98,24 @@ namespace APCore.Models
         public int PersonId { get; set; }
         public int EmployeeLocationId { get; set; }
         public string Post { get; set; }
-        public int? RemainNDT { get; set; }
-        public int? RemainCAO { get; set; }
+        public int? RemainNdt { get; set; }
+        public int? RemainCao { get; set; }
         public int? RemainPassport { get; set; }
-        public int IsNDTExpired { get; set; }
-        public int IsNDTExpiring { get; set; }
-        public int IsCAOExpired { get; set; }
-        public int IsCAOExpiring { get; set; }
+        public int IsNdtexpired { get; set; }
+        public int IsNdtexpiring { get; set; }
+        public int IsCaoexpired { get; set; }
+        public int IsCaoexpiring { get; set; }
         public int IsMedicalExpiring { get; set; }
         public int IsPassportExpired { get; set; }
         public int IsPassportExpiring { get; set; }
-        public DateTime? DateExpireNDT { get; set; }
-        public int? CriticalCertificatesCount { get; set; }
-        public int? BookAlert { get; set; }
+        public DateTime? DateExpireNdt { get; set; }
         public string Types { get; set; }
+        public int BookAlert { get; set; }
+        public int CriticalCertificatesCount { get; set; }
         public DateTime? ProficiencyExpireDate { get; set; }
         public DateTime? CrewMemberCertificateExpireDate { get; set; }
         public DateTime? LicenceExpireDate { get; set; }
-        public DateTime? LicenceIRExpireDate { get; set; }
+        public DateTime? LicenceIrexpireDate { get; set; }
         public DateTime? SimulatorLastCheck { get; set; }
         public DateTime? SimulatorNextCheck { get; set; }
         public string RampPassNo { get; set; }
@@ -122,34 +129,34 @@ namespace APCore.Models
         public int? ProficiencyCheckType { get; set; }
         public DateTime? ProficiencyCheckDate { get; set; }
         public DateTime? ProficiencyValidUntil { get; set; }
-        public string ProficiencyDescriptionOPC { get; set; }
-        public DateTime? ProficiencyCheckDateOPC { get; set; }
-        public DateTime? ProficiencyValidUntilOPC { get; set; }
-        public DateTime? DateTRIExpired { get; set; }
-        public DateTime? DateTREExpired { get; set; }
-        public int? ICAOLPRLevel { get; set; }
-        public DateTime? ICAOLPRValidUntil { get; set; }
+        public string ProficiencyDescriptionOpc { get; set; }
+        public DateTime? ProficiencyCheckDateOpc { get; set; }
+        public DateTime? ProficiencyValidUntilOpc { get; set; }
+        public DateTime? DateTriexpired { get; set; }
+        public DateTime? DateTreexpired { get; set; }
+        public int? Icaolprlevel { get; set; }
+        public DateTime? IcaolprvalidUntil { get; set; }
         public int? MedicalClass { get; set; }
         public string PostalCode { get; set; }
         public string MedicalLimitation { get; set; }
         public string ProficiencyDescription { get; set; }
         public DateTime? VisaExpireDate { get; set; }
-        public DateTime? SEPTIssueDate { get; set; }
-        public DateTime? SEPTExpireDate { get; set; }
-        public DateTime? SEPTPIssueDate { get; set; }
-        public DateTime? SEPTPExpireDate { get; set; }
+        public DateTime? SeptissueDate { get; set; }
+        public DateTime? SeptexpireDate { get; set; }
+        public DateTime? SeptpissueDate { get; set; }
+        public DateTime? SeptpexpireDate { get; set; }
         public DateTime? DangerousGoodsIssueDate { get; set; }
         public DateTime? DangerousGoodsExpireDate { get; set; }
-        public DateTime? CCRMIssueDate { get; set; }
-        public DateTime? CCRMExpireDate { get; set; }
-        public DateTime? CRMIssueDate { get; set; }
-        public DateTime? CRMExpireDate { get; set; }
-        public DateTime? SMSIssueDate { get; set; }
-        public DateTime? SMSExpireDate { get; set; }
+        public DateTime? CcrmissueDate { get; set; }
+        public DateTime? CcrmexpireDate { get; set; }
+        public DateTime? CrmissueDate { get; set; }
+        public DateTime? CrmexpireDate { get; set; }
+        public DateTime? SmsissueDate { get; set; }
+        public DateTime? SmsexpireDate { get; set; }
         public DateTime? AviationSecurityIssueDate { get; set; }
         public DateTime? AviationSecurityExpireDate { get; set; }
-        public DateTime? EGPWSIssueDate { get; set; }
-        public DateTime? EGPWSExpireDate { get; set; }
+        public DateTime? EgpwsissueDate { get; set; }
+        public DateTime? EgpwsexpireDate { get; set; }
         public DateTime? UpsetRecoveryTrainingIssueDate { get; set; }
         public DateTime? UpsetRecoveryTrainingExpireDate { get; set; }
         public DateTime? ColdWeatherOperationIssueDate { get; set; }
@@ -158,36 +165,36 @@ namespace APCore.Models
         public DateTime? HotWeatherOperationExpireDate { get; set; }
         public DateTime? FirstAidIssueDate { get; set; }
         public DateTime? FirstAidExpireDate { get; set; }
-        public DateTime? PBNRNAVIssueDate { get; set; }
-        public DateTime? PBNRNAVExpireDate { get; set; }
+        public DateTime? PbnrnavissueDate { get; set; }
+        public DateTime? PbnrnavexpireDate { get; set; }
         public int? RemainFirstAid { get; set; }
         public int IsFirstAidExpired { get; set; }
-        public int? RemainCMC { get; set; }
-        public int IsCMCExpired { get; set; }
+        public int? RemainCmc { get; set; }
+        public int IsCmcexpired { get; set; }
         public int? RemainLicence { get; set; }
         public int IsLicenceExpired { get; set; }
-        public int? RemainLicenceIR { get; set; }
-        public int IsLicenceIRExpired { get; set; }
+        public int? RemainLicenceIr { get; set; }
+        public int IsLicenceIrexpired { get; set; }
         public int? RemainProficiency { get; set; }
         public int IsProficiencyExpired { get; set; }
-        public int? RemainProficiencyOPC { get; set; }
-        public int IsProficiencyOPCExpired { get; set; }
-        public int? RemainLPR { get; set; }
-        public int IsLPRExpired { get; set; }
+        public int? RemainProficiencyOpc { get; set; }
+        public int IsProficiencyOpcexpired { get; set; }
+        public int? RemainLpr { get; set; }
+        public int IsLprexpired { get; set; }
         public int? RemainMedical { get; set; }
         public int IsMedicalExpired { get; set; }
-        public int? RemainSEPT { get; set; }
-        public int IsSEPTExpired { get; set; }
-        public int? RemainSEPTP { get; set; }
-        public int IsSEPTPExpired { get; set; }
-        public int? RemainDG { get; set; }
-        public int IsDGExpired { get; set; }
-        public int? RemainCRM { get; set; }
-        public int IsCRMExpired { get; set; }
-        public int? RemainCCRM { get; set; }
-        public int IsCCRMExpired { get; set; }
-        public int? RemainSMS { get; set; }
-        public int IsSMSExpired { get; set; }
+        public int? RemainSept { get; set; }
+        public int IsSeptexpired { get; set; }
+        public int? RemainSeptp { get; set; }
+        public int IsSeptpexpired { get; set; }
+        public int? RemainDg { get; set; }
+        public int IsDgexpired { get; set; }
+        public int? RemainCrm { get; set; }
+        public int IsCrmexpired { get; set; }
+        public int? RemainCcrm { get; set; }
+        public int IsCcrmexpired { get; set; }
+        public int? RemainSms { get; set; }
+        public int IsSmsexpired { get; set; }
         public int? RemainAvSec { get; set; }
         public int IsAvSecExpired { get; set; }
         public int? RemainUpsetRecoveryTraining { get; set; }
@@ -213,13 +220,15 @@ namespace APCore.Models
         public DateTime? RecurrentExpireDate { get; set; }
         public int IsRecurrentExpired { get; set; }
         public int IsLineExpired { get; set; }
-        public int IsTRIExpired { get; set; }
-        public int IsTREExpired { get; set; }
-        public int? RemainTRI { get; set; }
-        public int? RemainTRE { get; set; }
+        public int IsTriexpired { get; set; }
+        public int IsTreexpired { get; set; }
+        public int? RemainTri { get; set; }
+        public int? RemainTre { get; set; }
         public int? RemainRecurrent { get; set; }
         public int? RemainLine { get; set; }
-        public int? RemainEGPWS { get; set; }
+        public int? RemainEgpws { get; set; }
+        public int? RemainRsp { get; set; }
+        public int? RemainLrc { get; set; }
         public double FlightSum { get; set; }
         public int FlightEarly { get; set; }
         public int FlightLate { get; set; }
@@ -227,24 +236,61 @@ namespace APCore.Models
         public string JobGroupMain { get; set; }
         public string JobGroupMainCode { get; set; }
         public string JobGroupCode2 { get; set; }
-        public int? RemainTypeMD { get; set; }
+        public string CodeX { get; set; }
+        public int? RemainTypeMd { get; set; }
         public int? RemainType737 { get; set; }
         public int? RemainTypeAirbus { get; set; }
-        public DateTime CTUIssueDate { get; set; }
-        public DateTime LRCExpireDate { get; set; }
-        public DateTime LRCIssueDate { get; set; }
-        public DateTime RSPExpireDate { get; set; }
-        public DateTime RSPIssueDate { get; set; }
-        public DateTime SAExpireDate { get; set; }
-        public DateTime SAIssueDate { get; set; }
-        public DateTime Type737ConversionIssueDate { get; set; }
-        public DateTime Type737ExpireDate { get; set; }
-        public DateTime Type737IssueDate { get; set; }
-        public DateTime TypeAirbusConversionIssueDate { get; set; }
-        public DateTime TypeAirbusExpireDate { get; set; }
-        public DateTime TypeAirbusIssueDate { get; set; }
-        public DateTime TypeMDConversionIssueDate { get; set; }
-        public DateTime TypeMDExpireDate { get; set; }
-        public DateTime TypeMDIssueDate { get; set; }
+        public int? RemainHf { get; set; }
+        public int? RemainAsd { get; set; }
+        public int? RemainGom { get; set; }
+        public int? RemainAsf { get; set; }
+        public int? RemainCc { get; set; }
+        public int? RemainErp { get; set; }
+        public int? RemainMb { get; set; }
+        public int? RemainPs { get; set; }
+        public int? RemainAnnex { get; set; }
+        public int? RemainDrm { get; set; }
+        public int? RemainFmtd { get; set; }
+        public int? RemainMel { get; set; }
+        public int? RemainMet { get; set; }
+        public int? RemainPer { get; set; }
+        public int? RemainLpcc1 { get; set; }
+        public int? RemainLpcc2 { get; set; }
+        public int? RemainLpcc3 { get; set; }
+        public int? RemainLineC1 { get; set; }
+        public int? RemainLineC2 { get; set; }
+        public int? RemainLineC3 { get; set; }
+        public int? RemainRamp { get; set; }
+        public int? RemainAc { get; set; }
+        public int? RemainUprt { get; set; }
+        public int? RemainSfi { get; set; }
+        public int? RemainSfe { get; set; }
+        public int? RemainTri2 { get; set; }
+        public int? RemainTre2 { get; set; }
+        public int? RemainIri { get; set; }
+        public int? RemainIre { get; set; }
+        public int? RemainCri { get; set; }
+        public int? RemainCre { get; set; }
+        public int? RemainSfi2 { get; set; }
+        public int? RemainSfe2 { get; set; }
+        public int? RemainAirCrew { get; set; }
+        public int? RemainAirOps { get; set; }
+        public int? RemainSop { get; set; }
+        public int? RemainDiff31 { get; set; }
+        public int? RemainDiff34 { get; set; }
+        public int? RemainOma1 { get; set; }
+        public int? RemainOmb1 { get; set; }
+        public int? RemainOmc1 { get; set; }
+        public int? RemainOma2 { get; set; }
+        public int? RemainOmb2 { get; set; }
+        public int? RemainOmc2 { get; set; }
+        public int? RemainOma3 { get; set; }
+        public int? RemainOmb3 { get; set; }
+        public int? RemainOmc3 { get; set; }
+        public int? RemainMap { get; set; }
+        public int? RemainComRes { get; set; }
+        public int? RemainOpcc1 { get; set; }
+        public int? RemainOpcc2 { get; set; }
+        public int? RemainOpcc3 { get; set; }
     }
 }

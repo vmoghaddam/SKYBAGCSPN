@@ -12,9 +12,9 @@ namespace APCore.Models
         public int TypeId { get; set; }
         public DateTime? IssueDate { get; set; }
         public DateTime? ExpireDate { get; set; }
-        public int? EXPDay { get; set; }
-        public int? EXPMonth { get; set; }
-        public int? EXPYear { get; set; }
+        public int? Expday { get; set; }
+        public int? Expmonth { get; set; }
+        public int? Expyear { get; set; }
         public int? Remain { get; set; }
         public string Title { get; set; }
         public string Remark { get; set; }
